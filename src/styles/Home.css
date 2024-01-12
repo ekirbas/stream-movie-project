@@ -1,0 +1,24 @@
+.homeContainer {
+  color: var(--white);
+  gap: 150px;
+}
+.homeContainer .contentContainer fieldset {
+  border: solid 1px var(--black15);
+  border-radius: 12px;
+  padding: 50px;
+}
+.homeContainer .contentContainer fieldset legend .title {
+  border-radius: 8px;
+  padding: 10px 24px;
+  height: 50px;
+  background-color: var(--red45);
+  display: flex;
+  align-items: center;
+  font: 600 20px/150% "Manrope", sans-serif;
+}
+.homeContainer .contentContainer fieldset .headerContainer .header {
+  font: 700 38px/150% "Manrope", sans-serif;
+}
+.homeContainer .contentContainer fieldset .headerContainer .tabIndicator {
+  height: 88px;
+}

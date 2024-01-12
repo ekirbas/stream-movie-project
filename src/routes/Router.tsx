@@ -1,0 +1,49 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import App from "../App";
+import ErrorPage from "../pages/ErrorPage";
+import MovieAndShow from "../pages/MovieAndShow";
+import Subscription from "../pages/Subscription";
+import Support from "../pages/Support";
+import MovieDetail from "../pages/MovieDetail";
+import Layout from "../components/Layout";
+import Home from "../pages/Home";
+import SeriesDetail from "../pages/SeriesDetail";
+
+const Router = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      Component: Layout,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "/movie-and-series",
+          element: <MovieAndShow />,
+        },
+        {
+          path: "/subscription",
+          element: <Subscription />,
+        },
+        {
+          path: "/support",
+          element: <Support />,
+        },
+        {
+          path: "/movie-detail/:movie_id",
+          element: <MovieDetail />,
+        },
+        {
+          path: "/series-detail/:series_id",
+          element: <SeriesDetail />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
+};
+
+export default Router;
