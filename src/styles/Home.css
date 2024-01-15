@@ -1,13 +1,17 @@
 .homeContainer {
   color: var(--white);
   gap: 150px;
+  max-width: 100%;
 }
-.homeContainer .contentContainer fieldset {
+.homeContainer .contentContainer .fieldS {
   border: solid 1px var(--black15);
   border-radius: 12px;
   padding: 50px;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
 }
-.homeContainer .contentContainer fieldset legend .title {
+.homeContainer .contentContainer .fieldS legend .title {
   border-radius: 8px;
   padding: 10px 24px;
   height: 50px;
@@ -16,9 +20,52 @@
   align-items: center;
   font: 600 20px/150% "Manrope", sans-serif;
 }
-.homeContainer .contentContainer fieldset .headerContainer .header {
+.homeContainer .contentContainer .fieldS .headerContainer {
+  display: flex;
+}
+.homeContainer .contentContainer .fieldS .headerContainer .header {
   font: 700 38px/150% "Manrope", sans-serif;
 }
-.homeContainer .contentContainer fieldset .headerContainer .tabIndicator {
+.homeContainer .contentContainer .fieldS .headerContainer .tabIndicator {
   height: 88px;
+}
+.homeContainer .contentContainer .fieldS .dataContainer {
+  width: 100%;
+  height: 342px;
+  display: flex;
+  gap: 30px;
+}
+.homeContainer .contentContainer .fieldS .dataContainer .data {
+  min-width: 275px;
+  padding: 30px;
+  border-radius: 12px;
+  border: solid 1px var(--black15);
+  background-color: var(--black10);
+}
+.homeContainer .contentContainer .fieldS .dataContainer .data .dataImageContainer {
+  width: 102%;
+  position: relative;
+}
+.homeContainer .contentContainer .fieldS .dataContainer .data .dataImageContainer .fadeOut {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
+}
+.homeContainer .contentContainer .fieldS .dataContainer .data .dataImageContainer .fadeOut img {
+  width: 100%;
+  height: 100%;
+}
+.homeContainer .contentContainer .fieldS .dataContainer .data .bottomArea {
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.homeContainer .contentContainer .fieldS .dataContainer .data .bottomArea .bottomBtn {
+  display: flex;
+  align-items: center;
 }

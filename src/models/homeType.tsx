@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
+import { GenreMovieType } from "./storeType";
 
 export interface ContentContainerType {
-  title: string;
   header: string;
-  children?: ReactNode;
+  /*  children?: ReactNode; */
   data?: any;
 }
