@@ -10,8 +10,14 @@ const options = {
 export const useApiStore = create<ApiStore>()((set) => ({
   genreMovie: null,
   genreDescVoteMovie: null,
+  popularMovie: null,
+  topRatedMovie: null,
+  upcomingMovie: null,
 
   genreSeries: null,
+  popularSeries: null,
+  topRatedSeries: null,
+  onTheAirSeries: null,
 
   arrayState: [],
   count: 1,
@@ -29,8 +35,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/popular?language=tr&page=${page}`,
         options
       );
-      ////console.log("fecthPopularMovie =", response);
+      //console.log("fecthPopularMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ popularMovie: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -41,8 +48,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/upcoming?language=tr&page=${page}`,
         options
       );
-      ////console.log("fecthUpcomingMovie =", response);
+      //console.log("fecthUpcomingMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ upcomingMovie: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -53,8 +61,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/top_rated?language=tr&page=${page}`,
         options
       );
-      ////console.log("fecthTopRatedMovie =", response);
+      //console.log("fecthTopRatedMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ topRatedMovie: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -116,7 +125,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/genre/movie/list?language=tr`,
         options
       );
-      console.log("fecthGenreMovie =", response);
+      //console.log("fecthGenreMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       set(() => ({ genreMovie: response.data.genres }));
     } catch (err) {
@@ -131,7 +140,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/genre/tv/list?language=tr`,
         options
       );
-      console.log("fecthGenreSeries =", response);
+      //console.log("fecthGenreSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       set(() => ({
         genreSeries: response.data.genres,
@@ -148,6 +157,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
       );
       //console.log("fecthPopularSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ popularSeries: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -160,6 +170,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
       );
       //console.log("fecthTopRatedSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ topRatedSeries: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -212,7 +223,19 @@ export const useApiStore = create<ApiStore>()((set) => ({
       console.log(err);
     }
   },
-
+  fecthOnTheAirSeries: async (page) => {
+    try {
+      const response = await axios.get(
+        `https://api.themoviedb.org/3/tv/on_the_air?language=tr&page=${page}`,
+        options
+      );
+      console.log("fecthOnTheAirSeries =", response);
+      //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ onTheAirSeries: response.data.results }));
+    } catch (err) {
+      console.log(err);
+    }
+  },
   //---- set Movie
   setGenreMovie: (arg: any) => set(() => ({ genreMovie: arg })),
 

@@ -1,8 +1,83 @@
+.homeAboutContainer {
+  width: 100%;
+  min-height: 700px;
+  position: absolute;
+  inset: 0;
+  .homeImageDiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 80%;
+    }
+    .fadeOutTop {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(0, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
+    }
+    .fadeOutBottom {
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
+    }
+    .aboutIconArea {
+      position: absolute;
+      margin: auto;
+      inset: 0;
+      width: fit-content;
+      height: 60%;
+      .aboutLogo {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .aboutTextArea {
+    position: absolute;
+    bottom: 0;
+    padding: 0 412px;
+    text-align: center;
+    align-items: center;
+
+    h1 {
+      font: 600 58px/150% "Manrope", sans-serif;
+      color: var(--white);
+    }
+    p {
+      margin-top: 14px;
+      font: 400 18px/150% "Manrope", sans-serif;
+      color: var(--grey60);
+    }
+    .watchButton {
+      color: var(--white);
+      font: 500 18px/150% "Manrope", sans-serif;
+      border-radius: 8px;
+      padding: 18px 24px;
+      background-color: var(--red45);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin: 50px auto 16px auto;
+    }
+  }
+}
+
 .homeContainer {
   color: var(--white);
-  gap: 150px;
   max-width: 100%;
+
+  //GenresContentContainer.tsx
   .contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 0 0 50px 0;
     .fieldS {
       border: solid 1px var(--black15);
       border-radius: 12px;
@@ -10,6 +85,9 @@
       max-width: 100%;
       min-width: 0;
       overflow-x: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
 
       legend {
         .title {
@@ -33,18 +111,21 @@
       }
       .dataContainer {
         width: 100%;
-        height: 342px;
         display: flex;
         gap: 30px;
+        overflow-x: auto; //daha sonra kaldırılacak
 
-        .data {
+        .genreData {
+          height: 342px;
           min-width: 275px;
           padding: 30px;
           border-radius: 12px;
           border: solid 1px var(--black15);
           background-color: var(--black10);
+          cursor: pointer;
           .dataImageContainer {
-            width: 102%;
+            width: 100%;
+            height: 91%;
             position: relative;
             .fadeOut {
               width: 100%;
@@ -57,10 +138,13 @@
                 rgba(26, 26, 26, 0) 0%,
                 #1a1a1a 100%
               );
-              img {
-                width: 100%;
-                height: 100%;
-              }
+            }
+            img {
+              min-width: 100%;
+              max-width: 100%;
+              min-height: 100%;
+              max-height: 100%;
+              border-radius: 12px;
             }
           }
           .bottomArea {
@@ -74,6 +158,65 @@
               display: flex;
               align-items: center;
             }
+          }
+        }
+        //PopularContentContainer.tsx
+        .popularData {
+          min-width: 284px;
+          height: 377px;
+          padding: 20px;
+          gap: 20px;
+          .dataImageContainer {
+            height: 84%;
+            margin-bottom: 20px;
+            .voteDiv {
+              font: 600 14px/150% "Manrope", sans-serif;
+              position: absolute;
+              width: 70px;
+              height: 30px;
+              top: 8px;
+              right: 8px;
+              color: var(--white);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: #f6c700;
+              border-radius: 4px;
+              padding-right: 6px;
+            }
+          }
+          .bottomAreaPopular {
+            width: 100%;
+            color: var(--grey75);
+            font: 500 16px/150% "Manrope", sans-serif;
+            background-color: var(--black08);
+            border: solid 1px var(--black15);
+            border-radius: 51px;
+            text-align: center;
+            padding: 6px 10px 6px 10px;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+        }
+        //UpcamoingContentContainer.tsx
+        .dateDiv {
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          border-radius: 51px;
+          position: absolute;
+          top: 11px;
+          left: 8px;
+          font: 500 14px/150% "Manrope", sans-serif;
+          color: var(--grey60);
+          padding: 0 8px 0 1px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          span {
+            margin-left: 2px;
           }
         }
       }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { ContentContainerType } from "../models/homeType";
+import { GenresContentContainerType } from "../models/homeType";
 import { useApiStore } from "../store/store";
 import staticVariables from "../store/statikVariables";
 import RightArrowIcon from "../assets/images/rightArrowIcon";
+import { CreateUniqKey } from "../helpers/function";
 
-const GenresContentContainer = (props: ContentContainerType) => {
+const GenresContentContainer = (props: GenresContentContainerType) => {
   const { data, header } = props;
   const useApi = useApiStore();
 
@@ -31,15 +32,16 @@ const GenresContentContainer = (props: ContentContainerType) => {
   }, [data]); */
 
   return (
-    <>
+    <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
         <div className="tabIndicator">--</div>
       </div>
       <div className="dataContainer">
         {data?.map((v: any) => {
+          const uniqKey = CreateUniqKey();
           return (
-            <div className="data">
+            <div className="genreData" key={uniqKey}>
               <div className="dataImageContainer">
                 <img
                   onError={({ currentTarget }) => {
@@ -60,7 +62,7 @@ const GenresContentContainer = (props: ContentContainerType) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

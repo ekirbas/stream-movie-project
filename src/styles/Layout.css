@@ -6,10 +6,11 @@
   padding: 120px 160px 0 160px;
   position: relative;
 }
-.streamMovieProject svg {
-  cursor: pointer;
+.streamMovieProject .navBarZ-Index {
+  background-color: var(--black06);
 }
-.streamMovieProject .navBar {
+.streamMovieProject .navBarZ-Index .navBar {
+  z-index: 10;
   width: 100%;
   max-width: 100%;
   height: 120px;
@@ -20,13 +21,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: var(--black06);
 }
-.streamMovieProject .navBar .activeNavBarItem {
+.streamMovieProject .navBarZ-Index .navBar .activeNavBarItem {
   background-color: var(--black10);
   color: var(--white);
 }
-.streamMovieProject .navBar .navButtonsContainer {
+.streamMovieProject .navBarZ-Index .navBar .navButtonsContainer {
   width: 586px;
   height: 75px;
   padding: 10px;
@@ -42,12 +42,16 @@
   inset: 0;
   margin: auto;
 }
-.streamMovieProject .navBar .navButtonsContainer > li {
+.streamMovieProject .navBarZ-Index .navBar .navButtonsContainer > li {
   padding: 14px 24px;
   border-radius: 8px;
+  cursor: pointer;
 }
-.streamMovieProject .navBar .navButtonsContainer > li:hover {
+.streamMovieProject .navBarZ-Index .navBar .navButtonsContainer > li:hover {
   background-color: var(--black10);
+}
+.streamMovieProject .navBarZ-Index .navBar svg {
+  cursor: pointer;
 }
 .streamMovieProject .footer {
   width: 100%;

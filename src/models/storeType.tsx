@@ -9,8 +9,14 @@ export type ApiStore = {
 
   genreMovie: [GenreMovieType] | null;
   genreDescVoteMovie: any | null;
+  popularMovie: any | null;
+  topRatedMovie: any | null;
+  upcomingMovie: any | null;
 
   genreSeries: [GenreMovieType] | null;
+  popularSeries: any | null;
+  topRatedSeries: any | null;
+  onTheAirSeries: any | null;
 
   arrayState: any | null;
 
@@ -30,6 +36,7 @@ export type ApiStore = {
   fecthCastSeries: (series_id: string) => void;
   fecthDetailSeason: (series_id: string, season_number: string) => void;
   fecthTrailerSeries: (series_id: string) => void;
+  fecthOnTheAirSeries: (page: string) => void;
 
   setGenreMovie: (data?: GenreMovieType[]) => void;
 
