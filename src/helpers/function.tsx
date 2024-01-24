@@ -8,3 +8,11 @@ export const CreateUniqKey = () => {
     }
   );
 };
+
+/* Array.prototype.toGroup = function (callbackFn:any) {
+  return reduce((a:any, b:any) => {
+      const key = callbackFn(b);
+      const groupName = key == null ? "notTaken" : key;
+      return { ...a, [groupName]: groupName in a ? [...a[groupName], b] : [b] };
+  }, {});
+}; */

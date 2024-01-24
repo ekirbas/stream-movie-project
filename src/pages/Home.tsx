@@ -65,18 +65,22 @@ const Home = () => {
             </legend>
             <GenresContentContainer
               data={useApi.genreMovie}
+              type="genre-movie"
               header="Movie Genres"
             />
             <PopularContentContainer
               header="Populer Movies"
+              type="movie"
               data={useApi.popularMovie}
             />
             <PopularContentContainer
               header="Top Rated Movies"
+              type="movie"
               data={useApi.topRatedMovie}
             />
             <UpcomingContentContainer
               header="New Releases Movies"
+              type="movie"
               data={useApi.upcomingMovie}
             />
           </fieldset>
@@ -88,17 +92,21 @@ const Home = () => {
             <GenresContentContainer
               data={useApi.genreSeries}
               header="Serie Genres"
+              type="genre-serie"
             />
             <PopularContentContainer
               header="Populer Series"
+              type="serie"
               data={useApi.popularSeries}
             />
             <PopularContentContainer
               header="Top Rated Series"
+              type="serie"
               data={useApi.topRatedSeries}
             />
             <UpcomingContentContainer
               header="On The Air"
+              type="serie"
               data={useApi.onTheAirSeries}
             />
           </fieldset>

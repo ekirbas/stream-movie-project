@@ -33,11 +33,11 @@ const Router = () => {
           element: <Support />,
         },
         {
-          path: "/movie-detail/:movie_id",
+          path: "/movie/:movie_id",
           element: <MovieDetail />,
         },
         {
-          path: "/series-detail/:series_id",
+          path: "/serie/:serie_id",
           element: <SeriesDetail />,
         },
       ],

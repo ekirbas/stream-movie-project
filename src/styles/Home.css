@@ -70,13 +70,13 @@
   color: var(--white);
   max-width: 100%;
 }
-.homeContainer .contentContainer {
+.contentContainer {
   display: flex;
   flex-direction: column;
   gap: 150px;
   padding: 0 0 50px 0;
 }
-.homeContainer .contentContainer .fieldS {
+.contentContainer .fieldS {
   border: solid 1px var(--black15);
   border-radius: 12px;
   padding: 50px;
@@ -87,7 +87,7 @@
   flex-direction: column;
   gap: 100px;
 }
-.homeContainer .contentContainer .fieldS legend .title {
+.contentContainer .fieldS legend .title {
   border-radius: 8px;
   padding: 10px 24px;
   height: 50px;
@@ -96,22 +96,22 @@
   align-items: center;
   font: 600 20px/150% "Manrope", sans-serif;
 }
-.homeContainer .contentContainer .fieldS .headerContainer {
+.contentContainer .fieldS .headerContainer {
   display: flex;
 }
-.homeContainer .contentContainer .fieldS .headerContainer .header {
+.contentContainer .fieldS .headerContainer .header {
   font: 700 38px/150% "Manrope", sans-serif;
 }
-.homeContainer .contentContainer .fieldS .headerContainer .tabIndicator {
+.contentContainer .fieldS .headerContainer .tabIndicator {
   height: 88px;
 }
-.homeContainer .contentContainer .fieldS .dataContainer {
+.contentContainer .fieldS .dataContainer {
   width: 100%;
   display: flex;
   gap: 30px;
   overflow-x: auto;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .genreData {
+.contentContainer .fieldS .dataContainer .genreData {
   height: 342px;
   min-width: 275px;
   padding: 30px;
@@ -120,26 +120,26 @@
   background-color: var(--black10);
   cursor: pointer;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .genreData .dataImageContainer {
+.contentContainer .fieldS .dataContainer .genreData .dataImageContainer {
   width: 100%;
   height: 91%;
   position: relative;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .genreData .dataImageContainer .fadeOut {
+.contentContainer .fieldS .dataContainer .genreData .dataImageContainer .fadeOut {
   width: 100%;
   height: 100%;
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
 }
-.homeContainer .contentContainer .fieldS .dataContainer .genreData .dataImageContainer img {
+.contentContainer .fieldS .dataContainer .genreData .dataImageContainer img {
   min-width: 100%;
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
   border-radius: 12px;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .genreData .bottomArea {
+.contentContainer .fieldS .dataContainer .genreData .bottomArea {
   font: 600 18px/150% "Manrope", sans-serif;
   color: var(--white);
   width: 100%;
@@ -147,21 +147,21 @@
   justify-content: space-between;
   align-items: center;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .genreData .bottomArea .bottomBtn {
+.contentContainer .fieldS .dataContainer .genreData .bottomArea .bottomBtn {
   display: flex;
   align-items: center;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .popularData {
+.contentContainer .fieldS .dataContainer .popularData {
   min-width: 284px;
   height: 377px;
   padding: 20px;
   gap: 20px;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .popularData .dataImageContainer {
+.contentContainer .fieldS .dataContainer .popularData .dataImageContainer {
   height: 84%;
   margin-bottom: 20px;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .popularData .dataImageContainer .voteDiv {
+.contentContainer .fieldS .dataContainer .popularData .dataImageContainer .voteDiv {
   font: 600 14px/150% "Manrope", sans-serif;
   position: absolute;
   width: 70px;
@@ -176,7 +176,7 @@
   border-radius: 4px;
   padding-right: 6px;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .popularData .bottomAreaPopular {
+.contentContainer .fieldS .dataContainer .popularData .bottomAreaPopular {
   width: 100%;
   color: var(--grey75);
   font: 500 16px/150% "Manrope", sans-serif;
@@ -191,7 +191,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .dateDiv {
+.contentContainer .fieldS .dataContainer .dateDiv {
   background-color: var(--black08);
   border: solid 1px var(--black15);
   border-radius: 51px;
@@ -205,6 +205,6 @@
   align-items: center;
   justify-content: center;
 }
-.homeContainer .contentContainer .fieldS .dataContainer .dateDiv span {
+.contentContainer .fieldS .dataContainer .dateDiv span {
   margin-left: 2px;
 }

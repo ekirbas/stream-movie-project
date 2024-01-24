@@ -13,6 +13,8 @@ export const useApiStore = create<ApiStore>()((set) => ({
   popularMovie: null,
   topRatedMovie: null,
   upcomingMovie: null,
+  detailMovie: null,
+  castMovie: null,
 
   genreSeries: null,
   popularSeries: null,
@@ -35,7 +37,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/popular?language=tr&page=${page}`,
         options
       );
-      //console.log("fecthPopularMovie =", response);
+      console.log("fecthPopularMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       set(() => ({ popularMovie: response.data.results }));
     } catch (err) {
@@ -74,8 +76,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/${movie_id}?language=tr`,
         options
       );
-      ////console.log("fecthDetailMovie =", response);
+      //console.log("fecthDetailMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ detailMovie: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -101,6 +104,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
       );
       ////console.log("fecthCastMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ castMovie: response.data }));
     } catch (err) {
       console.log(err);
     }

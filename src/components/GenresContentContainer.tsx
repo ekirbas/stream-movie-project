@@ -2,12 +2,31 @@ import React, { useEffect, useState } from "react";
 import { GenresContentContainerType } from "../models/homeType";
 import { useApiStore } from "../store/store";
 import staticVariables from "../store/statikVariables";
-import RightArrowIcon from "../assets/images/rightArrowIcon";
+import RightArrowIcon from "../assets/images/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
+import { useNavigate } from "react-router";
 
 const GenresContentContainer = (props: GenresContentContainerType) => {
-  const { data, header } = props;
+  const { data, header, type } = props;
   const useApi = useApiStore();
+  const navigate = useNavigate();
+
+  const handleClick = (id: string, type: string) => {
+    switch (type) {
+      case "movie":
+        navigate(`/movie/${id}`);
+        break;
+      case "serie":
+        navigate(`/serie/${id}`);
+        break;
+      case "genre-serie":
+        navigate(`/serie/${id}`);
+        break;
+      case "genre-movie":
+        navigate(`/movie/${id}`);
+        break;
+    }
+  };
 
   /*  her tür için 4 filmin kapak fotoğrafını alma 
   const [genreData, setGenreData] = useState<any>({});
@@ -41,7 +60,14 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
         {data?.map((v: any) => {
           const uniqKey = CreateUniqKey();
           return (
-            <div className="genreData" key={uniqKey}>
+            <div
+              className="genreData"
+              key={uniqKey}
+              onClick={() => {
+                console.log("çalıştı");
+                handleClick(v.id, type);
+              }}
+            >
               <div className="dataImageContainer">
                 <img
                   onError={({ currentTarget }) => {

@@ -12,6 +12,8 @@ export type ApiStore = {
   popularMovie: any | null;
   topRatedMovie: any | null;
   upcomingMovie: any | null;
+  detailMovie: any | null;
+  castMovie: any | null;
 
   genreSeries: [GenreMovieType] | null;
   popularSeries: any | null;

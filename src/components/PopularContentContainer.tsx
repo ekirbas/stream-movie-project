@@ -3,9 +3,28 @@ import { PopularContentContainerType } from "../models/homeType";
 import { CreateUniqKey } from "../helpers/function";
 import statikVariables from "../store/statikVariables";
 import ImdbIcon from "../assets/images/ImdbIcon";
+import { useNavigate } from "react-router";
 
 const PopularContentContainer = (props: PopularContentContainerType) => {
-  const { data, header } = props;
+  const { data, header, type } = props;
+  const navigate = useNavigate();
+
+  const handleClick = (id: string, type: string) => {
+    switch (type) {
+      case "movie":
+        navigate(`/movie/${id}`);
+        break;
+      case "serie":
+        navigate(`/serie/${id}`);
+        break;
+      case "genre-serie":
+        navigate(`/serie/${id}`);
+        break;
+      case "genre-movie":
+        navigate(`/movie/${id}`);
+        break;
+    }
+  };
   return (
     <div>
       <div className="headerContainer">
@@ -16,7 +35,11 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
         {data?.map((v: any) => {
           const uniqKey = CreateUniqKey();
           return (
-            <div className="genreData popularData" key={uniqKey}>
+            <div
+              className="genreData popularData"
+              key={uniqKey}
+              onClick={() => handleClick(v.id, type)}
+            >
               <div className="dataImageContainer">
                 <img
                   src={
