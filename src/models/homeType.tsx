@@ -25,3 +25,15 @@ export interface DetailImageType {
   overview: string;
   url: string;
 }
+export interface SeasonsType {
+  seasons: any;
+  series_id: any;
+}
+export interface EpisodesType {
+  detailSeason: any;
+}
+export interface SeasonItemType {
+  series_id: any;
+  episode_count: any;
+  season_number: any;
+}

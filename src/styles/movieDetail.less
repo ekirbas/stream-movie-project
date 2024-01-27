@@ -1,220 +1,224 @@
 .movieDetail {
   color: var(--white);
   max-width: 100%;
+}
+.divTitle {
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
-  .divTitle {
-    font: 500 18px/150% "Manrope", sans-serif;
-    color: var(--grey60);
-    margin-bottom: 14px;
+.detailContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  /* detailLeft */
+  .detailLeft {
     display: flex;
-    align-items: center;
-    gap: 4px;
-  }
+    flex-direction: column;
+    gap: 30px;
+    flex: 3;
+    max-width: 66.6%;
 
-  .detailContainer {
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    /* detailLeft */
-    .detailLeft {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      flex: 2;
-      max-width: 66.6%;
-      .overview {
-        background-color: var(--black10);
-        border-radius: 12px;
-        border: solid 1px var(--black15);
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        padding: 50px;
-        font: 500 18px/150% "Manrope", sans-serif;
-        color: var(--white);
-      }
-      .castArea {
-        display: flex;
-        flex-direction: column;
-        padding: 50px;
-        gap: 30px;
-        background-color: var(--black10);
-        border: solid 1px var(--black15);
-        border-radius: 12px;
-
-        .castContainer {
-          display: flex;
-          gap: 20px;
-          overflow: auto;
-          .castCard {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            img {
-              width: 226px;
-              height: 269px;
-              border-radius: 12px;
-            }
-            .characterText {
-              font: 400 18px/150% "Manrope", sans-serif;
-              color: var(--grey60);
-              display: -webkit-box;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              -webkit-line-clamp: 1;
-              -webkit-box-orient: vertical;
-            }
-          }
-        }
-      }
-    }
-    /* detailRight */
-    .detailRight {
+    .overview {
       background-color: var(--black10);
-      max-width: 33.3%;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      gap: 30px;
-      padding: 50px;
       border-radius: 12px;
       border: solid 1px var(--black15);
-      .releaseDate {
-        font: 600 20px/150% "Manrope", sans-serif;
-      }
-      .languagesArea {
-        .languagesContainer {
-          display: flex;
-          gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 50px;
+      font: 500 18px/150% "Manrope", sans-serif;
+      color: var(--white);
+    }
+    .castArea {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      gap: 30px;
+      background-color: var(--black10);
+      border: solid 1px var(--black15);
+      border-radius: 12px;
 
-          .languages {
-            border-radius: 8px;
-            background-color: var(--black08);
-            border: solid 1px var(--black15);
-            padding: 8px 14px;
-            font: 500 18px/150% "Manrope", sans-serif;
-          }
-        }
-      }
-      .ratingContainer {
-        display: inline-flex;
-        flex-direction: column;
-        font: 600 20px/150% "Manrope", sans-serif;
-        gap: 4px;
-        background-color: var(--black08);
-        border-radius: 8px;
-        border: solid 1px var(--black15);
-        padding: 16px;
-        .starsContainer {
-          display: flex;
-          align-items: center;
-          padding: 2px;
-          gap: 2px;
-
-          .ratingText {
-            font: 500 18px/100% "Manrope", sans-serif;
-            margin-left: 4px;
-            display: inline-flex;
-          }
-        }
-      }
-      .genresArea {
-        .genresContainer {
-          display: flex;
-          gap: 10px;
-          .genres {
-            border-radius: 8px;
-            background-color: var(--black08);
-            border: solid 1px var(--black15);
-            padding: 8px 14px;
-            font: 500 18px/150% "Manrope", sans-serif;
-          }
-        }
-      }
-      .directorArea {
-        .directorContainer {
+      .castContainer {
+        display: flex;
+        gap: 20px;
+        overflow: auto;
+        .castCard {
           display: flex;
           flex-direction: column;
-          gap: 10px;
-          .director {
-            display: flex;
-            align-items: center;
-            border-radius: 8px;
-            background-color: var(--black08);
-            border: solid 1px var(--black15);
-            padding: 14px;
-            font: 500 18px/150% "Manrope", sans-serif;
-            gap: 10px;
-            img {
-              height: 60px;
-              width: 56.56px;
-              border-radius: 8px;
-            }
+          align-items: center;
+          gap: 4px;
+          img {
+            width: 226px;
+            height: 269px;
+            border-radius: 12px;
+          }
+          .characterText {
+            font: 400 18px/150% "Manrope", sans-serif;
+            color: var(--grey60);
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
           }
         }
       }
     }
   }
-
-  .trialHorizontal {
-    width: 100%;
-    height: 313px;
-    padding: 100px 80px;
+  /* detailRight */
+  .detailRight {
+    background-color: var(--black10);
+    max-width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+    padding: 50px;
     border-radius: 12px;
-    border: solid 1px #262626;
-    position: relative;
-    .horizontalContainer {
-      display: flex;
-
-      .horizontalText {
+    border: solid 1px var(--black15);
+    .releaseDate {
+      font: 600 20px/150% "Manrope", sans-serif;
+    }
+    .languagesArea {
+      .languagesContainer {
         display: flex;
-        flex-direction: column;
-        gap: 14px;
-        flex: 3;
-        .horizontalBigText {
-          font: 600 48px/150% "Manrope", sans-serif;
-          color: var(--white);
-          z-index: 10;
-        }
-        .horizontalSmallText {
-          font: 400 18px/150% "Manrope", sans-serif;
-          color: var(--grey60);
-          z-index: 10;
-        }
-      }
-      .horizontalButton {
-        z-index: 10;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
 
-        button {
-          font: 600 18px/150% "Manrope", sans-serif;
-          color: var(--white);
-          padding: 18px 24px;
+        .languages {
           border-radius: 8px;
-          background-color: var(--red45);
-          z-index: 10;
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          padding: 8px 14px;
+          font: 500 18px/150% "Manrope", sans-serif;
         }
       }
     }
-    .fadeOutHorizontal {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 12px;
-      background: linear-gradient(
-        90deg,
-        #0f0f0f 4%,
-        rgba(20.42, 14.62, 14.62, 0.97) 22%,
-        rgba(34.35, 13.64, 13.64, 0.91) 39%,
-        rgba(229, 0, 0, 0.4) 100%
-      );
+    .ratingContainer {
+      display: inline-flex;
+      flex-direction: column;
+      font: 600 20px/150% "Manrope", sans-serif;
+      gap: 4px;
+      background-color: var(--black08);
+      border-radius: 8px;
+      border: solid 1px var(--black15);
+      padding: 16px;
+      .starsContainer {
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        gap: 2px;
+
+        .ratingText {
+          font: 500 18px/100% "Manrope", sans-serif;
+          margin-left: 4px;
+          display: inline-flex;
+        }
+      }
+    }
+    .genresArea {
+      .genresContainer {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .genres {
+          border-radius: 8px;
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          padding: 8px 14px;
+          font: 500 18px/150% "Manrope", sans-serif;
+        }
+      }
+    }
+    .directorArea {
+      .directorContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .director {
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          padding: 14px;
+          font: 500 18px/150% "Manrope", sans-serif;
+          gap: 10px;
+          img {
+            height: 60px;
+            width: 56.56px;
+            border-radius: 8px;
+          }
+        }
+      }
     }
   }
 }
+
+.trialHorizontal {
+  width: 100%;
+  height: 313px;
+  padding: 100px 80px;
+  border-radius: 12px;
+  border: solid 1px #262626;
+  position: relative;
+  .horizontalContainer {
+    display: flex;
+
+    .horizontalText {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 3;
+      .horizontalBigText {
+        font: 600 48px/150% "Manrope", sans-serif;
+        color: var(--white);
+        z-index: 10;
+      }
+      .horizontalSmallText {
+        font: 400 18px/150% "Manrope", sans-serif;
+        color: var(--grey60);
+        z-index: 10;
+      }
+    }
+    .horizontalButton {
+      z-index: 10;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      button {
+        font: 600 18px/150% "Manrope", sans-serif;
+        color: var(--white);
+        padding: 18px 24px;
+        border-radius: 8px;
+        background-color: var(--red45);
+        z-index: 10;
+      }
+    }
+  }
+  .fadeOutHorizontal {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      90deg,
+      #0f0f0f 4%,
+      rgba(20.42, 14.62, 14.62, 0.97) 22%,
+      rgba(34.35, 13.64, 13.64, 0.91) 39%,
+      rgba(229, 0, 0, 0.4) 100%
+    );
+  }
+}
+
 /* DetailImage */
 .detailImageContainer {
   width: 100%;

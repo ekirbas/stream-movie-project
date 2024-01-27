@@ -74,7 +74,6 @@ const MovieDetail = () => {
                 })}
               </div>
             </div>
-            <div className="reviewsArea"></div>
           </div>
           {/* detailRight */}
           <div className="detailRight">

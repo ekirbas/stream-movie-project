@@ -20,6 +20,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
   popularSeries: null,
   topRatedSeries: null,
   onTheAirSeries: null,
+  detailSeries: null,
+  castSeries: null,
+  detailSeason: null,
 
   arrayState: [],
   count: 1,
@@ -187,6 +190,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
       );
       //console.log("fecthDetailSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ detailSeries: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -199,6 +203,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
       );
       //console.log("fecthCastSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ castSeries: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -211,6 +216,8 @@ export const useApiStore = create<ApiStore>()((set) => ({
       );
       //console.log("fecthDetailSeason =", response);
       //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ detailSeason: response.data.episodes }));
+      return response;
     } catch (err) {
       console.log(err);
     }

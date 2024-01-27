@@ -2,7 +2,7 @@
   color: var(--white);
   max-width: 100%;
 }
-.movieDetail .divTitle {
+.divTitle {
   font: 500 18px/150% "Manrope", sans-serif;
   color: var(--grey60);
   margin-bottom: 14px;
@@ -10,21 +10,21 @@
   align-items: center;
   gap: 4px;
 }
-.movieDetail .detailContainer {
+.detailContainer {
   width: 100%;
   display: flex;
   gap: 20px;
   /* detailLeft */
   /* detailRight */
 }
-.movieDetail .detailContainer .detailLeft {
+.detailContainer .detailLeft {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  flex: 2;
+  flex: 3;
   max-width: 66.6%;
 }
-.movieDetail .detailContainer .detailLeft .overview {
+.detailContainer .detailLeft .overview {
   background-color: var(--black10);
   border-radius: 12px;
   border: solid 1px var(--black15);
@@ -35,7 +35,7 @@
   font: 500 18px/150% "Manrope", sans-serif;
   color: var(--white);
 }
-.movieDetail .detailContainer .detailLeft .castArea {
+.detailContainer .detailLeft .castArea {
   display: flex;
   flex-direction: column;
   padding: 50px;
@@ -44,23 +44,23 @@
   border: solid 1px var(--black15);
   border-radius: 12px;
 }
-.movieDetail .detailContainer .detailLeft .castArea .castContainer {
+.detailContainer .detailLeft .castArea .castContainer {
   display: flex;
   gap: 20px;
   overflow: auto;
 }
-.movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard {
+.detailContainer .detailLeft .castArea .castContainer .castCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
 }
-.movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard img {
+.detailContainer .detailLeft .castArea .castContainer .castCard img {
   width: 226px;
   height: 269px;
   border-radius: 12px;
 }
-.movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
+.detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
   font: 400 18px/150% "Manrope", sans-serif;
   color: var(--grey60);
   display: -webkit-box;
@@ -69,7 +69,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.movieDetail .detailContainer .detailRight {
+.detailContainer .detailRight {
   background-color: var(--black10);
   max-width: 33.3%;
   display: flex;
@@ -80,21 +80,22 @@
   border-radius: 12px;
   border: solid 1px var(--black15);
 }
-.movieDetail .detailContainer .detailRight .releaseDate {
+.detailContainer .detailRight .releaseDate {
   font: 600 20px/150% "Manrope", sans-serif;
 }
-.movieDetail .detailContainer .detailRight .languagesArea .languagesContainer {
+.detailContainer .detailRight .languagesArea .languagesContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
-.movieDetail .detailContainer .detailRight .languagesArea .languagesContainer .languages {
+.detailContainer .detailRight .languagesArea .languagesContainer .languages {
   border-radius: 8px;
   background-color: var(--black08);
   border: solid 1px var(--black15);
   padding: 8px 14px;
   font: 500 18px/150% "Manrope", sans-serif;
 }
-.movieDetail .detailContainer .detailRight .ratingContainer {
+.detailContainer .detailRight .ratingContainer {
   display: inline-flex;
   flex-direction: column;
   font: 600 20px/150% "Manrope", sans-serif;
@@ -104,34 +105,35 @@
   border: solid 1px var(--black15);
   padding: 16px;
 }
-.movieDetail .detailContainer .detailRight .ratingContainer .starsContainer {
+.detailContainer .detailRight .ratingContainer .starsContainer {
   display: flex;
   align-items: center;
   padding: 2px;
   gap: 2px;
 }
-.movieDetail .detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
+.detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
   font: 500 18px/100% "Manrope", sans-serif;
   margin-left: 4px;
   display: inline-flex;
 }
-.movieDetail .detailContainer .detailRight .genresArea .genresContainer {
+.detailContainer .detailRight .genresArea .genresContainer {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
-.movieDetail .detailContainer .detailRight .genresArea .genresContainer .genres {
+.detailContainer .detailRight .genresArea .genresContainer .genres {
   border-radius: 8px;
   background-color: var(--black08);
   border: solid 1px var(--black15);
   padding: 8px 14px;
   font: 500 18px/150% "Manrope", sans-serif;
 }
-.movieDetail .detailContainer .detailRight .directorArea .directorContainer {
+.detailContainer .detailRight .directorArea .directorContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.movieDetail .detailContainer .detailRight .directorArea .directorContainer .director {
+.detailContainer .detailRight .directorArea .directorContainer .director {
   display: flex;
   align-items: center;
   border-radius: 8px;
@@ -141,12 +143,12 @@
   font: 500 18px/150% "Manrope", sans-serif;
   gap: 10px;
 }
-.movieDetail .detailContainer .detailRight .directorArea .directorContainer .director img {
+.detailContainer .detailRight .directorArea .directorContainer .director img {
   height: 60px;
   width: 56.56px;
   border-radius: 8px;
 }
-.movieDetail .trialHorizontal {
+.trialHorizontal {
   width: 100%;
   height: 313px;
   padding: 100px 80px;
@@ -154,32 +156,32 @@
   border: solid 1px #262626;
   position: relative;
 }
-.movieDetail .trialHorizontal .horizontalContainer {
+.trialHorizontal .horizontalContainer {
   display: flex;
 }
-.movieDetail .trialHorizontal .horizontalContainer .horizontalText {
+.trialHorizontal .horizontalContainer .horizontalText {
   display: flex;
   flex-direction: column;
   gap: 14px;
   flex: 3;
 }
-.movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+.trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
   font: 600 48px/150% "Manrope", sans-serif;
   color: var(--white);
   z-index: 10;
 }
-.movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+.trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
   font: 400 18px/150% "Manrope", sans-serif;
   color: var(--grey60);
   z-index: 10;
 }
-.movieDetail .trialHorizontal .horizontalContainer .horizontalButton {
+.trialHorizontal .horizontalContainer .horizontalButton {
   z-index: 10;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.movieDetail .trialHorizontal .horizontalContainer .horizontalButton button {
+.trialHorizontal .horizontalContainer .horizontalButton button {
   font: 600 18px/150% "Manrope", sans-serif;
   color: var(--white);
   padding: 18px 24px;
@@ -187,7 +189,7 @@
   background-color: var(--red45);
   z-index: 10;
 }
-.movieDetail .trialHorizontal .fadeOutHorizontal {
+.trialHorizontal .fadeOutHorizontal {
   position: absolute;
   inset: 0;
   width: 100%;

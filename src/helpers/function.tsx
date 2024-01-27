@@ -9,10 +9,15 @@ export const CreateUniqKey = () => {
   );
 };
 
-/* Array.prototype.toGroup = function (callbackFn:any) {
-  return reduce((a:any, b:any) => {
+interface Array<T> {
+  toGroup(a: any): T;
+}
+Object.defineProperty(Array.prototype, "toGroup", {
+  value: function (callbackFn: any) {
+    return this.reduce((a: any, b: any) => {
       const key = callbackFn(b);
       const groupName = key == null ? "notTaken" : key;
       return { ...a, [groupName]: groupName in a ? [...a[groupName], b] : [b] };
-  }, {});
-}; */
+    }, {});
+  },
+});

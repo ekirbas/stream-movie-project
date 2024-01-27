@@ -7,6 +7,7 @@ export type ApiStore = {
   count: number;
   inc: () => void;
 
+  //Movies
   genreMovie: [GenreMovieType] | null;
   genreDescVoteMovie: any | null;
   popularMovie: any | null;
@@ -15,30 +16,36 @@ export type ApiStore = {
   detailMovie: any | null;
   castMovie: any | null;
 
+  //Series
   genreSeries: [GenreMovieType] | null;
   popularSeries: any | null;
   topRatedSeries: any | null;
   onTheAirSeries: any | null;
+  detailSeries: any | null;
+  castSeries: any | null;
+  detailSeason: any | null;
 
   arrayState: any | null;
 
-  fecthPopularMovie: (page: string) => void;
-  fecthUpcomingMovie: (page: string) => void;
-  fecthTopRatedMovie: (page: string) => void;
-  fecthDetailMovie: (movie_id: string) => void;
-  fecthTrailerMovie: (movie_id: string) => void;
-  fecthCastMovie: (movie_id: string) => void;
-  fecthGenreMovie: () => void;
-  fecthGenreDescVoteMovie: (genre_id: string) => void;
+  //Movies
+  fecthPopularMovie: (page: string) => Promise<any>;
+  fecthUpcomingMovie: (page: string) => Promise<any>;
+  fecthTopRatedMovie: (page: string) => Promise<any>;
+  fecthDetailMovie: (movie_id: string) => Promise<any>;
+  fecthTrailerMovie: (movie_id: string) => Promise<any>;
+  fecthCastMovie: (movie_id: string) => Promise<any>;
+  fecthGenreMovie: () => Promise<any>;
+  fecthGenreDescVoteMovie: (genre_id: string) => Promise<any>;
 
-  fecthGenreSeries: () => void;
-  fecthPopularSeries: (page: string) => void;
-  fecthTopRatedSeries: (page: string) => void;
-  fecthDetailSeries: (series_id: string) => void;
-  fecthCastSeries: (series_id: string) => void;
-  fecthDetailSeason: (series_id: string, season_number: string) => void;
-  fecthTrailerSeries: (series_id: string) => void;
-  fecthOnTheAirSeries: (page: string) => void;
+  //Series
+  fecthGenreSeries: () => Promise<any>;
+  fecthPopularSeries: (page: string) => Promise<any>;
+  fecthTopRatedSeries: (page: string) => Promise<any>;
+  fecthDetailSeries: (series_id: string) => Promise<any>;
+  fecthCastSeries: (series_id: string) => Promise<any>;
+  fecthDetailSeason: (series_id: string, season_number: string) => Promise<any>;
+  fecthTrailerSeries: (series_id: string) => Promise<any>;
+  fecthOnTheAirSeries: (page: string) => Promise<any>;
 
   setGenreMovie: (data?: GenreMovieType[]) => void;
 
