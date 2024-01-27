@@ -13,7 +13,7 @@ const ImageSliderData = (props: ImageSliderDataType) => {
   const { data } = props;
   return (
     <div className="sliderImageContainer">
-      {data.map((v: any) => {
+      {data?.map((v: any) => {
         const uniqKey = CreateUniqKey();
         return (
           <div

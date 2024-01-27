@@ -1,0 +1,148 @@
+.support {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 115px;
+}
+.contactArea {
+  width: 100%;
+  display: flex;
+  gap: 80px;
+}
+.contactArea .contactLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 14px;
+}
+.contactArea .contactLeft h1 {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.contactArea .contactLeft p {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.contactArea .contactLeft img {
+  margin-top: 36px;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: solid 6px var(--black15);
+  background-color: var(--black06);
+}
+/* ContactForm.tsx */
+.contactRight {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background-color: var(--black06);
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px var(--black15) solid;
+  gap: 50px;
+}
+.contactRight .horizontalContainer {
+  display: flex;
+  gap: 50px;
+}
+.contactRight .verticalContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.contactRight .titleDiv {
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.contactRight .inpt {
+  padding: 20px;
+  background-color: var(--black08);
+  border-radius: 8px;
+  border: 1px var(--black15) solid;
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.contactRight .sendButton {
+  border-radius: 8px;
+  padding: 18px 24px;
+  background-color: var(--red45);
+  color: var(--white);
+  font: 600 18px/150% "Manrope", sans-serif;
+  margin: auto;
+}
+.questionsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+}
+.questionsArea .questionsTopContainer {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+}
+.questionsArea .questionsTopContainer .questionsTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.questionsArea .questionsTopContainer .questionsTitleContainer .questionsTitle {
+  font: 600 38px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.questionsArea .questionsTopContainer .questionsTitleContainer .questionsText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.questionsArea .questionsTopContainer .askQuestionButton {
+  align-self: flex-end;
+  padding: 18px 24px;
+  border-radius: 8px;
+  background-color: var(--red45);
+  color: var(--white);
+  font: 600 18px/150% "Manrope", sans-serif;
+}
+.questionsArea .questionsBottomContainer {
+  display: flex;
+  gap: 80px;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 34px;
+  border-bottom: solid 1px var(--red45);
+  border-image: linear-gradient(to right, var(--black08) 0%, var(--red45) 8%, var(--black08) 100%) 1;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .count {
+  background-color: var(--black12);
+  border: 1px var(--black15);
+  padding: 20px;
+  font: 600 20px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionTitle {
+  font: 500 22px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionAnswer {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .plusIcon {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  flex-shrink: 0;
+}

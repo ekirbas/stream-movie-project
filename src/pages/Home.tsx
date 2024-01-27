@@ -55,7 +55,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-
       <div className="homeContainer" style={{ marginTop: `${windowHeight}px` }}>
         <div className="contentContainer">
           {/* Movie area */}

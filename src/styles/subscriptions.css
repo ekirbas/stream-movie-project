@@ -1,0 +1,161 @@
+.subscriptions {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 100px;
+}
+.plansArea {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.plansArea .topContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 100px;
+}
+.plansArea .topContainer .textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.plansArea .topContainer .textContainer .topTitle {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .topContainer .textContainer .topText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansArea .topContainer .tabs {
+  border-radius: 10px;
+  padding: 14px 24px;
+  background-color: var(--black12);
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+  margin-left: auto;
+}
+.plansArea .itemsContainer {
+  display: flex;
+  gap: 30px;
+}
+.plansArea .itemsContainer .planCard {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px var(--black15) solid;
+  background-color: var(--black10);
+}
+.plansArea .itemsContainer .planCard .planText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.plansArea .itemsContainer .planCard .planText h2 {
+  font: 700 24px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .itemsContainer .planCard .planText p {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansArea .itemsContainer .priceContainer {
+  display: flex;
+}
+.plansArea .itemsContainer .priceContainer .price {
+  font: 600 40px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .itemsContainer .priceContainer .planTime {
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansArea .itemsContainer .buttonsContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.plansArea .itemsContainer .buttonsContainer .trialButton {
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  padding: 18px 24px;
+  background-color: var(--black08);
+  border: 1px var(--black15) solid;
+  border-radius: 8px;
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .itemsContainer .buttonsContainer .choosePlanButton {
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  padding: 18px 24px;
+  background-color: var(--black08);
+  border: 1px var(--black15) solid;
+  border-radius: 8px;
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+  background-color: var(--red45);
+}
+.plansDetailArea {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.plansDetailArea .topContainer {
+  padding-right: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.plansDetailArea .topContainer .plansDetailTitle {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansDetailArea .topContainer .plansDetailText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansDetailArea .plansTable {
+  overflow: auto;
+  border: 1px var(--black15) solid;
+  border-radius: 12px;
+}
+.plansDetailArea .plansTable table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-style: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+.plansDetailArea .plansTable table thead {
+  background-color: var(--black06);
+  border: 1px var(--black15) solid;
+  font: 600 20px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansDetailArea .plansTable table thead th {
+  width: 25%;
+  border: 1px var(--black15) solid;
+  text-align: left;
+  flex: 1;
+  align-items: center;
+  padding: 30px;
+}
+.plansDetailArea .plansTable table thead th .popularText {
+  margin-left: 4px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  background-color: var(--red45);
+  font: 600 14px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansDetailArea .plansTable table tbody td {
+  border: 1px var(--black15) solid;
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  padding: 30px;
+}

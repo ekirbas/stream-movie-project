@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import App from "../App";
+/* import App from "../App"; */
 import ErrorPage from "../pages/ErrorPage";
 import MovieAndShow from "../pages/MovieAndShow";
-import Subscription from "../pages/Subscription";
+import Subscriptions from "../pages/Subscriptions";
 import Support from "../pages/Support";
 import MovieDetail from "../pages/MovieDetail";
 import Layout from "../components/Layout";
@@ -25,8 +25,8 @@ const Router = () => {
           element: <MovieAndShow />,
         },
         {
-          path: "/subscription",
-          element: <Subscription />,
+          path: "/subscriptions",
+          element: <Subscriptions />,
         },
         {
           path: "/support",
