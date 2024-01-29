@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router";
 import { useApiStore } from "../store/store";
 import DetailImage from "../components/DetailImage";
@@ -12,25 +12,17 @@ import DateIcon from "../assets/images/DateIcon";
 import "../helpers/function";
 import Seasons from "../components/Seasons";
 import { CreateUniqKey } from "../helpers/function";
+import TabsIndicator from "../components/TabsIndicator";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
+import TrialHorizontal from "../components/TrialHorizontal";
 
 const SeriesDetail = () => {
   const useApi = useApiStore();
   const { serie_id } = useParams();
-  useEffect(() => {
-    useApi.fecthDetailSeries(`${serie_id}`);
-    useApi.fecthCastSeries(`${serie_id}`);
-  }, []);
-
+  const castContainerRef = useRef(null);
   const data = useApi.detailSeries;
-
   const castData = useApi.castSeries;
-  /*  const castGroup = castData?.crew?.toGroup((v: any) => v.job); //gruplama prototype  */
-
-  console.log("detailSeries", data);
-  console.log("castSeries", castData);
-
   let directors: any = [],
     writer: any = [],
     music: any = [];
@@ -46,9 +38,11 @@ const SeriesDetail = () => {
       return true;
     }
   });
-  console.log("directors", directors);
-  console.log("writer", writer);
-  console.log("music", music);
+
+  useEffect(() => {
+    useApi.fecthDetailSeries(`${serie_id}`);
+    useApi.fecthCastSeries(`${serie_id}`);
+  }, []);
 
   return (
     <div className="seriesDetail">
@@ -58,6 +52,7 @@ const SeriesDetail = () => {
           overview={data?.tagline ?? ""}
           url={data?.backdrop_path}
         />
+        {/* detailContainer */}
         <div className="detailContainer">
           {/* detailLeft */}
           <div className="detailLeft">
@@ -68,8 +63,11 @@ const SeriesDetail = () => {
             </div>
             {/* castArea */}
             <div className="castArea">
-              <div className="divTitle">Cast</div>
-              <div className="castContainer">
+              <div className="topContainer">
+                <div className="divTitle">Cast</div>
+                <TabsIndicator ref={castContainerRef} />
+              </div>
+              <div className="castContainer" ref={castContainerRef}>
                 {castData?.cast.map((v: any) => {
                   const uniqId = CreateUniqKey();
                   return (
@@ -113,6 +111,7 @@ const SeriesDetail = () => {
                 })}
               </div>
             </div>
+            {/* vote container */}
             <div>
               <div className="divTitle">
                 <StarIcon />
@@ -136,6 +135,7 @@ const SeriesDetail = () => {
                 </div>
               </div>
             </div>
+            {/* genresArea */}
             <div className="genresArea">
               <div className="divTitle">
                 <GenreIcon />
@@ -147,6 +147,8 @@ const SeriesDetail = () => {
                 })}
               </div>
             </div>
+
+            {/* directorArea */}
             {directors.length !== 0 ? (
               <div className="directorArea">
                 <div className="divTitle">Yönetmen</div>
@@ -171,6 +173,8 @@ const SeriesDetail = () => {
                 </div>
               </div>
             ) : null}
+
+            {/* writer Area */}
             {writer.length !== 0 ? (
               <div className="directorArea">
                 <div className="divTitle">Yazar</div>
@@ -194,6 +198,8 @@ const SeriesDetail = () => {
                 </div>
               </div>
             ) : null}
+
+            {/* music Area */}
             {music.length !== 0 ? (
               <div className="directorArea">
                 <div className="divTitle">Müzik</div>
@@ -220,25 +226,8 @@ const SeriesDetail = () => {
             ) : null}
           </div>
         </div>
-        <div
-          className="trialHorizontal"
-          style={{ backgroundImage: `url(${trialHorizontal})` }}
-        >
-          <div className="horizontalContainer">
-            <div className="horizontalText">
-              <div className="horizontalBigText">
-                Start your free trial today!
-              </div>
-              <div className="horizontalSmallText">
-                This is a clear and concise call to action that encourages users
-                to sign up for a free trial of StreamVibe.
-              </div>
-            </div>
-            <div className="horizontalButton">
-              <button>Start a Free Trial</button>
-            </div>
-          </div>
-          <div className="fadeOutHorizontal"></div>
+        <div>
+          <TrialHorizontal />
         </div>
       </div>
     </div>

@@ -1,20 +1,9 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef } from "react";
 import LeftArrowIcon from "../assets/images/LeftArrowIcon";
 import RightArrowIcon from "../assets/images/RightArrowIcon";
 
 const TabsIndicator = ({}, ref: any) => {
   const scrollLeft = () => {
-    /*  ref.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    }); */
-    /* 
-      const listNode = listRef.current;
-    // This line assumes a particular DOM structure:
-    const imgNode = listNode.querySelectorAll('li > img')[index];
-  */
-    console.log("ref", ref.current.offsetWidth);
     const refWidth = ref.current.offsetWidth;
     ref.current.scrollBy({
       left: -refWidth,

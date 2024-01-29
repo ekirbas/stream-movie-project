@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { GenresContentContainerType } from "../models/homeType";
 import { useApiStore } from "../store/store";
-import staticVariables from "../store/statikVariables";
 import RightArrowIcon from "../assets/images/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
 import { useNavigate } from "react-router";
@@ -9,7 +8,6 @@ import TabsIndicator from "./TabsIndicator";
 
 const GenresContentContainer = (props: GenresContentContainerType) => {
   const { data, header, type } = props;
-  const useApi = useApiStore();
   const navigate = useNavigate();
   const dataContainerRef = useRef(null);
 
@@ -66,7 +64,6 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
               className="genreData"
               key={uniqKey}
               onClick={() => {
-                console.log("çalıştı");
                 handleClick(v.id, type);
               }}
             >

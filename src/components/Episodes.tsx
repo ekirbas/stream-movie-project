@@ -5,7 +5,6 @@ import { CreateUniqKey } from "../helpers/function";
 
 const Episodes = (props: EpisodesType) => {
   const { detailSeason } = props;
-  console.log("detailSeason", detailSeason);
   return detailSeason.map((v: any) => {
     const uniqId = CreateUniqKey();
 

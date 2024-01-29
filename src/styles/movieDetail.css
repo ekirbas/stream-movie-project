@@ -44,10 +44,20 @@
   border: solid 1px var(--black15);
   border-radius: 12px;
 }
+.detailContainer .detailLeft .castArea .topContainer {
+  display: flex;
+}
 .detailContainer .detailLeft .castArea .castContainer {
   display: flex;
   gap: 20px;
   overflow: auto;
+  -ms-overflow-style: none;
+  /* Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.detailContainer .detailLeft .castArea .castContainer::-webkit-scrollbar {
+  display: none;
 }
 .detailContainer .detailLeft .castArea .castContainer .castCard {
   display: flex;

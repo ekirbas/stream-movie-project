@@ -17,6 +17,14 @@ const Home = () => {
     useApi.fecthTopRatedSeries("1");
     useApi.fecthUpcomingMovie("1");
     useApi.fecthOnTheAirSeries("1");
+
+    /* useApi.genreDescVoteMovie("28"); */
+    /*  useApi.fecthDetailMovie("572802"); */
+    /* useApi.fecthCastMovie("572802"); */
+    /* useApi.fecthDetailSeries("67136"); */
+    /* useApi.fecthCastSeries("67136"); */
+    useApi.fecthDetailSeason("67136", "1");
+    /* console.log("sonuç", useApi.detailMovie); */
   }, []);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   window.onresize = () => setWindowHeight(window.innerHeight);

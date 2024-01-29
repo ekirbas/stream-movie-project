@@ -4,7 +4,6 @@ import RightArrowIcon from "../assets/images/RightArrowIcon";
 
 const SliderImageTabsIndicator = ({}, ref: any) => {
   const scrollLeft = () => {
-    console.log("ref", ref.current.offsetWidth);
     const refWidth = ref.current.offsetWidth;
     ref.current.scrollBy({
       left: -refWidth,
@@ -15,7 +14,6 @@ const SliderImageTabsIndicator = ({}, ref: any) => {
   };
   const scrollRight = () => {
     const refWidth = ref.current.offsetWidth;
-    console.log("refWidth", ref);
     ref.current.scrollBy({
       left: refWidth,
       behavior: "smooth",

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router";
 import { useApiStore } from "../store/store";
 import DetailImage from "../components/DetailImage";
@@ -11,24 +11,14 @@ import statikVariables from "../store/statikVariables";
 import TrialHorizontal from "../components/TrialHorizontal";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
+import TabsIndicator from "../components/TabsIndicator";
 
 const MovieDetail = () => {
   const useApi = useApiStore();
   const { movie_id } = useParams();
-  useEffect(() => {
-    useApi.fecthDetailMovie(`${movie_id}`);
-    useApi.fecthCastMovie(`${movie_id}`);
-  }, []);
-
+  const castContainerRef = useRef(null);
   const data = useApi.detailMovie;
   const castData = useApi.castMovie;
-  console.log("data md", data);
-  const handleRating = (rate: number) => {
-    console.log("rate", rate);
-
-    // other logic
-  };
-
   let directors: any = [],
     writer: any = [],
     music: any = [];
@@ -44,6 +34,10 @@ const MovieDetail = () => {
       return true;
     }
   });
+  useEffect(() => {
+    useApi.fecthDetailMovie(`${movie_id}`);
+    useApi.fecthCastMovie(`${movie_id}`);
+  }, []);
 
   return (
     <div className="movieDetail">
@@ -61,8 +55,11 @@ const MovieDetail = () => {
               <div>{data?.overview}</div>
             </div>
             <div className="castArea">
-              <div className="divTitle">Cast</div>
-              <div className="castContainer">
+              <div className="topContainer">
+                <div className="divTitle">Cast</div>
+                <TabsIndicator ref={castContainerRef} />
+              </div>
+              <div className="castContainer" ref={castContainerRef}>
                 {castData?.cast.map((v: any) => {
                   return (
                     v.profile_path && (

@@ -21,9 +21,9 @@ export interface ImageSliderDataType {
   data?: any;
 }
 export interface DetailImageType {
-  title: string;
-  overview: string;
-  url: string;
+  title?: string;
+  overview?: string;
+  url?: string;
 }
 export interface SeasonsType {
   seasons: any;

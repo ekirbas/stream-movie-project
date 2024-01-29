@@ -8,6 +8,11 @@ const options = {
 };
 
 export const useApiStore = create<ApiStore>()((set) => ({
+  /* Zustand default state */
+  count: 1,
+  inc: () => set((state) => ({ count: state.count + 1 })),
+
+  /* Movie */
   genreMovie: null,
   genreDescVoteMovie: null,
   popularMovie: null,
@@ -16,6 +21,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
   detailMovie: null,
   castMovie: null,
 
+  /* Series */
   genreSeries: null,
   popularSeries: null,
   topRatedSeries: null,
@@ -24,14 +30,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
   castSeries: null,
   detailSeason: null,
 
-  arrayState: [],
-  count: 1,
-  inc: () => set((state) => ({ count: state.count + 1 })),
+  searchMulti: null,
 
-  //---- set States
-  setArrayState: (value) =>
-    set((state) => ({ arrayState: [...state.arrayState, ...value] })),
-  clearArrayState: () => set(() => ({ arrayState: [] })),
+  arrayState: [],
 
   //---- fecth Movie
   fecthPopularMovie: async (page) => {
@@ -40,7 +41,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/popular?language=tr&page=${page}`,
         options
       );
-      console.log("fecthPopularMovie =", response);
+      //console.log("fecthPopularMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       set(() => ({ popularMovie: response.data.results }));
     } catch (err) {
@@ -105,7 +106,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=tr`,
         options
       );
-      ////console.log("fecthCastMovie =", response);
+      //console.log("fecthCastMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       set(() => ({ castMovie: response.data }));
     } catch (err) {
@@ -240,15 +241,36 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/on_the_air?language=tr&page=${page}`,
         options
       );
-      console.log("fecthOnTheAirSeries =", response);
+      //console.log("fecthOnTheAirSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       set(() => ({ onTheAirSeries: response.data.results }));
     } catch (err) {
       console.log(err);
     }
   },
+
+  fecthSearchMulti: async (search_query) => {
+    try {
+      const response = await axios.get(
+        `https://api.themoviedb.org/3/search/multi?query=${search_query}&include_adult=false&language=tr&page=1`,
+        options
+      );
+      //console.log("fecthSearchMulti =", response.data.results);
+      //console.log("respon jsn =", JSON.stringify(response));
+      set(() => ({ searchMulti: response.data.results }));
+      return response.data.results;
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
   //---- set Movie
   setGenreMovie: (arg: any) => set(() => ({ genreMovie: arg })),
 
   //---- set Series
+
+  //---- set States
+  setArrayState: (value) =>
+    set((state) => ({ arrayState: [...state.arrayState, ...value] })),
+  clearArrayState: () => set(() => ({ arrayState: [] })),
 }));

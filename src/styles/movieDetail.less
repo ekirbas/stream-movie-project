@@ -43,10 +43,20 @@
       border: solid 1px var(--black15);
       border-radius: 12px;
 
+      .topContainer {
+        display: flex;
+      }
+
       .castContainer {
         display: flex;
         gap: 20px;
         overflow: auto;
+        //hide scroll x
+        -ms-overflow-style: none; /* Internet Explorer and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
         .castCard {
           display: flex;
           flex-direction: column;

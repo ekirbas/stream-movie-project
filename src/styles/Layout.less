@@ -42,12 +42,15 @@
         position: absolute;
         inset: 0;
         margin: auto;
-        & > li {
-          padding: 14px 24px;
-          border-radius: 8px;
-          cursor: pointer;
+        li {
+          a {
+            display: block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+          }
         }
-        & > li:hover {
+        li :hover {
           background-color: var(--black10);
         }
       }
