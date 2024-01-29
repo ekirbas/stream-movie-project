@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import { PopularContentContainerType } from "../models/homeType";
 import { CreateUniqKey } from "../helpers/function";
 import statikVariables from "../store/statikVariables";
 import ImdbIcon from "../assets/images/ImdbIcon";
 import { useNavigate } from "react-router";
+import LeftArrowIcon from "../assets/images/LeftArrowIcon";
+import RightArrowIcon from "../assets/images/RightArrowIcon";
+import TabsIndicator from "./TabsIndicator";
 
 const PopularContentContainer = (props: PopularContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
+  const itemRef = useRef(null);
 
   const handleClick = (id: string, type: string) => {
     switch (type) {
@@ -29,9 +33,9 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        <div className="tabIndicator">--</div>
+        <TabsIndicator ref={itemRef} />
       </div>
-      <div className="dataContainer">
+      <div className="dataContainer" ref={itemRef}>
         {data?.map((v: any) => {
           const uniqKey = CreateUniqKey();
           return (

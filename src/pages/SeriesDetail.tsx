@@ -12,6 +12,8 @@ import DateIcon from "../assets/images/DateIcon";
 import "../helpers/function";
 import Seasons from "../components/Seasons";
 import { CreateUniqKey } from "../helpers/function";
+//@ts-ignore
+import StarRatings from "react-star-ratings";
 
 const SeriesDetail = () => {
   const useApi = useApiStore();
@@ -22,6 +24,7 @@ const SeriesDetail = () => {
   }, []);
 
   const data = useApi.detailSeries;
+
   const castData = useApi.castSeries;
   /*  const castGroup = castData?.crew?.toGroup((v: any) => v.job); //gruplama prototype  */
 
@@ -118,11 +121,15 @@ const SeriesDetail = () => {
               <div className="ratingContainer">
                 <div>Streamvibe</div>
                 <div className="starsContainer">
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
+                  <StarRatings
+                    rating={
+                      data?.vote_average != null ? data?.vote_average / 2 : 0
+                    }
+                    starDimension={"24px"}
+                    starSpacing={"1px"}
+                    react-simple-star-rating={"#999999"}
+                    starRatedColor={"#e50000"}
+                  />
                   <div className="ratingText">
                     {data?.vote_average.toFixed(1)}
                   </div>

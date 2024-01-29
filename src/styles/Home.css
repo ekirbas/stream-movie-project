@@ -70,6 +70,9 @@
   color: var(--white);
   max-width: 100%;
 }
+.gap30 {
+  gap: 30px !important;
+}
 .contentContainer {
   display: flex;
   flex-direction: column;
@@ -98,18 +101,25 @@
 }
 .contentContainer .fieldS .headerContainer {
   display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 50px;
 }
 .contentContainer .fieldS .headerContainer .header {
   font: 700 38px/150% "Manrope", sans-serif;
 }
-.contentContainer .fieldS .headerContainer .tabIndicator {
-  height: 88px;
-}
 .contentContainer .fieldS .dataContainer {
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   overflow-x: auto;
+  -ms-overflow-style: none;
+  /* Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.contentContainer .fieldS .dataContainer::-webkit-scrollbar {
+  display: none;
 }
 .contentContainer .fieldS .dataContainer .genreData {
   height: 342px;
@@ -207,4 +217,40 @@
 }
 .contentContainer .fieldS .dataContainer .dateDiv span {
   margin-left: 2px;
+}
+.tabIndicatorContainer {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  background-color: var(--black06);
+  border-radius: 12px;
+  border: 1px var(--black12);
+  margin-left: auto;
+}
+.tabIndicatorContainer .arrowContainer {
+  padding: 14px;
+  border-radius: 8px;
+  background-color: var(--black10);
+  border: 1px var(--black12), solid;
+}
+.tabIndicatorContainer .arrowContainer svg {
+  width: 28px;
+  height: 28px;
+}
+.tabIndicatorContainer .lineTabsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.tabIndicatorContainer .lineTabsContainer .tab {
+  display: flex;
+  height: 4px;
+  width: 16px;
+  background-color: var(--black20);
+  border-radius: 100px;
+}
+.tabIndicatorContainer .lineTabsContainer .tabActive {
+  background-color: var(--red45);
+  width: 23px;
 }

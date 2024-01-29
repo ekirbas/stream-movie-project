@@ -1,0 +1,45 @@
+import React, { forwardRef } from "react";
+import LeftArrowIcon from "../assets/images/LeftArrowIcon";
+import RightArrowIcon from "../assets/images/RightArrowIcon";
+
+const SliderImageTabsIndicator = ({}, ref: any) => {
+  const scrollLeft = () => {
+    console.log("ref", ref.current.offsetWidth);
+    const refWidth = ref.current.offsetWidth;
+    ref.current.scrollBy({
+      left: -refWidth,
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
+  const scrollRight = () => {
+    const refWidth = ref.current.offsetWidth;
+    console.log("refWidth", ref);
+    ref.current.scrollBy({
+      left: refWidth,
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
+
+  return (
+    <div className="sliderTabIndicatorContainer">
+      <div className="arrowContainer" onClick={scrollLeft}>
+        <LeftArrowIcon />
+      </div>
+      <div className="lineTabsContainer" style={{ width: "81px" }}>
+        <div className="tab tabActive"></div>
+        <div className="tab"></div>
+        <div className="tab"></div>
+        <div className="tab"></div>
+      </div>
+      <div className="arrowContainer">
+        <RightArrowIcon onClick={scrollRight} />
+      </div>
+    </div>
+  );
+};
+
+export default forwardRef(SliderImageTabsIndicator);

@@ -9,6 +9,8 @@ import StarIcon from "../assets/images/StarIcon";
 import GenreIcon from "../assets/images/GenreIcon";
 import statikVariables from "../store/statikVariables";
 import TrialHorizontal from "../components/TrialHorizontal";
+//@ts-ignore
+import StarRatings from "react-star-ratings";
 
 const MovieDetail = () => {
   const useApi = useApiStore();
@@ -20,6 +22,12 @@ const MovieDetail = () => {
 
   const data = useApi.detailMovie;
   const castData = useApi.castMovie;
+  console.log("data md", data);
+  const handleRating = (rate: number) => {
+    console.log("rate", rate);
+
+    // other logic
+  };
 
   let directors: any = [],
     writer: any = [],
@@ -105,11 +113,15 @@ const MovieDetail = () => {
               <div className="ratingContainer">
                 <div>Streamvibe</div>
                 <div className="starsContainer">
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
-                  <StarIcon />
+                  <StarRatings
+                    rating={
+                      data?.vote_average != null ? data?.vote_average / 2 : 5
+                    }
+                    starDimension={"24px"}
+                    starSpacing={"1px"}
+                    react-simple-star-rating={"#999999"}
+                    starRatedColor={"#e50000"}
+                  />
                   <div className="ratingText">
                     {data?.vote_average.toFixed(1)}
                   </div>

@@ -74,6 +74,9 @@
 }
 
 //GenresContentContainer.tsx
+.gap30 {
+  gap: 30px !important;
+}
 .contentContainer {
   display: flex;
   flex-direction: column;
@@ -103,18 +106,24 @@
     }
     .headerContainer {
       display: flex;
+      align-items: center;
+      gap: 100px;
+      margin-bottom: 50px;
       .header {
         font: 700 38px/150% "Manrope", sans-serif;
-      }
-      .tabIndicator {
-        height: 88px;
       }
     }
     .dataContainer {
       width: 100%;
       display: flex;
-      gap: 30px;
-      overflow-x: auto; //daha sonra kaldırılacak
+      gap: 20px; //genrede 30 diğerleri 20
+      overflow-x: auto;
+      //hide scroll x
+      -ms-overflow-style: none; /* Internet Explorer and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       .genreData {
         height: 342px;
@@ -167,6 +176,7 @@
         height: 377px;
         padding: 20px;
         gap: 20px;
+
         .dataImageContainer {
           height: 84%;
           margin-bottom: 20px;
@@ -220,6 +230,44 @@
           margin-left: 2px;
         }
       }
+    }
+  }
+}
+
+.tabIndicatorContainer {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  background-color: var(--black06);
+  border-radius: 12px;
+  border: 1px var(--black12);
+  margin-left: auto;
+  .arrowContainer {
+    padding: 14px;
+    border-radius: 8px;
+    background-color: var(--black10);
+    border: 1px var(--black12), solid;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .lineTabsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    .tab {
+      display: flex;
+      height: 4px;
+      width: 16px;
+      background-color: var(--black20);
+      border-radius: 100px;
+    }
+    .tabActive {
+      background-color: var(--red45);
+      width: 23px;
     }
   }
 }

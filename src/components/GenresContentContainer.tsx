@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GenresContentContainerType } from "../models/homeType";
 import { useApiStore } from "../store/store";
 import staticVariables from "../store/statikVariables";
 import RightArrowIcon from "../assets/images/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
 import { useNavigate } from "react-router";
+import TabsIndicator from "./TabsIndicator";
 
 const GenresContentContainer = (props: GenresContentContainerType) => {
   const { data, header, type } = props;
   const useApi = useApiStore();
   const navigate = useNavigate();
+  const dataContainerRef = useRef(null);
 
   const handleClick = (id: string, type: string) => {
     switch (type) {
@@ -54,9 +56,9 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        <div className="tabIndicator">--</div>
+        <TabsIndicator ref={dataContainerRef} />
       </div>
-      <div className="dataContainer">
+      <div className="dataContainer gap30" ref={dataContainerRef}>
         {data?.map((v: any) => {
           const uniqKey = CreateUniqKey();
           return (

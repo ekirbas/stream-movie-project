@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { ImageSliderDataType } from "../models/homeType";
 import statikVariables from "../store/statikVariables";
 import { CreateUniqKey } from "../helpers/function";
@@ -8,11 +8,14 @@ import LikeICon from "../assets/images/LikeICon";
 import VolumeIcon from "../assets/images/VolumeIcon";
 import LeftArrowIcon from "../assets/images/LeftArrowIcon";
 import RightArrowIcon from "../assets/images/RightArrowIcon";
+import TabsIndicator from "./TabsIndicator";
+import SliderImageTabsIndicator from "./SliderImageTabsIndicator";
 
 const ImageSliderData = (props: ImageSliderDataType) => {
   const { data } = props;
+  const sliderImageContainerRef = useRef(null);
   return (
-    <div className="sliderImageContainer">
+    <div className="sliderImageContainer" ref={sliderImageContainerRef}>
       {data?.map((v: any) => {
         const uniqKey = CreateUniqKey();
         return (
@@ -46,19 +49,11 @@ const ImageSliderData = (props: ImageSliderDataType) => {
                 </button>
               </div>
             </div>
+            <div className="sliderImageFadeOut"></div>
+            <SliderImageTabsIndicator ref={sliderImageContainerRef} />
           </div>
         );
       })}
-      {/* sliderNavContainer gezinme çubuğu ----- Daha sonra yapılacak */}
-      <div className="sliderNavContainer">
-        <div className="leftBtn">
-          <LeftArrowIcon />
-        </div>
-        <div className="centerBtn">---</div>
-        <div className="rightBtn">
-          <RightArrowIcon />
-        </div>
-      </div>
     </div>
   );
 };

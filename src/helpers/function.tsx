@@ -21,3 +21,47 @@ Object.defineProperty(Array.prototype, "toGroup", {
     }, {});
   },
 });
+
+/* çoklu state leri tek yere toplayıp tek setstate üzerinden hepsini güncelleyebiliyorsun */
+import { useReducer, Reducer } from "react";
+
+export function useCustomReducer<T>(initialState: T) {
+  const reducer: Reducer<T, Partial<T>> = (prev, curr) => ({
+    ...prev,
+    ...curr,
+  });
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const setState = (update: Partial<T>) => {
+    dispatch(update);
+  };
+
+  return [state, setState] as const;
+}
+
+import React, { useState } from "react";
+
+/* export kısmını bununla kaplıyorsun verdiği değerleri kullanabiliyorsun isLoading */
+export function withLoading(WrappedComponent: any) {
+  return function WithLoading(props: any) {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const startLoading = () => {
+      setIsLoading(true);
+    };
+
+    const stopLoading = () => {
+      setIsLoading(false);
+    };
+
+    return (
+      <WrappedComponent
+        {...props}
+        isLoading={isLoading}
+        startLoading={startLoading}
+        stopLoading={stopLoading}
+      />
+    );
+  };
+}

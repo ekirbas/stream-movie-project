@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { UpcomingContentContainerType } from "../models/homeType";
 import { CreateUniqKey } from "../helpers/function";
 import statikVariables from "../store/statikVariables";
@@ -6,10 +6,11 @@ import ImdbIcon from "../assets/images/ImdbIcon";
 import ClockIcon from "../assets/images/ClockIcon";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router";
+import TabsIndicator from "./TabsIndicator";
 const UpcomingContentContainer = (props: UpcomingContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
-
+  const dataContainerRef = useRef(null);
   const handleClick = (id: string, type: string) => {
     switch (type) {
       case "movie":
@@ -30,9 +31,9 @@ const UpcomingContentContainer = (props: UpcomingContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        <div className="tabIndicator">--</div>
+        <TabsIndicator ref={dataContainerRef} />
       </div>
-      <div className="dataContainer">
+      <div className="dataContainer" ref={dataContainerRef}>
         {data?.map((v: any) => {
           const uniqKey = CreateUniqKey();
           return (
