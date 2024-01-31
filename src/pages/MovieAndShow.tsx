@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useApiStore } from "../store/store";
 import GenresContentContainer from "../components/GenresContentContainer";
 import PopularContentContainer from "../components/PopularContentContainer";

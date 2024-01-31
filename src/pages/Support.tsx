@@ -20,8 +20,8 @@ const Support = () => {
           </div>
           {/* contactRight */}
           <ContactForm />
-          {/* Frequently Asked Questions */}
         </div>
+        {/* Frequently Asked Questions */}
         <Questions />
         <TrialHorizontal />
       </div>

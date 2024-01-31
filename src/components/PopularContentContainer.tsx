@@ -4,16 +4,15 @@ import { CreateUniqKey } from "../helpers/function";
 import statikVariables from "../store/statikVariables";
 import ImdbIcon from "../assets/images/ImdbIcon";
 import { useNavigate } from "react-router";
-import LeftArrowIcon from "../assets/images/LeftArrowIcon";
-import RightArrowIcon from "../assets/images/RightArrowIcon";
 import TabsIndicator from "./TabsIndicator";
+import { ResultPopularMovie } from "../models/storeType";
 
 const PopularContentContainer = (props: PopularContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
   const itemRef = useRef(null);
 
-  const handleClick = (id: string, type: string) => {
+  const handleClick = (id: number, type: string) => {
     switch (type) {
       case "movie":
         navigate(`/movie/${id}`);
@@ -36,7 +35,7 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
         <TabsIndicator ref={itemRef} />
       </div>
       <div className="dataContainer" ref={itemRef}>
-        {data?.map((v: any) => {
+        {data?.map((v: ResultPopularMovie) => {
           const uniqKey = CreateUniqKey();
           return (
             <div

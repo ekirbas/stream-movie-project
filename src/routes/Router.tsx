@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-/* import App from "../App"; */
 import ErrorPage from "../pages/ErrorPage";
 import MovieAndShow from "../pages/MovieAndShow";
 import Subscriptions from "../pages/Subscriptions";

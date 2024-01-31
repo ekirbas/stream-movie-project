@@ -1,6 +1,15 @@
 import axios from "axios";
 import { create } from "zustand";
-import { ApiStore } from "../models/storeType";
+import {
+  ApiStore,
+  DataCast,
+  DataCastSeries,
+  DataDetailMovie,
+  DataDetailSeries,
+  EpisodeDetailSeason,
+  Genre,
+  ResultPopularMovie,
+} from "../models/storeType";
 import statikVariables from "./statikVariables";
 
 const options = {
@@ -27,7 +36,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
   topRatedSeries: null,
   onTheAirSeries: null,
   detailSeries: null,
-  castSeries: null,
+  castSeries: undefined,
   detailSeason: null,
 
   searchMulti: null,
@@ -41,9 +50,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/popular?language=tr&page=${page}`,
         options
       );
+      const data: ResultPopularMovie[] = response.data.results;
+      set(() => ({ popularMovie: response.data.results }));
       //console.log("fecthPopularMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ popularMovie: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -54,9 +64,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/upcoming?language=tr&page=${page}`,
         options
       );
+      const data: ResultPopularMovie[] = response.data.results;
+      set(() => ({ upcomingMovie: data }));
       //console.log("fecthUpcomingMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ upcomingMovie: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -67,9 +78,11 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/top_rated?language=tr&page=${page}`,
         options
       );
+      const data: ResultPopularMovie[] = response.data.results;
+
+      set(() => ({ topRatedMovie: data }));
       //console.log("fecthTopRatedMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ topRatedMovie: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -80,9 +93,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/${movie_id}?language=tr`,
         options
       );
+      const data: DataDetailMovie = response.data;
+      set(() => ({ detailMovie: data }));
       //console.log("fecthDetailMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ detailMovie: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -93,6 +107,7 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/${movie_id}/videos?language=tr`,
         options
       );
+      const data: any = response;
       ////console.log("fecthTrailerMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
     } catch (err) {
@@ -106,9 +121,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=tr`,
         options
       );
+      const data: DataCast = response.data;
+      set(() => ({ castMovie: data }));
       //console.log("fecthCastMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ castMovie: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -119,10 +135,11 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=tr&page=1&sort_by=vote_count.desc&with_genres=${genre_id}`,
         options
       );
+      const data: any = response.data.results;
+      set(() => ({ genreDescVoteMovie: data }));
       //console.log("fecthGenreDescVoteMovie =", response.data.results);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ genreDescVoteMovie: response.data.results }));
-      return response.data.results;
+      return data;
     } catch (err) {
       console.log(err);
     }
@@ -133,9 +150,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/genre/movie/list?language=tr`,
         options
       );
+      const data: Genre[] = response.data.genres;
+      set(() => ({ genreMovie: data }));
       //console.log("fecthGenreMovie =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ genreMovie: response.data.genres }));
     } catch (err) {
       console.log(err);
     }
@@ -148,11 +166,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/genre/tv/list?language=tr`,
         options
       );
+      const data: Genre[] = response.data.genres;
+      set(() => ({ genreSeries: data }));
       //console.log("fecthGenreSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({
-        genreSeries: response.data.genres,
-      }));
     } catch (err) {
       console.log(err);
     }
@@ -163,9 +180,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/popular?language=tr&page=${page}`,
         options
       );
+      const data: ResultPopularMovie[] = response.data.results;
+      set(() => ({ popularSeries: data }));
       //console.log("fecthPopularSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ popularSeries: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -176,9 +194,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/top_rated?language=tr&page=${page}`,
         options
       );
+      const data: ResultPopularMovie[] = response.data.results;
+      set(() => ({ topRatedSeries: data }));
       //console.log("fecthTopRatedSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ topRatedSeries: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -189,9 +208,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/${series_id}?language=tr`,
         options
       );
+      const data: DataDetailSeries = response.data;
+      set(() => ({ detailSeries: data }));
       //console.log("fecthDetailSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ detailSeries: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -202,9 +222,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/${series_id}/credits?language=tr`,
         options
       );
+      const data: DataCastSeries = response.data;
+      set(() => ({ castSeries: data }));
       //console.log("fecthCastSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ castSeries: response.data }));
     } catch (err) {
       console.log(err);
     }
@@ -215,10 +236,11 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/${series_id}/season/${season_number}?language=tr`,
         options
       );
+      const data: EpisodeDetailSeason[] = response.data.episodes;
+      set(() => ({ detailSeason: data }));
       //console.log("fecthDetailSeason =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ detailSeason: response.data.episodes }));
-      return response;
+      return data;
     } catch (err) {
       console.log(err);
     }
@@ -241,9 +263,10 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/on_the_air?language=tr&page=${page}`,
         options
       );
+      const data: ResultPopularMovie[] = response.data.results;
+      set(() => ({ onTheAirSeries: data }));
       //console.log("fecthOnTheAirSeries =", response);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ onTheAirSeries: response.data.results }));
     } catch (err) {
       console.log(err);
     }
@@ -255,9 +278,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/search/multi?query=${search_query}&include_adult=false&language=tr&page=1`,
         options
       );
+      set(() => ({ searchMulti: response.data.results }));
       //console.log("fecthSearchMulti =", response.data.results);
       //console.log("respon jsn =", JSON.stringify(response));
-      set(() => ({ searchMulti: response.data.results }));
       return response.data.results;
     } catch (err) {
       console.log(err);

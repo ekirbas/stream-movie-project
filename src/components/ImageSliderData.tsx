@@ -6,17 +6,15 @@ import PlayBtnIcon from "../assets/images/PlayBtnIcon";
 import PlusIcon from "../assets/images/PlusIcon";
 import LikeICon from "../assets/images/LikeICon";
 import VolumeIcon from "../assets/images/VolumeIcon";
-import LeftArrowIcon from "../assets/images/LeftArrowIcon";
-import RightArrowIcon from "../assets/images/RightArrowIcon";
-import TabsIndicator from "./TabsIndicator";
 import SliderImageTabsIndicator from "./SliderImageTabsIndicator";
+import { ResultPopularMovie } from "../models/storeType";
 
 const ImageSliderData = (props: ImageSliderDataType) => {
   const { data } = props;
   const sliderImageContainerRef = useRef(null);
   return (
     <div className="sliderImageContainer" ref={sliderImageContainerRef}>
-      {data?.map((v: any) => {
+      {data?.map((v: ResultPopularMovie) => {
         const uniqKey = CreateUniqKey();
         return (
           <div

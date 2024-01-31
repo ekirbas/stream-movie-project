@@ -7,11 +7,12 @@ import ClockIcon from "../assets/images/ClockIcon";
 import dayjs from "dayjs";
 import { useNavigate } from "react-router";
 import TabsIndicator from "./TabsIndicator";
+import { ResultPopularMovie } from "../models/storeType";
 const UpcomingContentContainer = (props: UpcomingContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
   const dataContainerRef = useRef(null);
-  const handleClick = (id: string, type: string) => {
+  const handleClick = (id: number, type: string) => {
     switch (type) {
       case "movie":
         navigate(`/movie/${id}`);
@@ -34,7 +35,7 @@ const UpcomingContentContainer = (props: UpcomingContentContainerType) => {
         <TabsIndicator ref={dataContainerRef} />
       </div>
       <div className="dataContainer" ref={dataContainerRef}>
-        {data?.map((v: any) => {
+        {data?.map((v: ResultPopularMovie) => {
           const uniqKey = CreateUniqKey();
           return (
             <div

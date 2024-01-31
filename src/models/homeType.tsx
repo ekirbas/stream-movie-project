@@ -1,24 +1,27 @@
-import { ReactNode } from "react";
-import { GenreMovieType } from "./storeType";
+import {
+  EpisodeDetailSeason,
+  Genre,
+  ResultPopularMovie,
+  Season,
+} from "./storeType";
 
 export interface GenresContentContainerType {
   header: string;
-  /*  children?: ReactNode; */
   type: string;
-  data?: any;
+  data: Genre[] | null;
 }
 export interface PopularContentContainerType {
   header: string;
-  data?: any;
+  data?: ResultPopularMovie[] | null;
   type: string;
 }
 export interface UpcomingContentContainerType {
   header: string;
   type: string;
-  data?: any;
+  data?: ResultPopularMovie[] | null;
 }
 export interface ImageSliderDataType {
-  data?: any;
+  data?: ResultPopularMovie[];
 }
 export interface DetailImageType {
   title?: string;
@@ -26,14 +29,14 @@ export interface DetailImageType {
   url?: string;
 }
 export interface SeasonsType {
-  seasons: any;
-  series_id: any;
+  seasons?: Season[];
+  series_id: number;
 }
 export interface EpisodesType {
-  detailSeason: any;
+  detailSeason: EpisodeDetailSeason[];
 }
 export interface SeasonItemType {
-  series_id: any;
-  episode_count: any;
-  season_number: any;
+  series_id: number;
+  episode_count: number;
+  season_number: number;
 }

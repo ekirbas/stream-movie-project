@@ -13,8 +13,8 @@ const SeasonItem = (props: SeasonItemType) => {
 
   const useApi = useApiStore();
   const handleSeasonClick = async (
-    series_id: string,
-    season_number: string
+    series_id: number,
+    season_number: number
   ) => {
     const response = await useApi.fecthDetailSeason(series_id, season_number);
     setEpisodes(response.data.episodes ?? []);

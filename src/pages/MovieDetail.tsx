@@ -12,6 +12,7 @@ import TrialHorizontal from "../components/TrialHorizontal";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
 import TabsIndicator from "../components/TabsIndicator";
+import { Cast, Crew, Genre, SpokenLanguage } from "../models/storeType";
 
 const MovieDetail = () => {
   const useApi = useApiStore();
@@ -19,10 +20,10 @@ const MovieDetail = () => {
   const castContainerRef = useRef(null);
   const data = useApi.detailMovie;
   const castData = useApi.castMovie;
-  let directors: any = [],
-    writer: any = [],
-    music: any = [];
-  const crew = castData?.crew.filter((v: any) => {
+  let directors: Crew[] = [],
+    writer: Crew[] = [],
+    music: Crew[] = [];
+  const crew = castData?.crew.filter((v: Crew) => {
     if (v.job === "Writer") {
       writer.push(v);
       return true;
@@ -60,9 +61,10 @@ const MovieDetail = () => {
                 <TabsIndicator ref={castContainerRef} />
               </div>
               <div className="castContainer" ref={castContainerRef}>
-                {castData?.cast.map((v: any) => {
-                  return (
-                    v.profile_path && (
+                {castData?.cast
+                  .filter((v) => v.profile_path != null)
+                  .map((v: Cast) => {
+                    return (
                       <div className="castCard">
                         <img
                           src={`${
@@ -74,9 +76,8 @@ const MovieDetail = () => {
                         <div>{v.name}</div>
                         <div className="characterText">{v.character}</div>
                       </div>
-                    )
-                  );
-                })}
+                    );
+                  })}
               </div>
             </div>
           </div>
@@ -97,7 +98,7 @@ const MovieDetail = () => {
                 Konuşulan Diller
               </div>
               <div className="languagesContainer">
-                {data?.spoken_languages.map((v: any) => {
+                {data?.spoken_languages.map((v: SpokenLanguage) => {
                   return <div className="languages">{v.english_name}</div>;
                 })}
               </div>
@@ -131,7 +132,7 @@ const MovieDetail = () => {
                 Türler
               </div>
               <div className="genresContainer">
-                {data?.genres.map((v: any) => {
+                {data?.genres.map((v: Genre) => {
                   return <div className="genres">{v.name}</div>;
                 })}
               </div>
@@ -140,7 +141,7 @@ const MovieDetail = () => {
               <div className="directorArea">
                 <div className="divTitle">Yönetmen</div>
                 <div className="directorContainer">
-                  {directors?.map((v: any) => {
+                  {directors?.map((v: Crew) => {
                     return (
                       <div className="director">
                         {v.profile_path && (
@@ -159,14 +160,12 @@ const MovieDetail = () => {
                   })}
                 </div>
               </div>
-            ) : (
-              ""
-            )}
+            ) : null}
             {writer.length !== 0 ? (
               <div className="directorArea">
                 <div className="divTitle">Yazar</div>
                 <div className="directorContainer">
-                  {writer?.map((v: any) => {
+                  {writer?.map((v) => {
                     return (
                       <div className="director">
                         {v.profile_path && (
@@ -184,14 +183,12 @@ const MovieDetail = () => {
                   })}
                 </div>
               </div>
-            ) : (
-              ""
-            )}
+            ) : null}
             {music.length !== 0 ? (
               <div className="directorArea">
                 <div className="divTitle">Müzik</div>
                 <div className="directorContainer">
-                  {music?.map((v: any) => {
+                  {music?.map((v) => {
                     return (
                       <div className="director">
                         {v.profile_path && (
@@ -210,9 +207,7 @@ const MovieDetail = () => {
                   })}
                 </div>
               </div>
-            ) : (
-              ""
-            )}
+            ) : null}
           </div>
         </div>
         <TrialHorizontal />

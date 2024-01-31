@@ -13,6 +13,7 @@ export interface ResultPopularMovie {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  name?: string;
 }
 
 export interface DataDetailMovie {
@@ -64,7 +65,7 @@ export interface DataDetailSeries {
   last_air_date: string;
   last_episode_to_air: LastEpisodeToAir;
   name: string;
-  next_episode_to_air: any;
+  next_episode_to_air: number;
   networks: Network[];
   number_of_episodes: number;
   number_of_seasons: number;
@@ -83,6 +84,7 @@ export interface DataDetailSeries {
   type: string;
   vote_average: number;
   vote_count: number;
+  release_date?: string;
 }
 
 export interface CreatedBy {
@@ -255,22 +257,22 @@ export type ApiStore = {
   inc: () => void;
 
   //Movies
-  genreMovie: Genre | null;
+  genreMovie: Genre[] | null;
   genreDescVoteMovie: any | null; //genre image için kullanılacaktı vazgeçtim
-  popularMovie: ResultPopularMovie | null;
-  topRatedMovie: ResultPopularMovie | null;
-  upcomingMovie: ResultPopularMovie | null;
+  popularMovie: ResultPopularMovie[] | null;
+  topRatedMovie: ResultPopularMovie[] | null;
+  upcomingMovie: ResultPopularMovie[] | null;
   detailMovie: DataDetailMovie | null;
   castMovie: DataCast | null;
 
   //Series
-  genreSeries: Genre | null;
-  popularSeries: ResultPopularMovie | null;
-  topRatedSeries: ResultPopularMovie | null;
-  onTheAirSeries: ResultPopularMovie | null;
+  genreSeries: Genre[] | null;
+  popularSeries: ResultPopularMovie[] | null;
+  topRatedSeries: ResultPopularMovie[] | null;
+  onTheAirSeries: ResultPopularMovie[] | null;
   detailSeries: DataDetailSeries | null;
-  castSeries: DataCastSeries | null;
-  detailSeason: EpisodeDetailSeason | null;
+  castSeries?: DataCastSeries;
+  detailSeason: EpisodeDetailSeason[] | null;
 
   searchMulti: any | null;
 
@@ -292,7 +294,7 @@ export type ApiStore = {
   fecthTopRatedSeries: (page: string) => Promise<void>;
   fecthDetailSeries: (series_id: string) => Promise<void>;
   fecthCastSeries: (series_id: string) => Promise<void>;
-  fecthDetailSeason: (series_id: string, season_number: string) => Promise<any>; // void yapamıyorum
+  fecthDetailSeason: (series_id: number, season_number: number) => Promise<any>; // void yapamıyorum
   fecthTrailerSeries: (series_id: string) => Promise<void>;
   fecthOnTheAirSeries: (page: string) => Promise<void>;
 

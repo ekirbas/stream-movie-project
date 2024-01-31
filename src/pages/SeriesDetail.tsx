@@ -2,20 +2,25 @@ import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router";
 import { useApiStore } from "../store/store";
 import DetailImage from "../components/DetailImage";
-import trialHorizontal from "../assets/images/trialHorizontal.png";
 import statikVariables from "../store/statikVariables";
 import GenreIcon from "../assets/images/GenreIcon";
 import StarIcon from "../assets/images/StarIcon";
 import LangIcon from "../assets/images/LangIcon";
 import dayjs from "dayjs";
 import DateIcon from "../assets/images/DateIcon";
-import "../helpers/function";
 import Seasons from "../components/Seasons";
 import { CreateUniqKey } from "../helpers/function";
 import TabsIndicator from "../components/TabsIndicator";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
 import TrialHorizontal from "../components/TrialHorizontal";
+import "../helpers/function";
+import {
+  CastSeries,
+  CrewSeries,
+  Genre,
+  SpokenLanguage,
+} from "../models/storeType";
 
 const SeriesDetail = () => {
   const useApi = useApiStore();
@@ -23,10 +28,10 @@ const SeriesDetail = () => {
   const castContainerRef = useRef(null);
   const data = useApi.detailSeries;
   const castData = useApi.castSeries;
-  let directors: any = [],
-    writer: any = [],
-    music: any = [];
-  const crew = castData?.crew.filter((v: any) => {
+  let directors: CrewSeries[] = [],
+    writer: CrewSeries[] = [],
+    music: CrewSeries[] = [];
+  const crew = castData?.crew.filter((v: CrewSeries) => {
     if (v.job === "Writer") {
       writer.push(v);
       return true;
@@ -56,7 +61,8 @@ const SeriesDetail = () => {
         <div className="detailContainer">
           {/* detailLeft */}
           <div className="detailLeft">
-            <Seasons seasons={data?.seasons} series_id={data?.id} />
+            <Seasons seasons={data?.seasons} series_id={data?.id ?? 0} />{" "}
+            {/* {data?.id??0} bura typescrip hataya düşürüyor */}
             <div className="overview">
               <div className="divTitle">Açıklama</div>
               <div>{data?.overview}</div>
@@ -68,7 +74,7 @@ const SeriesDetail = () => {
                 <TabsIndicator ref={castContainerRef} />
               </div>
               <div className="castContainer" ref={castContainerRef}>
-                {castData?.cast.map((v: any) => {
+                {castData?.cast.map((v: CastSeries) => {
                   const uniqId = CreateUniqKey();
                   return (
                     v.profile_path && (
@@ -106,7 +112,7 @@ const SeriesDetail = () => {
                 Konuşulan Diller
               </div>
               <div className="languagesContainer">
-                {data?.spoken_languages.map((v: any) => {
+                {data?.spoken_languages.map((v: SpokenLanguage) => {
                   return <div className="languages">{v.english_name}</div>;
                 })}
               </div>
@@ -142,7 +148,7 @@ const SeriesDetail = () => {
                 Türler
               </div>
               <div className="genresContainer">
-                {data?.genres.map((v: any) => {
+                {data?.genres.map((v: Genre) => {
                   return <div className="genres">{v.name}</div>;
                 })}
               </div>
@@ -153,7 +159,7 @@ const SeriesDetail = () => {
               <div className="directorArea">
                 <div className="divTitle">Yönetmen</div>
                 <div className="directorContainer">
-                  {directors?.map((v: any) => {
+                  {directors?.map((v: CrewSeries) => {
                     return (
                       <div className="director">
                         {v.profile_path && (
@@ -179,7 +185,7 @@ const SeriesDetail = () => {
               <div className="directorArea">
                 <div className="divTitle">Yazar</div>
                 <div className="directorContainer">
-                  {writer?.map((v: any) => {
+                  {writer?.map((v: CrewSeries) => {
                     return (
                       <div className="director">
                         {v.profile_path && (
@@ -204,7 +210,7 @@ const SeriesDetail = () => {
               <div className="directorArea">
                 <div className="divTitle">Müzik</div>
                 <div className="directorContainer">
-                  {music?.map((v: any) => {
+                  {music?.map((v: CrewSeries) => {
                     return (
                       <div className="director">
                         {v.profile_path && (

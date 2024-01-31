@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
-import Episodes from "./Episodes";
+import React from "react";
 import { SeasonsType } from "../models/homeType";
-import BottomArrowIcon from "../assets/images/BottomArrowIcon";
-import { useApiStore } from "../store/store";
 import SeasonItem from "./SeasonItem";
+import { Season } from "../models/storeType";
 
 const Seasons = (props: SeasonsType) => {
   const { seasons, series_id } = props;
@@ -11,7 +9,7 @@ const Seasons = (props: SeasonsType) => {
   return (
     <div className="seasonsArea">
       <div className="seasonsTitle">Season and Episodes</div>
-      {seasons?.map((v: any) => {
+      {seasons?.map((v: Season) => {
         return (
           <SeasonItem
             series_id={series_id}

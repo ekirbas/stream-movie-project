@@ -1,17 +1,17 @@
 import React, { useRef } from "react";
 import { GenresContentContainerType } from "../models/homeType";
-import { useApiStore } from "../store/store";
 import RightArrowIcon from "../assets/images/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
 import { useNavigate } from "react-router";
 import TabsIndicator from "./TabsIndicator";
+import { Genre } from "../models/storeType";
 
 const GenresContentContainer = (props: GenresContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
   const dataContainerRef = useRef(null);
 
-  const handleClick = (id: string, type: string) => {
+  const handleClick = (id: number, type: string) => {
     switch (type) {
       case "movie":
         navigate(`/movie/${id}`);
@@ -57,7 +57,7 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
         <TabsIndicator ref={dataContainerRef} />
       </div>
       <div className="dataContainer gap30" ref={dataContainerRef}>
-        {data?.map((v: any) => {
+        {data?.map((v: Genre) => {
           const uniqKey = CreateUniqKey();
           return (
             <div
