@@ -33,8 +33,8 @@ const SliderImageTabsIndicator = ({}, ref: any) => {
         <div className="tab"></div>
         <div className="tab"></div>
       </div>
-      <div className="arrowContainer">
-        <RightArrowIcon onClick={scrollRight} />
+      <div className="arrowContainer" onClick={scrollRight}>
+        <RightArrowIcon />
       </div>
     </div>
   );

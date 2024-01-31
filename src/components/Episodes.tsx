@@ -2,13 +2,11 @@ import React from "react";
 import { EpisodesType } from "../models/homeType";
 import statikVariables from "../store/statikVariables";
 import { CreateUniqKey } from "../helpers/function";
-import { EpisodeDetailSeason } from "../models/storeType";
 
 const Episodes = (props: EpisodesType) => {
   const { detailSeason } = props;
-  return detailSeason.map((v: EpisodeDetailSeason) => {
+  return detailSeason.map((v) => {
     const uniqId = CreateUniqKey();
-
     return (
       <div className="episodesArea" key={uniqId}>
         <div className="episodesContainer">

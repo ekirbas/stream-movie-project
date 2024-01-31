@@ -7,20 +7,20 @@ import { CreateUniqKey } from "../helpers/function";
 
 const SeasonItem = (props: SeasonItemType) => {
   const { series_id, season_number, episode_count } = props;
-
   const [activeSeason, setActiveSeason] = useState(false);
   const [episodes, setEpisodes] = useState([]);
-
+  const uniqId = CreateUniqKey();
   const useApi = useApiStore();
+
   const handleSeasonClick = async (
     series_id: number,
     season_number: number
   ) => {
     const response = await useApi.fecthDetailSeason(series_id, season_number);
-    setEpisodes(response.data.episodes ?? []);
+    setEpisodes(response ?? []);
     setActiveSeason(!activeSeason);
   };
-  const uniqId = CreateUniqKey();
+
   return (
     <div className="seasonContainer" key={uniqId}>
       <div className="titleContainer">

@@ -257,26 +257,26 @@ export type ApiStore = {
   inc: () => void;
 
   //Movies
-  genreMovie: Genre[] | null;
-  genreDescVoteMovie: any | null; //genre image için kullanılacaktı vazgeçtim
-  popularMovie: ResultPopularMovie[] | null;
-  topRatedMovie: ResultPopularMovie[] | null;
-  upcomingMovie: ResultPopularMovie[] | null;
-  detailMovie: DataDetailMovie | null;
-  castMovie: DataCast | null;
+  genreMovie?: Genre[];
+  genreDescVoteMovie?: any; //genre image için kullanılacaktı vazgeçtim
+  popularMovie?: ResultPopularMovie[];
+  topRatedMovie?: ResultPopularMovie[];
+  upcomingMovie?: ResultPopularMovie[];
+  detailMovie?: DataDetailMovie;
+  castMovie?: DataCast;
 
   //Series
-  genreSeries: Genre[] | null;
-  popularSeries: ResultPopularMovie[] | null;
-  topRatedSeries: ResultPopularMovie[] | null;
-  onTheAirSeries: ResultPopularMovie[] | null;
-  detailSeries: DataDetailSeries | null;
+  genreSeries?: Genre[];
+  popularSeries?: ResultPopularMovie[];
+  topRatedSeries?: ResultPopularMovie[];
+  onTheAirSeries?: ResultPopularMovie[];
+  detailSeries?: DataDetailSeries;
   castSeries?: DataCastSeries;
-  detailSeason: EpisodeDetailSeason[] | null;
+  detailSeason?: EpisodeDetailSeason[];
 
-  searchMulti: any | null;
+  searchMulti?: any;
 
-  arrayState: any | null;
+  arrayState?: any;
 
   //Movies
   fecthPopularMovie: (page: string) => Promise<void>; // ---void ?

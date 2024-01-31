@@ -22,24 +22,24 @@ export const useApiStore = create<ApiStore>()((set) => ({
   inc: () => set((state) => ({ count: state.count + 1 })),
 
   /* Movie */
-  genreMovie: null,
-  genreDescVoteMovie: null,
-  popularMovie: null,
-  topRatedMovie: null,
-  upcomingMovie: null,
-  detailMovie: null,
-  castMovie: null,
+  genreMovie: undefined,
+  genreDescVoteMovie: undefined,
+  popularMovie: undefined,
+  topRatedMovie: undefined,
+  upcomingMovie: undefined,
+  detailMovie: undefined,
+  castMovie: undefined,
 
   /* Series */
-  genreSeries: null,
-  popularSeries: null,
-  topRatedSeries: null,
-  onTheAirSeries: null,
-  detailSeries: null,
+  genreSeries: undefined,
+  popularSeries: undefined,
+  topRatedSeries: undefined,
+  onTheAirSeries: undefined,
+  detailSeries: undefined,
   castSeries: undefined,
-  detailSeason: null,
+  detailSeason: undefined,
 
-  searchMulti: null,
+  searchMulti: undefined,
 
   arrayState: [],
 
@@ -115,9 +115,8 @@ export const useApiStore = create<ApiStore>()((set) => ({
     }
   },
   fecthCastMovie: async (movie_id) => {
-    let response: any = null;
     try {
-      response = await axios.get(
+      const response = await axios.get(
         `https://api.themoviedb.org/3/movie/${movie_id}/credits?language=tr`,
         options
       );
@@ -236,9 +235,9 @@ export const useApiStore = create<ApiStore>()((set) => ({
         `https://api.themoviedb.org/3/tv/${series_id}/season/${season_number}?language=tr`,
         options
       );
-      const data: EpisodeDetailSeason[] = response.data.episodes;
+      const data: EpisodeDetailSeason[] = response?.data?.episodes;
       set(() => ({ detailSeason: data }));
-      //console.log("fecthDetailSeason =", response);
+      console.log("fecthDetailSeason =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       return data;
     } catch (err) {
