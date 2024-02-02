@@ -1,8 +1,8 @@
 import React from "react";
-import PopularContentContainer from "./PopularContentContainer";
-import UpcomingContentContainer from "./UpcomingContentContainer";
-import GenresContentContainer from "./GenresContentContainer";
-import { useApiStore } from "../store/store";
+import PopularContentContainer from "../PopularContentContainer";
+import UpcomingContentContainer from "../UpcomingContentContainer";
+import GenresContentContainer from "../GenresContentContainer";
+import { useApiStore } from "../../store/store";
 
 const MovieAndShowSeriesArea = () => {
   const useApi = useApiStore();

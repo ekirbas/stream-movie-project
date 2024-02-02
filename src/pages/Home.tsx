@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useApiStore } from "../store/store";
-import HomeAboutArea from "../components/HomeAboutArea";
-import HomeMovieArea from "../components/HomeMovieArea";
-import HomeSerieArea from "../components/HomeSerieArea";
+import HomeAboutArea from "../components/home/HomeAboutArea";
+import HomeMovieArea from "../components/home/HomeMovieArea";
+import HomeSerieArea from "../components/home/HomeSerieArea";
 const Home = () => {
   const useApi = useApiStore();
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);

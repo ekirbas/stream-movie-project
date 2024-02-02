@@ -102,3 +102,30 @@ export interface SeriesWriterAreaType {
 export interface SeriesMusicAreaType {
   music?: CrewSeries[];
 }
+export interface MovieDetailOverviewType {
+  data?: DataDetailMovie;
+}
+export interface MovieDetailCastAreaType {
+  castData?: DataCast;
+}
+export interface MovieReleaseDateType {
+  data?: DataDetailMovie;
+}
+export interface MovieLanguagesAreaType {
+  data?: DataDetailMovie;
+}
+export interface MovieVoteContainerType {
+  data?: DataDetailMovie;
+}
+export interface MovieGenresAreaType {
+  data?: DataDetailMovie;
+}
+export interface MovieDirectorAreaType {
+  directors?: Crew[];
+}
+export interface MovieWriterAreaType {
+  writer?: Crew[];
+}
+export interface MovieMusicAreaType {
+  music?: Crew[];
+}

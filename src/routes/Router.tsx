@@ -4,7 +4,7 @@ import MovieAndShow from "../pages/MovieAndShow";
 import Subscriptions from "../pages/Subscriptions";
 import Support from "../pages/Support";
 import MovieDetail from "../pages/MovieDetail";
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import Home from "../pages/Home";
 import SeriesDetail from "../pages/SeriesDetail";
 

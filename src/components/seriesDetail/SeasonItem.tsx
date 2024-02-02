@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import BottomArrowIcon from "../assets/images/BottomArrowIcon";
-import { useApiStore } from "../store/store";
-import { SeasonItemType } from "../models/homeType";
+import BottomArrowIcon from "../../assets/svgComp/BottomArrowIcon";
+import { useApiStore } from "../../store/store";
+import { SeasonItemType } from "../../models/homeType";
 import Episodes from "./Episodes";
-import { CreateUniqKey } from "../helpers/function";
+import { CreateUniqKey } from "../../helpers/function";
 
 const SeasonItem = (props: SeasonItemType) => {
   const { series_id, season_number, episode_count } = props;

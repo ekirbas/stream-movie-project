@@ -1,5 +1,5 @@
 import React from "react";
-import LangIcon from "../../assets/images/LangIcon";
+import LangIcon from "../../assets/svgComp/LangIcon";
 import { SeriesLanguagesAreaType } from "../../models/homeType";
 
 const SeriesLanguagesArea = (props: SeriesLanguagesAreaType) => {

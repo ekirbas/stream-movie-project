@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
-import LeftArrowIcon from "../assets/images/LeftArrowIcon";
-import RightArrowIcon from "../assets/images/RightArrowIcon";
+import LeftArrowIcon from "../../assets/svgComp/LeftArrowIcon";
+import RightArrowIcon from "../../assets/svgComp/RightArrowIcon";
 
 const SliderImageTabsIndicator = ({}, ref: any) => {
   const scrollLeft = () => {

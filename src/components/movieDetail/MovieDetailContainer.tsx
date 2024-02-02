@@ -16,19 +16,17 @@ const MovieDetailContainer = (props: MovieDetailContainerType) => {
     if (v.job === "Writer") {
       writer.push(v);
       return true;
-    } else if (v.job === "Director") {
+    } else if (v.job === "Director" || v.job === "Series Director") {
       directors.push(v);
       return true;
-    } else if (v.job === "Music") {
+    } else if (v.job === "Music" || v.job === "Original Music Composer") {
       music.push(v);
       return true;
     }
   });
   return (
     <div className="detailContainer">
-      {/* detailLeft */}
       <MovieDetailLeft castData={castData} data={data} />
-      {/* detailRight */}
       <MovieDetailRight
         data={data}
         directors={directors}

@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
-import LeftArrowIcon from "../assets/images/LeftArrowIcon";
-import RightArrowIcon from "../assets/images/RightArrowIcon";
+import LeftArrowIcon from "../assets/svgComp/LeftArrowIcon";
+import RightArrowIcon from "../assets/svgComp/RightArrowIcon";
 
 const TabsIndicator = ({}, ref: any) => {
   const scrollLeft = () => {
@@ -33,8 +33,8 @@ const TabsIndicator = ({}, ref: any) => {
         <div className="tab"></div>
         <div className="tab"></div>
       </div>
-      <div className="arrowContainer">
-        <RightArrowIcon onClick={scrollRight} />
+      <div className="arrowContainer" onClick={scrollRight}>
+        <RightArrowIcon />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import { EpisodesType } from "../models/homeType";
-import statikVariables from "../store/statikVariables";
-import { CreateUniqKey } from "../helpers/function";
+import { EpisodesType } from "../../models/homeType";
+import statikVariables from "../../store/statikVariables";
+import { CreateUniqKey } from "../../helpers/function";
 
 const Episodes = (props: EpisodesType) => {
   const { detailSeason } = props;

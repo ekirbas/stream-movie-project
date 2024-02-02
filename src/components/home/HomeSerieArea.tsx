@@ -1,8 +1,8 @@
 import React from "react";
-import GenresContentContainer from "./GenresContentContainer";
-import PopularContentContainer from "./PopularContentContainer";
-import UpcomingContentContainer from "./UpcomingContentContainer";
-import { useApiStore } from "../store/store";
+import GenresContentContainer from "../GenresContentContainer";
+import PopularContentContainer from "../PopularContentContainer";
+import UpcomingContentContainer from "../UpcomingContentContainer";
+import { useApiStore } from "../../store/store";
 
 const HomeSerieArea = () => {
   const useApi = useApiStore();

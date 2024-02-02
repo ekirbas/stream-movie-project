@@ -1,5 +1,5 @@
 import React from "react";
-import Questions from "../components/Questions";
+import Questions from "../components/supports/Questions";
 import TrialHorizontal from "../components/TrialHorizontal";
 import ContactArea from "../components/supports/ContactArea";
 

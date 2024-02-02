@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { GenresContentContainerType } from "../models/homeType";
-import RightArrowIcon from "../assets/images/RightArrowIcon";
+import RightArrowIcon from "../assets/svgComp/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
 import { useNavigate } from "react-router";
 import TabsIndicator from "./TabsIndicator";

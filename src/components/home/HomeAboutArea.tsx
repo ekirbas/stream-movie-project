@@ -1,8 +1,8 @@
 import React from "react";
-import PlayBtnIcon from "../assets/images/PlayBtnIcon";
-import AboutLogo from "../assets/images/AboutLogo";
-import mixImage from "../assets/images/mix.png";
-import { HomeAboutAreaType } from "../models/homeType";
+import PlayBtnIcon from "../../assets/svgComp/PlayBtnIcon";
+import AboutLogo from "../../assets/svgComp/AboutLogo";
+import mixImage from "../../assets/images/mix.png";
+import { HomeAboutAreaType } from "../../models/homeType";
 
 const HomeAboutArea = (props: HomeAboutAreaType) => {
   const { windowHeight } = props;

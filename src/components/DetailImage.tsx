@@ -1,10 +1,10 @@
 import React from "react";
 import statikVariables from "../store/statikVariables";
 import { DetailImageType } from "../models/homeType";
-import PlayBtnIcon from "../assets/images/PlayBtnIcon";
-import PlusIcon from "../assets/images/PlusIcon";
-import LikeICon from "../assets/images/LikeICon";
-import VolumeIcon from "../assets/images/VolumeIcon";
+import PlayBtnIcon from "../assets/svgComp/PlayBtnIcon";
+import PlusIcon from "../assets/svgComp/PlusIcon";
+import LikeICon from "../assets/svgComp/LikeICon";
+import VolumeIcon from "../assets/svgComp/VolumeIcon";
 
 const DetailImage = (props: DetailImageType) => {
   const { title, overview, url } = props;

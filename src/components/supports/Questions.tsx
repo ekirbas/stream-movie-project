@@ -1,5 +1,5 @@
 import React from "react";
-import PlusIcon from "../assets/images/PlusIcon";
+import PlusIcon from "../../assets/svgComp/PlusIcon";
 
 const Questions = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import GenreIcon from "../../assets/images/GenreIcon";
+import GenreIcon from "../../assets/svgComp/GenreIcon";
 import { Genre } from "../../models/storeType";
 import { SeriesGenresAreaType } from "../../models/homeType";
 

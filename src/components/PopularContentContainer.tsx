@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { PopularContentContainerType } from "../models/homeType";
 import { CreateUniqKey } from "../helpers/function";
 import statikVariables from "../store/statikVariables";
-import ImdbIcon from "../assets/images/ImdbIcon";
+import ImdbIcon from "../assets/svgComp/ImdbIcon";
 import { useNavigate } from "react-router";
 import TabsIndicator from "./TabsIndicator";
 import { ResultPopularMovie } from "../models/storeType";

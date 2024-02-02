@@ -1,9 +1,9 @@
 import React from "react";
 import DateIcon from "../../assets/svgComp/DateIcon";
 import dayjs from "dayjs";
-import { SeriesReleaseDateAreaType } from "../../models/homeType";
+import { MovieReleaseDateType } from "../../models/homeType";
 
-const SeriesReleaseDateArea = (props: SeriesReleaseDateAreaType) => {
+const MovieReleaseDate = (props: MovieReleaseDateType) => {
   const { data } = props;
   return (
     <div>
@@ -18,4 +18,4 @@ const SeriesReleaseDateArea = (props: SeriesReleaseDateAreaType) => {
   );
 };
 
-export default SeriesReleaseDateArea;
+export default MovieReleaseDate;

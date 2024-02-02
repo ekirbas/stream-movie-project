@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Logo, SearchIcon } from "../assets/images/SvgComponents";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "../../assets/svgComp/Logo";
+import SearchIcon from "../../assets/svgComp/SearchIcon";
 
 const NavBar = () => {
   const urlPath = () => {

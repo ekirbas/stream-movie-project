@@ -1,5 +1,5 @@
 import React from "react";
-import { SeasonsType } from "../models/homeType";
+import { SeasonsType } from "../../models/homeType";
 import SeasonItem from "./SeasonItem";
 
 const Seasons = (props: SeasonsType) => {

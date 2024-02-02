@@ -1,7 +1,7 @@
 import React from "react";
 import DetailLeftOverview from "./DetailLeftOverview";
 import CastArea from "./CastArea";
-import Seasons from "../Seasons";
+import Seasons from "./Seasons";
 import { SeriesDetailLeftType } from "../../models/homeType";
 
 const SeriesDetailLeft = (props: SeriesDetailLeftType) => {

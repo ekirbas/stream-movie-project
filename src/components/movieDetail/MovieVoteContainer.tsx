@@ -1,10 +1,9 @@
 import React from "react";
 import StarIcon from "../../assets/svgComp/StarIcon";
-import { SeriesVoteContainerType } from "../../models/homeType";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
-
-const SeriesVoteContainer = (props: SeriesVoteContainerType) => {
+import { MovieVoteContainerType } from "../../models/homeType";
+const MovieVoteContainer = (props: MovieVoteContainerType) => {
   const { data } = props;
   return (
     <div>
@@ -16,7 +15,7 @@ const SeriesVoteContainer = (props: SeriesVoteContainerType) => {
         <div>Streamvibe</div>
         <div className="starsContainer">
           <StarRatings
-            rating={data?.vote_average != null ? data?.vote_average / 2 : 0}
+            rating={data?.vote_average != null ? data?.vote_average / 2 : 5}
             starDimension={"24px"}
             starSpacing={"1px"}
             react-simple-star-rating={"#999999"}
@@ -29,4 +28,4 @@ const SeriesVoteContainer = (props: SeriesVoteContainerType) => {
   );
 };
 
-export default SeriesVoteContainer;
+export default MovieVoteContainer;

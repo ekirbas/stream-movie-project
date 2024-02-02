@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
-import { ImageSliderDataType } from "../models/homeType";
-import statikVariables from "../store/statikVariables";
-import { CreateUniqKey } from "../helpers/function";
-import PlayBtnIcon from "../assets/images/PlayBtnIcon";
-import PlusIcon from "../assets/images/PlusIcon";
-import LikeICon from "../assets/images/LikeICon";
-import VolumeIcon from "../assets/images/VolumeIcon";
+import { ImageSliderDataType } from "../../models/homeType";
+import statikVariables from "../../store/statikVariables";
+import { CreateUniqKey } from "../../helpers/function";
+import PlayBtnIcon from "../../assets/svgComp/PlayBtnIcon";
+import PlusIcon from "../../assets/svgComp/PlusIcon";
+import LikeICon from "../../assets/svgComp/LikeICon";
+import VolumeIcon from "../../assets/svgComp/VolumeIcon";
 import SliderImageTabsIndicator from "./SliderImageTabsIndicator";
-import { ResultPopularMovie } from "../models/storeType";
+import { ResultPopularMovie } from "../../models/storeType";
 
 const ImageSliderData = (props: ImageSliderDataType) => {
   const { data } = props;

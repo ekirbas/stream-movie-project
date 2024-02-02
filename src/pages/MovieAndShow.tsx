@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useApiStore } from "../store/store";
-import ImageSliderData from "../components/ImageSliderData";
-import MovieAndShowMovieArea from "../components/MovieAndShowMovieArea";
-import MovieAndShowSeriesArea from "../components/MovieAndShowSeriesArea";
+import ImageSliderData from "../components/movieAndShow/ImageSliderData";
+import MovieAndShowMovieArea from "../components/movieAndShow/MovieAndShowMovieArea";
+import MovieAndShowSeriesArea from "../components/movieAndShow/MovieAndShowSeriesArea";
 
 const MovieAndShow = () => {
   const useApi = useApiStore();
