@@ -1,7 +1,7 @@
 import React from "react";
-import { CrewSeries } from "../../models/storeType";
 import statikVariables from "../../store/statikVariables";
 import { SeriesWriterAreaType } from "../../models/homeType";
+import { CreateUniqKey } from "../../helpers/function";
 
 const SeriesWriterArea = (props: SeriesWriterAreaType) => {
   const { writer } = props;
@@ -10,9 +10,10 @@ const SeriesWriterArea = (props: SeriesWriterAreaType) => {
       <div className="directorArea">
         <div className="divTitle">Yazar</div>
         <div className="directorContainer">
-          {writer?.map((v: CrewSeries) => {
+          {writer?.map((v) => {
+            const uniqKey = CreateUniqKey();
             return (
-              <div className="director">
+              <div className="director" key={uniqKey}>
                 {v.profile_path && (
                   <img
                     src={`${

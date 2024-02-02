@@ -1,6 +1,7 @@
 import React from "react";
 import statikVariables from "../../store/statikVariables";
 import { SeriesMusicAreaType } from "../../models/homeType";
+import { CreateUniqKey } from "../../helpers/function";
 
 const SeriesMusicArea = (props: SeriesMusicAreaType) => {
   const { music } = props;
@@ -10,8 +11,9 @@ const SeriesMusicArea = (props: SeriesMusicAreaType) => {
         <div className="divTitle">Müzik</div>
         <div className="directorContainer">
           {music?.map((v) => {
+            const uniqKey = CreateUniqKey();
             return (
-              <div className="director">
+              <div className="director" key={uniqKey}>
                 {v.profile_path && (
                   <img
                     src={`${

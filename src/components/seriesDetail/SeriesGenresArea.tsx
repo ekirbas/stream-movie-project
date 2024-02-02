@@ -1,7 +1,7 @@
 import React from "react";
 import GenreIcon from "../../assets/svgComp/GenreIcon";
-import { Genre } from "../../models/storeType";
 import { SeriesGenresAreaType } from "../../models/homeType";
+import { CreateUniqKey } from "../../helpers/function";
 
 const SeriesGenresArea = (props: SeriesGenresAreaType) => {
   const { data } = props;
@@ -12,8 +12,13 @@ const SeriesGenresArea = (props: SeriesGenresAreaType) => {
         Türler
       </div>
       <div className="genresContainer">
-        {data?.genres.map((v: Genre) => {
-          return <div className="genres">{v.name}</div>;
+        {data?.genres.map((v) => {
+          const uniqKey = CreateUniqKey();
+          return (
+            <div className="genres" key={uniqKey}>
+              {v.name}
+            </div>
+          );
         })}
       </div>
     </div>
