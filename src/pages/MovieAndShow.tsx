@@ -1,25 +1,45 @@
 import React, { useEffect } from "react";
-import { useApiStore } from "../store/store";
 import ImageSliderData from "../components/movieAndShow/ImageSliderData";
 import MovieAndShowMovieArea from "../components/movieAndShow/MovieAndShowMovieArea";
 import MovieAndShowSeriesArea from "../components/movieAndShow/MovieAndShowSeriesArea";
+import { useStoreMulti } from "../helpers/useStoreMulti";
 
 const MovieAndShow = () => {
-  const useApi = useApiStore();
+  const {
+    popularMovie,
+    fecthGenreMovie,
+    fecthGenreSeries,
+    fecthPopularMovie,
+    fecthPopularSeries,
+    fecthTopRatedMovie,
+    fecthTopRatedSeries,
+    fecthUpcomingMovie,
+    fecthOnTheAirSeries,
+  } = useStoreMulti(
+    "popularMovie",
+    "fecthGenreMovie",
+    "fecthGenreSeries",
+    "fecthPopularMovie",
+    "fecthPopularSeries",
+    "fecthTopRatedMovie",
+    "fecthTopRatedSeries",
+    "fecthUpcomingMovie",
+    "fecthOnTheAirSeries"
+  );
   useEffect(() => {
-    useApi.fecthGenreMovie();
-    useApi.fecthGenreSeries();
-    useApi.fecthPopularMovie("1");
-    useApi.fecthPopularSeries("1");
-    useApi.fecthTopRatedMovie("1");
-    useApi.fecthTopRatedSeries("1");
-    useApi.fecthUpcomingMovie("1");
-    useApi.fecthOnTheAirSeries("1");
+    fecthGenreMovie();
+    fecthGenreSeries();
+    fecthPopularMovie("1");
+    fecthPopularSeries("1");
+    fecthTopRatedMovie("1");
+    fecthTopRatedSeries("1");
+    fecthUpcomingMovie("1");
+    fecthOnTheAirSeries("1");
   }, []);
   return (
     <div className="movieAndShow">
       <div className="contentContainer">
-        <ImageSliderData data={useApi.popularMovie?.slice(0, 4)} />
+        <ImageSliderData data={popularMovie?.slice(0, 4)} />
         <MovieAndShowMovieArea />
         <MovieAndShowSeriesArea />
       </div>

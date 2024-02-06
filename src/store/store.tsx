@@ -16,7 +16,7 @@ const options = {
   headers: { Authorization: `Bearer ${statikVariables.readAccessToken}` },
 };
 
-export const useApiStore = create<ApiStore>()((set) => ({
+export const useApiStore = create<ApiStore>((set) => ({
   /* Zustand default state */
   count: 1,
   inc: () => set((state) => ({ count: state.count + 1 })),
@@ -236,8 +236,8 @@ export const useApiStore = create<ApiStore>()((set) => ({
         options
       );
       const data: EpisodeDetailSeason[] = response?.data?.episodes;
-      set(() => ({ detailSeason: data }));
-      console.log("fecthDetailSeason =", response);
+      /* set(() => ({ detailSeason: data })); */
+      //console.log("fecthDetailSeason =", response);
       //console.log("respon jsn =", JSON.stringify(response));
       return data;
     } catch (err) {

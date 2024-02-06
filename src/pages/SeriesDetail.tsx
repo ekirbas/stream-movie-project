@@ -1,21 +1,28 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
-import { useApiStore } from "../store/store";
 import DetailImage from "../components/DetailImage";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
 import TrialHorizontal from "../components/TrialHorizontal";
 import "../helpers/function";
 import SeriesDetailContainer from "../components/seriesDetail/SeriesDetailContainer";
+import { useStoreMulti } from "../helpers/useStoreMulti";
 
 const SeriesDetail = () => {
-  const useApi = useApiStore();
   const { serie_id } = useParams();
-  const data = useApi.detailSeries;
+  const { detailSeries, fecthDetailSeries, fecthCastSeries } = useStoreMulti(
+    "detailSeries",
+    "fecthDetailSeries",
+    "fecthCastSeries"
+  );
+  const data = detailSeries;
+  const fetchAsync = async () => {
+    await fecthCastSeries(`${serie_id}`);
+    await fecthDetailSeries(`${serie_id}`);
+  };
 
   useEffect(() => {
-    useApi.fecthDetailSeries(`${serie_id}`);
-    useApi.fecthCastSeries(`${serie_id}`);
+    fetchAsync();
   }, []);
 
   return (

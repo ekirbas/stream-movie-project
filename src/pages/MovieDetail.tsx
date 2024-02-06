@@ -1,19 +1,24 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router";
-import { useApiStore } from "../store/store";
 import DetailImage from "../components/DetailImage";
 import TrialHorizontal from "../components/TrialHorizontal";
 import MovieDetailContainer from "../components/movieDetail/MovieDetailContainer";
 //@ts-ignore
 import StarRatings from "react-star-ratings";
+import { useStoreMulti } from "../helpers/useStoreMulti";
 
 const MovieDetail = () => {
-  const useApi = useApiStore();
   const { movie_id } = useParams();
-  const data = useApi.detailMovie;
+  const { detailMovie, fecthDetailMovie, fecthCastMovie } = useStoreMulti(
+    "detailMovie",
+    "fecthDetailMovie",
+    "fecthCastMovie"
+  );
+  const data = detailMovie;
+
   useEffect(() => {
-    useApi.fecthDetailMovie(`${movie_id}`);
-    useApi.fecthCastMovie(`${movie_id}`);
+    fecthDetailMovie(`${movie_id}`);
+    fecthCastMovie(`${movie_id}`);
   }, []);
   return (
     <div className="movieDetail">

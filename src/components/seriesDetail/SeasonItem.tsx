@@ -3,20 +3,18 @@ import BottomArrowIcon from "../../assets/svgComp/BottomArrowIcon";
 import { useApiStore } from "../../store/store";
 import { SeasonItemType } from "../../models/homeType";
 import Episodes from "./Episodes";
-import { CreateUniqKey } from "../../helpers/function";
 import { EpisodeDetailSeason } from "../../models/storeType";
 
 const SeasonItem = (props: SeasonItemType) => {
   const { series_id, season_number, episode_count } = props;
-  const useApi = useApiStore();
   const [activeSeason, setActiveSeason] = useState(false);
   const [episodes, setEpisodes] = useState<EpisodeDetailSeason[]>([]);
-  const uniqId = CreateUniqKey();
+  const fecthDetailSeason = useApiStore((state) => state.fecthDetailSeason);
   const handleSeasonClick = async (
     series_id: number,
     season_number: number
   ) => {
-    const response: EpisodeDetailSeason[] = await useApi.fecthDetailSeason(
+    const response: EpisodeDetailSeason[] = await fecthDetailSeason(
       series_id,
       season_number
     );
@@ -25,7 +23,7 @@ const SeasonItem = (props: SeasonItemType) => {
   };
 
   return (
-    <div className="seasonContainer" key={uniqId}>
+    <div className="seasonContainer">
       <div className="titleContainer">
         <div className="seasonsTitle">
           Season

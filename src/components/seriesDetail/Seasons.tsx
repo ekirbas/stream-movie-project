@@ -1,15 +1,15 @@
 import React, { useId } from "react";
 import { SeasonsType } from "../../models/homeType";
 import SeasonItem from "./SeasonItem";
+import { CreateUniqKey } from "../../helpers/function";
 
 const Seasons = (props: SeasonsType) => {
   const { seasons, series_id } = props;
-
   return (
     <div className="seasonsArea">
       <div className="seasonsTitle">Season and Episodes</div>
       {seasons?.map((v) => {
-        const uniqId = useId();
+        const uniqId = CreateUniqKey();
         return (
           <SeasonItem
             key={`seasons-${uniqId}`}

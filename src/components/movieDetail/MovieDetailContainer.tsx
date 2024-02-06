@@ -7,8 +7,7 @@ import { MovieDetailContainerType } from "../../models/homeType";
 
 const MovieDetailContainer = (props: MovieDetailContainerType) => {
   const { data } = props;
-  const useApi = useApiStore();
-  const castData = useApi.castMovie;
+  const castData = useApiStore((state) => state.castMovie);
   let directors: Crew[] = [],
     writer: Crew[] = [],
     music: Crew[] = [];

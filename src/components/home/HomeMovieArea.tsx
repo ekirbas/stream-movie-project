@@ -2,34 +2,40 @@ import React from "react";
 import GenresContentContainer from "../GenresContentContainer";
 import PopularContentContainer from "../PopularContentContainer";
 import UpcomingContentContainer from "../UpcomingContentContainer";
-import { useApiStore } from "../../store/store";
+import { useStoreMulti } from "../../helpers/useStoreMulti";
 
 const HomeMovieArea = () => {
-  const useApi = useApiStore();
+  const { genreMovie, popularMovie, topRatedMovie, upcomingMovie } =
+    useStoreMulti(
+      "genreMovie",
+      "popularMovie",
+      "topRatedMovie",
+      "upcomingMovie"
+    );
   return (
     <fieldset className="fieldS">
       <legend>
         <div className="title">Movies</div>
       </legend>
       <GenresContentContainer
-        data={useApi.genreMovie}
+        data={genreMovie}
         type="genre-movie"
         header="Movie Genres"
       />
       <PopularContentContainer
         header="Populer Movies"
         type="movie"
-        data={useApi.popularMovie}
+        data={popularMovie}
       />
       <PopularContentContainer
         header="Top Rated Movies"
         type="movie"
-        data={useApi.topRatedMovie}
+        data={topRatedMovie}
       />
       <UpcomingContentContainer
         header="New Releases Movies"
         type="movie"
-        data={useApi.upcomingMovie}
+        data={upcomingMovie}
       />
     </fieldset>
   );

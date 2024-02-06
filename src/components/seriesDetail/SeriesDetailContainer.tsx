@@ -7,9 +7,7 @@ import { SeriesDetailContainerType } from "../../models/homeType";
 
 const SeriesDetailContainer = (props: SeriesDetailContainerType) => {
   const { data } = props;
-  const useApi = useApiStore();
-  const castData = useApi.castSeries;
-
+  const castData = useApiStore((state) => state.castSeries);
   let directors: CrewSeries[] = [],
     writer: CrewSeries[] = [],
     music: CrewSeries[] = [];

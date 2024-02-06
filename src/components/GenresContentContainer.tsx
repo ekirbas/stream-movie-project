@@ -4,7 +4,6 @@ import RightArrowIcon from "../assets/svgComp/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
 import { useNavigate } from "react-router";
 import TabsIndicator from "./TabsIndicator";
-import { Genre } from "../models/storeType";
 
 const GenresContentContainer = (props: GenresContentContainerType) => {
   const { data, header, type } = props;
@@ -28,28 +27,6 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
     }
   };
 
-  /*  her tür için 4 filmin kapak fotoğrafını alma 
-  const [genreData, setGenreData] = useState<any>({});
-
-  const genreImages = async () => {
-    let dataObject = {};
-    for (let i = 0; i < data?.length; i++) {
-      const v = data[i];
-      const response: any = await useApi.fecthGenreDescVoteMovie(`${v.id}`);
-      let imagesArr = [
-        response[0].poster_path,
-        response[1].poster_path,
-        response[2].poster_path,
-        response[3].poster_path,
-      ];
-      dataObject = { ...dataObject, [v.id]: imagesArr };
-    }
-    setGenreData(dataObject);
-  };
-  useEffect(() => {
-    genreImages();
-  }, [data]); */
-
   return (
     <div>
       <div className="headerContainer">
@@ -57,7 +34,7 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
         <TabsIndicator ref={dataContainerRef} />
       </div>
       <div className="dataContainer gap30" ref={dataContainerRef}>
-        {data?.map((v: Genre) => {
+        {data?.map((v) => {
           const uniqKey = CreateUniqKey();
           return (
             <div
