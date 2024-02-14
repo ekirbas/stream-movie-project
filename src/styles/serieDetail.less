@@ -14,7 +14,7 @@
   color: var(--white);
 
   .seasonsTitle {
-    font: 500 24px/150% "Manrope", sans-serif;
+    font: 600 24px/150% "Manrope", sans-serif;
     color: var(--white);
   }
   .seasonContainer {
@@ -103,6 +103,199 @@
     }
     .episodesArea:nth-child(2) {
       margin-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 1441px) {
+  .seriesDetail {
+    margin-top: 16px;
+    .tabIndicatorContainer {
+      padding: 10px;
+      gap: 8px;
+      .arrowContainer {
+        padding: 6px;
+      }
+    }
+    .trialHorizontal {
+      height: 236px;
+      padding: 80px 60px;
+      .horizontalContainer {
+        .horizontalButton button {
+          padding: 14px 20px;
+          font-size: 14px;
+        }
+        .horizontalText {
+          gap: 10px;
+          .horizontalBigText {
+            font-size: 28px;
+          }
+          .horizontalSmallText {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .detailImageContainer {
+      height: 709px;
+      padding: 40px 40px 16px 40px;
+      .dataInfoContainer {
+        gap: 2px;
+        padding: 0 120px;
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .infoButtons {
+          margin-top: 22px;
+          gap: 12px;
+          .playBtn {
+            padding: 12px 20px;
+            font-size: 14px;
+            svg {
+              width: 15.3px;
+              height: 16.45px;
+            }
+          }
+          .actionBtn {
+            padding: 12px;
+            height: 44px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    .contentContainer {
+      gap: 80px;
+    }
+    .detailContainer {
+      .detailRight {
+        padding: 40px;
+        gap: 24px;
+        .releaseDate {
+          font-size: 16px;
+        }
+        .languagesArea .languagesContainer .languages {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+        .ratingContainer {
+          font-size: 16px;
+          padding: 14px;
+          gap: 4px;
+          .starsContainer {
+            svg {
+              width: 18px !important;
+              height: 18px !important;
+            }
+            .ratingText {
+              font-size: 14px;
+            }
+          }
+        }
+        .genresArea .genresContainer .genres {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+        .directorArea .directorContainer .director {
+          padding: 12px;
+          font-size: 16px;
+          img {
+            width: 47.13px;
+            height: 50px;
+          }
+        }
+      }
+
+      .detailLeft {
+        gap: 20px;
+        .seasonsArea {
+          padding: 30px;
+          .seasonsTitle {
+            font-size: 20px;
+          }
+          .seasonContainer {
+            padding: 40px;
+            .titleContainer {
+              gap: 8px;
+              .episodesTotal {
+                font-size: 16px;
+              }
+              .hideArrow {
+                padding: 12px;
+                svg {
+                  height: 20px;
+                  width: 20px;
+                }
+              }
+            }
+            .episodesArea {
+              padding: 35px 0;
+              &:nth-child(2) {
+                margin-top: 24px;
+              }
+              .episodesContainer {
+                gap: 18px;
+                .episodNumber {
+                  font-size: 24px;
+                }
+                .episodeImageArea {
+                  img {
+                    margin-right: 18px;
+                  }
+                  .episodeNameArea {
+                    gap: 10px;
+                    .episodeName {
+                      font-size: 18px;
+                      .episodeDuration {
+                        font-size: 14px;
+                      }
+                    }
+                    .episodeOverview {
+                      font-size: 16px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .overview {
+          padding: 40px;
+          gap: 10px;
+          font-size: 16px;
+        }
+        .castArea {
+          padding: 40px;
+          gap: 20px;
+          .castContainer {
+            gap: 10px;
+            .castCard {
+              gap: 2px;
+              font-size: 14px;
+              img {
+                width: 184px;
+                height: 226px;
+                border-radius: 10px;
+              }
+              .characterText {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .divTitle {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
   }
 }

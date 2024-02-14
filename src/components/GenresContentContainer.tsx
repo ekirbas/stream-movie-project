@@ -19,10 +19,10 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
         navigate(`/serie/${id}`);
         break;
       case "genre-serie":
-        navigate(`/serie/${id}`);
+        /* navigate(`/serie/${id}`); */
         break;
       case "genre-movie":
-        navigate(`/movie/${id}`);
+        /* navigate(`/movie/${id}`); */
         break;
     }
   };

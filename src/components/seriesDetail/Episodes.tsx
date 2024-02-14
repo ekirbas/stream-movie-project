@@ -20,7 +20,7 @@ const Episodes = (props: EpisodesType) => {
             <div className="episodeNameArea">
               <div className="episodeName">
                 {v?.name}
-                <div className="episodeDuration">{v.runtime}</div>
+                <div className="episodeDuration">{v.runtime} min</div>
               </div>
               <div className="episodeOverview">{v.overview}</div>
             </div>

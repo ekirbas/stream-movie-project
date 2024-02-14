@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/svgComp/Logo";
 import SearchIcon from "../../assets/svgComp/SearchIcon";
 
@@ -8,6 +8,10 @@ const NavBar = () => {
     const arr = useLocation().pathname.split("/");
     return arr[1];
   };
+  const navigate = useNavigate();
+  const handleLogo = () => {
+    navigate("/");
+  };
   const [navActive, setNavActive] = useState(urlPath());
   const handleNavBarActive = (val: string) => {
     setNavActive(val);
@@ -15,7 +19,7 @@ const NavBar = () => {
   return (
     <div className="navBarZ-Index">
       <div className="navBar">
-        <Logo />
+        <Logo className="navLogo" onClick={handleLogo} />
         <ul className="navButtonsContainer">
           <li>
             <Link

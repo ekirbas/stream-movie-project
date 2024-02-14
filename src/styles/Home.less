@@ -20,7 +20,7 @@
     }
     .fadeOutBottom {
       position: absolute;
-      bottom: 20%;
+      bottom: 19%;
       left: 0;
       width: 100%;
       height: 70%;
@@ -32,6 +32,8 @@
       inset: 0;
       width: fit-content;
       height: 60%;
+      display: flex;
+      align-items: center;
       .aboutLogo {
         width: 100%;
         height: 100%;
@@ -139,7 +141,7 @@
           position: relative;
           .fadeOut {
             width: 100%;
-            height: 100%;
+            height: 101%;
             position: absolute;
             inset: 0;
 
@@ -270,5 +272,110 @@
       background-color: var(--red45);
       width: 23px;
     }
+  }
+}
+
+@media (max-width: 1441px) {
+  .homeAboutContainer {
+    .homeImageDiv .aboutIconArea .aboutLogo {
+      width: 300px;
+      height: 300px;
+    }
+    .aboutTextArea {
+      padding: 0 150px;
+      h1 {
+        font-size: 48px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .watchButton {
+        margin: 40px auto 1.5% auto;
+        font: 600 14px/150% "Manrope", sans-serif;
+        padding: 14px 24px;
+        svg {
+          width: 15.3px;
+          height: 16.45px;
+        }
+      }
+    }
+  }
+  .homeContainer {
+    .contentContainer {
+      .fieldS {
+        padding: 40px;
+        gap: 80px;
+        legend .title {
+          font-size: 16px;
+          padding: 8px 20px;
+        }
+        .headerContainer {
+          margin-bottom: 40px;
+          .header {
+            font-size: 30px;
+          }
+        }
+        .dataContainer {
+          .genreData {
+            min-width: 224px;
+            height: 259px;
+            border-radius: 10px;
+            padding: 24px;
+            .bottomArea {
+              font-size: 16px;
+              .bottomBtn {
+                width: 15px;
+                height: 13.5px;
+              }
+            }
+          }
+          .popularData {
+            min-width: 224px;
+            height: 308px;
+            border-radius: 10px;
+            padding: 16px;
+            .dataImageContainer {
+              margin-bottom: 16px;
+              .voteDiv {
+                font-size: 13px;
+                width: 62px;
+                height: 24px;
+              }
+            }
+            .bottomAreaPopular {
+              font-size: 12px;
+              padding: 4px 8px 4px 8px;
+            }
+          }
+          .dateDiv {
+            font-size: 12px;
+            top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .tabIndicatorContainer {
+    padding: 12px;
+    gap: 12px;
+    .arrowContainer {
+      padding: 10px;
+      border-radius: 6px;
+      svg {
+        width: 15px;
+        height: 13.5px;
+      }
+    }
+    .lineTabsContainer {
+      .tab {
+        width: 14px;
+      }
+      .tabActive {
+        width: 18px;
+      }
+    }
+  }
+  .gap30 {
+    gap: 20px !important;
   }
 }

@@ -20,6 +20,7 @@ const MovieVoteContainer = (props: MovieVoteContainerType) => {
             starSpacing={"1px"}
             react-simple-star-rating={"#999999"}
             starRatedColor={"#e50000"}
+            className="starCss"
           />
           <div className="ratingText">{data?.vote_average.toFixed(1)}</div>
         </div>

@@ -1,6 +1,7 @@
 .movieDetail {
   color: var(--white);
   max-width: 100%;
+  margin-top: 16px;
 }
 .divTitle {
   font: 500 18px/150% "Manrope", sans-serif;
@@ -165,6 +166,7 @@
   border-radius: 12px;
   border: solid 1px #262626;
   position: relative;
+  background: round;
 }
 .trialHorizontal .horizontalContainer {
   display: flex;
@@ -176,7 +178,7 @@
   flex: 3;
 }
 .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
-  font: 600 48px/150% "Manrope", sans-serif;
+  font: 700 48px/150% "Manrope", sans-serif;
   color: var(--white);
   z-index: 10;
 }
@@ -262,4 +264,136 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+}
+@media (max-width: 1441px) {
+  .movieDetail {
+    margin-top: 16px;
+  }
+  .movieDetail .tabIndicatorContainer {
+    padding: 10px;
+    gap: 8px;
+  }
+  .movieDetail .tabIndicatorContainer .arrowContainer {
+    padding: 6px;
+  }
+  .movieDetail .trialHorizontal {
+    height: 236px;
+    padding: 80px 60px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 28px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 16px;
+  }
+  .movieDetail .detailImageContainer {
+    height: 709px;
+    padding: 40px 40px 16px 40px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer {
+    gap: 2px;
+    padding: 0 120px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer h1 {
+    font-size: 30px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer p {
+    font-size: 16px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons {
+    margin-top: 22px;
+    gap: 12px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn svg {
+    width: 15.3px;
+    height: 16.45px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn {
+    padding: 12px;
+    height: 44px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .movieDetail .contentContainer {
+    gap: 80px;
+  }
+  .movieDetail .detailContainer .detailRight {
+    padding: 40px;
+    gap: 24px;
+  }
+  .movieDetail .detailContainer .detailRight .releaseDate {
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .languagesArea .languagesContainer .languages {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer {
+    font-size: 16px;
+    padding: 14px;
+    gap: 4px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .genresArea .genresContainer .genres {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director img {
+    width: 47.13px;
+    height: 50px;
+  }
+  .movieDetail .detailContainer .detailLeft {
+    gap: 20px;
+  }
+  .movieDetail .detailContainer .detailLeft .overview {
+    padding: 40px;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea {
+    padding: 40px;
+    gap: 20px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer {
+    gap: 10px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard {
+    gap: 2px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard img {
+    width: 184px;
+    height: 226px;
+    border-radius: 10px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
+    font-size: 14px;
+  }
+  .movieDetail .divTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
 }
