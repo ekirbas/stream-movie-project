@@ -32,7 +32,7 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        <TabsIndicator ref={itemRef} />
+        {outerWidth > 390 && <TabsIndicator ref={itemRef} />}
       </div>
       <div className="dataContainer" ref={itemRef}>
         {data?.map((v: ResultPopularMovie) => {

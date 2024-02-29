@@ -32,7 +32,7 @@ const UpcomingContentContainer = (props: UpcomingContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        <TabsIndicator ref={dataContainerRef} />
+        {outerWidth > 390 && <TabsIndicator ref={dataContainerRef} />}
       </div>
       <div className="dataContainer" ref={dataContainerRef}>
         {data?.map((v: ResultPopularMovie) => {

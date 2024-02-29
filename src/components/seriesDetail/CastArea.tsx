@@ -12,7 +12,7 @@ const CastArea = (props: CastAreaType) => {
     <div className="castArea">
       <div className="topContainer">
         <div className="divTitle">Cast</div>
-        <TabsIndicator ref={castContainerRef} />
+        {outerWidth > 390 && <TabsIndicator ref={castContainerRef} />}
       </div>
       <div className="castContainer" ref={castContainerRef}>
         {castData?.cast.map((v) => {

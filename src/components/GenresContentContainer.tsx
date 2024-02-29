@@ -31,7 +31,7 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        <TabsIndicator ref={dataContainerRef} />
+        {outerWidth > 390 && <TabsIndicator ref={dataContainerRef} />}
       </div>
       <div className="dataContainer gap30" ref={dataContainerRef}>
         {data?.map((v) => {

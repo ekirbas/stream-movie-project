@@ -265,7 +265,7 @@
   align-items: center;
   cursor: pointer;
 }
-@media (max-width: 1441px) {
+@media (max-width: 1700px) {
   .movieDetail {
     margin-top: 16px;
   }

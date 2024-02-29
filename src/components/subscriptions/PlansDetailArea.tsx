@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PlansTable from "./PlansTable";
+import MobileTabsSubscriptions from "./MobileTabsSubscriptions";
 
 const PlansDetailArea = () => {
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
   return (
     <div className="plansDetailArea">
       <div className="topContainer">
@@ -14,7 +19,7 @@ const PlansDetailArea = () => {
           the one that's right for you.
         </div>
       </div>
-      <PlansTable />
+      {pageWidth > 390 ? <PlansTable /> : <MobileTabsSubscriptions />}
     </div>
   );
 };

@@ -3,6 +3,7 @@ import PopularContentContainer from "../PopularContentContainer";
 import UpcomingContentContainer from "../UpcomingContentContainer";
 import GenresContentContainer from "../GenresContentContainer";
 import { useStoreMulti } from "../../helpers/useStoreMulti";
+import FieldsetComp from "../home/FieldsetComp";
 
 const MovieAndShowMovieArea = () => {
   const { genreMovie, popularMovie, topRatedMovie, upcomingMovie } =
@@ -13,11 +14,7 @@ const MovieAndShowMovieArea = () => {
       "upcomingMovie"
     );
   return (
-    <fieldset className="fieldS">
-      <legend>
-        <div className="title">Movies</div>
-      </legend>
-
+    <FieldsetComp title="Movies">
       <PopularContentContainer
         header="Populer Movies"
         data={popularMovie}
@@ -38,7 +35,7 @@ const MovieAndShowMovieArea = () => {
         type="genre-movie"
         header="Movie Genres"
       />
-    </fieldset>
+    </FieldsetComp>
   );
 };
 

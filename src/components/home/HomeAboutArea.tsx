@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PlayBtnIcon from "../../assets/svgComp/PlayBtnIcon";
 import AboutLogo from "../../assets/svgComp/AboutLogo";
 import mixImage from "../../assets/images/mix.png";
@@ -6,6 +6,10 @@ import { HomeAboutAreaType } from "../../models/homeType";
 
 const HomeAboutArea = (props: HomeAboutAreaType) => {
   const { windowHeight } = props;
+  const [pageWidth, setPageWidth] = useState<number>(390);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
   return (
     <div
       className="homeAboutContainer"
@@ -26,11 +30,10 @@ const HomeAboutArea = (props: HomeAboutAreaType) => {
         <h1>The Best Streaming Experience</h1>
         <p>
           StreamVibe is the best streaming experience for watching your favorite
-          movies and shows on demand, anytime, anywhere. With StreamVibe, you
-          can enjoy a wide variety of content, including the latest
-          blockbusters, classic movies, popular TV shows, and more. You can also
-          create your own watchlists, so you can easily find the content you
-          want to watch.
+          movies and shows on demand, anytime, anywhere.
+          {pageWidth < 391
+            ? ""
+            : " With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch."}
         </p>
         <button className="watchButton">
           <PlayBtnIcon />

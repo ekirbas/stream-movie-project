@@ -7,14 +7,13 @@ import PlusIcon from "../../assets/svgComp/PlusIcon";
 import LikeICon from "../../assets/svgComp/LikeICon";
 import VolumeIcon from "../../assets/svgComp/VolumeIcon";
 import SliderImageTabsIndicator from "./SliderImageTabsIndicator";
-import { ResultPopularMovie } from "../../models/storeType";
 
 const ImageSliderData = (props: ImageSliderDataType) => {
   const { data } = props;
   const sliderImageContainerRef = useRef(null);
   return (
     <div className="sliderImageContainer" ref={sliderImageContainerRef}>
-      {data?.map((v: ResultPopularMovie) => {
+      {data?.map((v) => {
         const uniqKey = CreateUniqKey();
         return (
           <div
@@ -48,7 +47,9 @@ const ImageSliderData = (props: ImageSliderDataType) => {
               </div>
             </div>
             <div className="sliderImageFadeOut"></div>
-            <SliderImageTabsIndicator ref={sliderImageContainerRef} />
+            {outerWidth > 390 && (
+              <SliderImageTabsIndicator ref={sliderImageContainerRef} />
+            )}
           </div>
         );
       })}

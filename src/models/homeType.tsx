@@ -129,3 +129,18 @@ export interface MovieWriterAreaType {
 export interface MovieMusicAreaType {
   music?: Crew[];
 }
+
+export interface TabsContentType {
+  activeTab: string;
+}
+export interface FieldsetCompType {
+  title: string;
+  children: React.ReactNode;
+}
+export interface MobileTabsHomeType {
+  page: string;
+  activeTab_initial: string;
+}
+export interface SubscriptionsTabsContentType {
+  activeTab: string;
+}

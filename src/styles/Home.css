@@ -101,16 +101,16 @@
   align-items: center;
   font: 600 20px/150% "Manrope", sans-serif;
 }
-.contentContainer .fieldS .headerContainer {
+.contentContainer .headerContainer {
   display: flex;
   align-items: center;
   gap: 100px;
   margin-bottom: 50px;
 }
-.contentContainer .fieldS .headerContainer .header {
+.contentContainer .headerContainer .header {
   font: 700 38px/150% "Manrope", sans-serif;
 }
-.contentContainer .fieldS .dataContainer {
+.contentContainer .dataContainer {
   width: 100%;
   display: flex;
   gap: 20px;
@@ -120,10 +120,10 @@
   scrollbar-width: none;
   /* Firefox */
 }
-.contentContainer .fieldS .dataContainer::-webkit-scrollbar {
+.contentContainer .dataContainer::-webkit-scrollbar {
   display: none;
 }
-.contentContainer .fieldS .dataContainer .genreData {
+.contentContainer .dataContainer .genreData {
   height: 342px;
   min-width: 275px;
   padding: 30px;
@@ -132,26 +132,26 @@
   background-color: var(--black10);
   cursor: pointer;
 }
-.contentContainer .fieldS .dataContainer .genreData .dataImageContainer {
+.contentContainer .dataContainer .genreData .dataImageContainer {
   width: 100%;
   height: 91%;
   position: relative;
 }
-.contentContainer .fieldS .dataContainer .genreData .dataImageContainer .fadeOut {
+.contentContainer .dataContainer .genreData .dataImageContainer .fadeOut {
   width: 100%;
   height: 101%;
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
 }
-.contentContainer .fieldS .dataContainer .genreData .dataImageContainer img {
+.contentContainer .dataContainer .genreData .dataImageContainer img {
   min-width: 100%;
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
   border-radius: 12px;
 }
-.contentContainer .fieldS .dataContainer .genreData .bottomArea {
+.contentContainer .dataContainer .genreData .bottomArea {
   font: 600 18px/150% "Manrope", sans-serif;
   color: var(--white);
   width: 100%;
@@ -159,21 +159,21 @@
   justify-content: space-between;
   align-items: center;
 }
-.contentContainer .fieldS .dataContainer .genreData .bottomArea .bottomBtn {
+.contentContainer .dataContainer .genreData .bottomArea .bottomBtn {
   display: flex;
   align-items: center;
 }
-.contentContainer .fieldS .dataContainer .popularData {
+.contentContainer .dataContainer .popularData {
   min-width: 284px;
   height: 377px;
   padding: 20px;
   gap: 20px;
 }
-.contentContainer .fieldS .dataContainer .popularData .dataImageContainer {
+.contentContainer .dataContainer .popularData .dataImageContainer {
   height: 84%;
   margin-bottom: 20px;
 }
-.contentContainer .fieldS .dataContainer .popularData .dataImageContainer .voteDiv {
+.contentContainer .dataContainer .popularData .dataImageContainer .voteDiv {
   font: 600 14px/150% "Manrope", sans-serif;
   position: absolute;
   width: 70px;
@@ -188,7 +188,7 @@
   border-radius: 4px;
   padding-right: 6px;
 }
-.contentContainer .fieldS .dataContainer .popularData .bottomAreaPopular {
+.contentContainer .dataContainer .popularData .bottomAreaPopular {
   width: 100%;
   color: var(--grey75);
   font: 500 16px/150% "Manrope", sans-serif;
@@ -203,7 +203,7 @@
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-.contentContainer .fieldS .dataContainer .dateDiv {
+.contentContainer .dataContainer .dateDiv {
   background-color: var(--black08);
   border: solid 1px var(--black15);
   border-radius: 51px;
@@ -217,7 +217,7 @@
   align-items: center;
   justify-content: center;
 }
-.contentContainer .fieldS .dataContainer .dateDiv span {
+.contentContainer .dataContainer .dateDiv span {
   margin-left: 2px;
 }
 .tabIndicatorContainer {
@@ -257,7 +257,7 @@
   background-color: var(--red45);
   width: 23px;
 }
-@media (max-width: 1441px) {
+@media (max-width: 1700px) {
   .homeAboutContainer .homeImageDiv .aboutIconArea .aboutLogo {
     width: 300px;
     height: 300px;
@@ -279,6 +279,9 @@
   .homeAboutContainer .aboutTextArea .watchButton svg {
     width: 15.3px;
     height: 16.45px;
+  }
+  .homeContainer .contentContainer {
+    gap: 120px;
   }
   .homeContainer .contentContainer .fieldS {
     padding: 40px;
@@ -328,6 +331,138 @@
   .homeContainer .contentContainer .fieldS .dataContainer .dateDiv {
     font-size: 12px;
     top: 10px;
+  }
+  .tabIndicatorContainer {
+    padding: 12px;
+    gap: 12px;
+  }
+  .tabIndicatorContainer .arrowContainer {
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .tabIndicatorContainer .arrowContainer svg {
+    width: 15px;
+    height: 13.5px;
+  }
+  .tabIndicatorContainer .lineTabsContainer .tab {
+    width: 14px;
+  }
+  .tabIndicatorContainer .lineTabsContainer .tabActive {
+    width: 18px;
+  }
+  .gap30 {
+    gap: 20px !important;
+  }
+}
+@media (max-width: 391px) {
+  .homeAboutContainer {
+    min-height: 549px;
+  }
+  .homeAboutContainer .homeImageDiv img {
+    object-fit: cover;
+  }
+  .homeAboutContainer .homeImageDiv .fadeOutTop {
+    background: linear-gradient(0, rgba(26, 26, 26, 0) 0%, #1a1a1a 87%);
+  }
+  .homeAboutContainer .homeImageDiv .fadeOutBottom {
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 95%);
+  }
+  .homeAboutContainer .homeImageDiv .aboutIconArea .aboutLogo {
+    width: 200px;
+    height: 200px;
+  }
+  .homeAboutContainer .aboutTextArea {
+    padding: 0;
+  }
+  .homeAboutContainer .aboutTextArea h1 {
+    font-size: 28px;
+  }
+  .homeAboutContainer .aboutTextArea p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .homeAboutContainer .aboutTextArea .watchButton {
+    font: 600 14px/150% "Manrope", sans-serif;
+    padding: 14px 24px;
+    margin: 30px auto 4.5% auto;
+  }
+  .homeAboutContainer .aboutTextArea .watchButton svg {
+    width: 15.3px;
+    height: 16.45px;
+  }
+  .homeContainer {
+    padding-top: 80px;
+  }
+  .homeContainer .contentContainer {
+    gap: 50px;
+  }
+  .homeContainer .contentContainer .mobileTabsContainer {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black06);
+    border: solid 1px var(--black15);
+    border-radius: 8px;
+  }
+  .homeContainer .contentContainer .mobileTabsContainer .mobileTab {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font: 500 14px/150% "Manrope", sans-serif;
+    color: var(--grey60);
+  }
+  .homeContainer .contentContainer .mobileTabsContainer .mobileTabActive {
+    color: var(--white);
+    background-color: var(--black12);
+  }
+  .homeContainer .contentContainer .headerContainer {
+    margin-bottom: 40px;
+  }
+  .homeContainer .contentContainer .headerContainer .header {
+    font-size: 24px;
+  }
+  .homeContainer .contentContainer .dataContainer .genreData {
+    min-width: 181px;
+    height: 201px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .homeContainer .contentContainer .dataContainer .genreData .bottomArea {
+    font-size: 14px;
+  }
+  .homeContainer .contentContainer .dataContainer .genreData .bottomArea .bottomBtn {
+    width: 12.5px;
+    height: 11.25px;
+  }
+  .homeContainer .contentContainer .dataContainer .popularData {
+    min-width: 178.4px;
+    height: 259px;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .homeContainer .contentContainer .dataContainer .popularData .dataImageContainer {
+    margin-bottom: 12px;
+  }
+  .homeContainer .contentContainer .dataContainer .popularData .dataImageContainer .voteDiv {
+    font-size: 11px;
+    width: 52px;
+    height: 18px;
+  }
+  .homeContainer .contentContainer .dataContainer .popularData .bottomAreaPopular {
+    font-size: 10px;
+    padding: 4px 8px 4px 8px;
+  }
+  .homeContainer .contentContainer .dataContainer .dateDiv {
+    font-size: 10px;
+    top: 8px;
+  }
+  .homeContainer .contentContainer .dataContainer .dateDiv svg {
+    width: 18px;
+    height: 18px;
   }
   .tabIndicatorContainer {
     padding: 12px;

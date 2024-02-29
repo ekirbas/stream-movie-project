@@ -3,6 +3,7 @@ import HomeAboutArea from "../components/home/HomeAboutArea";
 import HomeMovieArea from "../components/home/HomeMovieArea";
 import HomeSerieArea from "../components/home/HomeSerieArea";
 import { useStoreMulti } from "../helpers/useStoreMulti";
+import MobileTabsHome from "../components/home/MobileTabsHome";
 
 const Home = () => {
   const {
@@ -26,6 +27,7 @@ const Home = () => {
   );
 
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
   useEffect(() => {
     fecthGenreMovie();
     fecthGenreSeries();
@@ -35,7 +37,10 @@ const Home = () => {
     fecthTopRatedSeries("1");
     fecthUpcomingMovie("1");
     fecthOnTheAirSeries("1");
-    window.onresize = () => setWindowHeight(window.innerHeight);
+    window.onresize = () => {
+      setWindowHeight(window.innerHeight);
+      setPageWidth(outerWidth);
+    };
   }, []);
 
   return (
@@ -43,8 +48,14 @@ const Home = () => {
       <HomeAboutArea windowHeight={windowHeight} />
       <div className="homeContainer" style={{ marginTop: `${windowHeight}px` }}>
         <div className="contentContainer">
-          <HomeMovieArea />
-          <HomeSerieArea />
+          {pageWidth > 390 ? (
+            <>
+              <HomeMovieArea />
+              <HomeSerieArea />
+            </>
+          ) : (
+            <MobileTabsHome page="home" activeTab_initial="movies" />
+          )}
         </div>
       </div>
     </>

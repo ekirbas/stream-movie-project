@@ -113,9 +113,12 @@
   height: 13%;
   background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
 }
-@media (max-width: 1441px) {
+@media (max-width: 1700px) {
   .movieAndShow {
     margin-top: 16px;
+  }
+  .movieAndShow .contentContainer {
+    gap: 120px;
   }
   .movieAndShow .contentContainer .fieldS {
     padding: 40px;
@@ -208,5 +211,122 @@
   .sliderImageContainer .sliderTabIndicatorContainer .arrowContainer svg {
     width: 20px;
     height: 18px;
+  }
+}
+@media (max-width: 391px) {
+  .movieAndShow {
+    margin-top: 60px;
+  }
+  .movieAndShow .contentContainer {
+    gap: 50px;
+  }
+  .movieAndShow .contentContainer .mobileTabsContainer {
+    margin-top: 30px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black06);
+    border: solid 1px var(--black15);
+    border-radius: 8px;
+  }
+  .movieAndShow .contentContainer .mobileTabsContainer .mobileTab {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font: 500 14px/150% "Manrope", sans-serif;
+    color: var(--grey60);
+  }
+  .movieAndShow .contentContainer .mobileTabsContainer .mobileTabActive {
+    color: var(--white);
+    background-color: var(--black12);
+  }
+  .movieAndShow .contentContainer .headerContainer {
+    margin-bottom: 20px;
+  }
+  .movieAndShow .contentContainer .headerContainer .header {
+    font-size: 24px;
+  }
+  .movieAndShow .contentContainer .dataContainer .genreData {
+    min-width: 181px;
+    height: 201px;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .movieAndShow .contentContainer .dataContainer .genreData .bottomArea {
+    font-size: 14px;
+  }
+  .movieAndShow .contentContainer .dataContainer .genreData .bottomArea .bottomBtn {
+    width: 12.5px;
+    height: 11.25px;
+  }
+  .movieAndShow .contentContainer .dataContainer .popularData {
+    min-width: 178.4px;
+    height: 259px;
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .movieAndShow .contentContainer .dataContainer .popularData .dataImageContainer {
+    margin-bottom: 12px;
+  }
+  .movieAndShow .contentContainer .dataContainer .popularData .dataImageContainer .voteDiv {
+    font-size: 11px;
+    width: 52px;
+    height: 18px;
+  }
+  .movieAndShow .contentContainer .dataContainer .popularData .bottomAreaPopular {
+    font-size: 10px;
+    padding: 4px 8px 4px 8px;
+  }
+  .movieAndShow .contentContainer .dataContainer .dateDiv {
+    font-size: 10px;
+    top: 8px;
+  }
+  .movieAndShow .contentContainer .dataContainer .dateDiv svg {
+    width: 18px;
+    height: 18px;
+  }
+  .sliderImageContainer {
+    height: 468px;
+  }
+  .sliderImageContainer .imageContainer {
+    padding: 24px 24px 16px 24px;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer {
+    gap: 2px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer h1 {
+    font-size: 24px;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer p {
+    display: none;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer .infoButtons {
+    margin-top: 20px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer .infoButtons .playBtn {
+    padding: 14px 20px;
+    font-size: 14px;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer .infoButtons .playBtn svg {
+    width: 16.3px;
+    height: 17.45px;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer .infoButtons .actionBtn {
+    padding: 12px;
+    height: 48px;
+  }
+  .sliderImageContainer .imageContainer .dataInfoContainer .infoButtons .actionBtn svg {
+    width: 24px;
+    height: 24px;
   }
 }
