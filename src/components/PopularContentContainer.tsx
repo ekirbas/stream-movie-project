@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { PopularContentContainerType } from "../models/homeType";
 import { CreateUniqKey } from "../helpers/function";
 import statikVariables from "../store/statikVariables";
@@ -11,7 +11,10 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
   const itemRef = useRef(null);
-
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
   const handleClick = (id: number, type: string) => {
     switch (type) {
       case "movie":
@@ -32,7 +35,7 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        {outerWidth > 390 && <TabsIndicator ref={itemRef} />}
+        {pageWidth > 390 && <TabsIndicator ref={itemRef} />}
       </div>
       <div className="dataContainer" ref={itemRef}>
         {data?.map((v: ResultPopularMovie) => {

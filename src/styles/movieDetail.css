@@ -254,6 +254,7 @@
   align-items: center;
   gap: 4px;
   cursor: pointer;
+  font-weight: 600;
 }
 .detailImageContainer .dataInfoContainer .infoButtons .actionBtn {
   padding: 14px;
@@ -395,5 +396,153 @@
   .movieDetail .divTitle {
     font-size: 16px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 391px) {
+  .movieDetail {
+    margin-top: 60px;
+  }
+  .movieDetail .detailImageContainer {
+    height: 468px;
+    padding: 24px 24px 16px 24px;
+    background-position: center;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer {
+    gap: 20px;
+    padding: 0;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer h1 {
+    font-size: 24px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons {
+    margin-top: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn {
+    padding: 14px 20px;
+    font-size: 14px;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn svg {
+    width: 27.3px;
+    height: 21.45px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn {
+    padding: 12px;
+    height: 48px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .movieDetail .contentContainer {
+    gap: 80px;
+  }
+  .movieDetail .detailContainer {
+    flex-wrap: wrap;
+  }
+  .movieDetail .detailContainer .detailRight {
+    padding: 24px;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .movieDetail .detailContainer .detailRight .releaseDate {
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .languagesArea .languagesContainer .languages {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer {
+    font-size: 14px;
+    padding: 12px;
+    gap: 4px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .genresArea .genresContainer .genres {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director img {
+    width: 47.13px;
+    height: 50px;
+  }
+  .movieDetail .detailContainer .detailLeft {
+    gap: 20px;
+    max-width: 100%;
+  }
+  .movieDetail .detailContainer .detailLeft .overview {
+    padding: 24px;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea {
+    padding: 24px;
+    gap: 6px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer {
+    gap: 8px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard {
+    gap: 2px;
+    font-size: 12px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard img {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
+    font-size: 12px;
+  }
+  .movieDetail .divTitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .movieDetail .trialHorizontal {
+    height: 344px;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -530px 47px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+    flex-basis: 100%;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+    flex-basis: 100%;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 24px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 14px;
+  }
+  .movieDetail .trialHorizontal .fadeOutHorizontal {
+    background: linear-gradient(180deg, #0f0f0f 4%, rgba(20, 15, 15, 0.97) 22%, rgba(34, 14, 14, 0.91) 39%, rgba(229, 0, 0, 0.4) 100%);
   }
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TabsIndicator from "../TabsIndicator";
 import statikVariables from "../../store/statikVariables";
 import { CreateUniqKey } from "../../helpers/function";
@@ -7,11 +7,16 @@ import { MovieDetailCastAreaType } from "../../models/homeType";
 const MovieDetailCastArea = (props: MovieDetailCastAreaType) => {
   const { castData } = props;
   const castContainerRef = useRef(null);
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
+
   return (
     <div className="castArea">
       <div className="topContainer">
         <div className="divTitle">Cast</div>
-        {outerWidth > 390 && <TabsIndicator ref={castContainerRef} />}
+        {pageWidth > 390 && <TabsIndicator ref={castContainerRef} />}
       </div>
       {/* castContainer */}
       <div className="castContainer" ref={castContainerRef}>

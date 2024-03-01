@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ImageSliderDataType } from "../../models/homeType";
 import statikVariables from "../../store/statikVariables";
 import { CreateUniqKey } from "../../helpers/function";
@@ -11,6 +11,10 @@ import SliderImageTabsIndicator from "./SliderImageTabsIndicator";
 const ImageSliderData = (props: ImageSliderDataType) => {
   const { data } = props;
   const sliderImageContainerRef = useRef(null);
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
   return (
     <div className="sliderImageContainer" ref={sliderImageContainerRef}>
       {data?.map((v) => {
@@ -47,7 +51,7 @@ const ImageSliderData = (props: ImageSliderDataType) => {
               </div>
             </div>
             <div className="sliderImageFadeOut"></div>
-            {outerWidth > 390 && (
+            {pageWidth > 390 && (
               <SliderImageTabsIndicator ref={sliderImageContainerRef} />
             )}
           </div>

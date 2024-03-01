@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GenresContentContainerType } from "../models/homeType";
 import RightArrowIcon from "../assets/svgComp/RightArrowIcon";
 import { CreateUniqKey } from "../helpers/function";
@@ -9,7 +9,10 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
   const { data, header, type } = props;
   const navigate = useNavigate();
   const dataContainerRef = useRef(null);
-
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
   const handleClick = (id: number, type: string) => {
     switch (type) {
       case "movie":
@@ -31,7 +34,7 @@ const GenresContentContainer = (props: GenresContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        {outerWidth > 390 && <TabsIndicator ref={dataContainerRef} />}
+        {pageWidth > 390 && <TabsIndicator ref={dataContainerRef} />}
       </div>
       <div className="dataContainer gap30" ref={dataContainerRef}>
         {data?.map((v) => {

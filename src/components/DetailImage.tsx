@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import statikVariables from "../store/statikVariables";
 import { DetailImageType } from "../models/homeType";
 import PlayBtnIcon from "../assets/svgComp/PlayBtnIcon";
@@ -8,6 +8,11 @@ import VolumeIcon from "../assets/svgComp/VolumeIcon";
 
 const DetailImage = (props: DetailImageType) => {
   const { title, overview, url } = props;
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
+  useEffect(() => {
+    setPageWidth(outerWidth);
+  }, []);
+
   return (
     <div
       className="detailImageContainer"
@@ -23,7 +28,7 @@ const DetailImage = (props: DetailImageType) => {
     >
       <div className="dataInfoContainer">
         <h1>{title}</h1>
-        <p>{overview} </p>
+        {pageWidth > 390 ? <p>{overview} </p> : null}
         <div className="infoButtons">
           <button className="playBtn">
             <PlayBtnIcon />
