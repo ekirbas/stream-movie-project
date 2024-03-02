@@ -210,22 +210,54 @@
         width: 116px;
         height: 35px;
       }
-      .activeNavBarItem {
-        font-size: 14px;
+      .hamburgerMenuIconContainer {
+        padding: 6px 6px 2px 6px;
+        border: solid 2px var(--black15);
+        border-radius: 6px;
+        background-color: var(--black06);
+      }
+      .activeHamburgerMenu {
+        border: solid 0.5px var(--red45);
       }
       .navButtonsContainer {
-        display: none;
+        z-index: 20;
         padding: 8px;
-        width: 465px;
-        height: 61px;
+        height: auto;
+        width: 200px;
+        flex-direction: column;
+        inset: initial;
+        right: 12px;
+        top: 62px;
+        margin: 0;
+        align-items: stretch;
+        border-radius: 8px;
+        border: solid 0.5px var(--red45);
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 200ms;
         li a {
           font: 400 14px/150% "Manrope", sans-serif;
           padding: 12px 20px;
         }
+        .mobileSearchIcon {
+          float: right;
+        }
+      }
+      .activeNavButtons {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+      }
+      .activeNavBarItem {
+        font-size: 14px;
       }
       svg {
         width: 24px;
         height: 24px;
+      }
+      & > svg:nth-child(4) {
+        display: none;
       }
     }
 
