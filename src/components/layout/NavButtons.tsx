@@ -25,7 +25,7 @@ const NavButtons = () => {
   };
   return (
     <>
-      {pageWidth < 391 && (
+      {!(pageWidth > 798) && (
         <div
           className={`hamburgerMenuIconContainer ${
             activeHamburgerMenu ? "activeHamburgerMenu" : ""
@@ -79,7 +79,7 @@ const NavButtons = () => {
             Subscriptions
           </Link>
         </li>
-        {pageWidth < 391 && (
+        {!(pageWidth > 798) && (
           <li>
             <SearchIcon className="mobileSearchIcon" />
           </li>

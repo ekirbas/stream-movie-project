@@ -19,7 +19,7 @@ const PlansDetailArea = () => {
           the one that's right for you.
         </div>
       </div>
-      {pageWidth > 390 ? <PlansTable /> : <MobileTabsSubscriptions />}
+      {pageWidth > 798 ? <PlansTable /> : <MobileTabsSubscriptions />}
     </div>
   );
 };

@@ -354,7 +354,16 @@
     gap: 20px !important;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 1050px) {
+  .streamMovieProject .navBarZ-Index .navBar .navLogo {
+    width: 130px;
+    height: 42px;
+  }
+  .streamMovieProject .homeAboutContainer .aboutTextArea {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 799px) {
   .homeAboutContainer {
     min-height: 549px;
   }

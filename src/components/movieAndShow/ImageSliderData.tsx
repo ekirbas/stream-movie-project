@@ -51,7 +51,7 @@ const ImageSliderData = (props: ImageSliderDataType) => {
               </div>
             </div>
             <div className="sliderImageFadeOut"></div>
-            {pageWidth > 390 && (
+            {pageWidth > 798 && (
               <SliderImageTabsIndicator ref={sliderImageContainerRef} />
             )}
           </div>

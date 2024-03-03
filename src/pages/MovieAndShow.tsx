@@ -45,7 +45,7 @@ const MovieAndShow = () => {
     <div className="movieAndShow">
       <div className="contentContainer">
         <ImageSliderData data={popularMovie?.slice(0, 4)} />
-        {pageWidth > 390 ? (
+        {pageWidth > 798 ? (
           <>
             <MovieAndShowMovieArea />
             <MovieAndShowSeriesArea />

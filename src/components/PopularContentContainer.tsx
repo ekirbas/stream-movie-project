@@ -35,7 +35,7 @@ const PopularContentContainer = (props: PopularContentContainerType) => {
     <div>
       <div className="headerContainer">
         <div className="header">{header}</div>
-        {pageWidth > 390 && <TabsIndicator ref={itemRef} />}
+        {pageWidth > 798 && <TabsIndicator ref={itemRef} />}
       </div>
       <div className="dataContainer" ref={itemRef}>
         {data?.map((v: ResultPopularMovie) => {

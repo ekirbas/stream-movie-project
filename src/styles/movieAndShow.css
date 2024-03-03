@@ -213,7 +213,7 @@
     height: 18px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 799px) {
   .movieAndShow {
     margin-top: 60px;
   }

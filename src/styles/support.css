@@ -253,7 +253,18 @@
     font-size: 16px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 1050px) {
+  .support {
+    margin-top: 40px;
+  }
+  .support .contactArea {
+    flex-wrap: wrap;
+  }
+  .support .contactArea .contactLeft img {
+    width: auto;
+  }
+}
+@media (max-width: 799px) {
   .support {
     margin-top: 60px;
   }
@@ -266,6 +277,7 @@
   }
   .support .contactArea .contactLeft {
     gap: 10px;
+    flex-basis: 100%;
   }
   .support .contactArea .contactLeft h1 {
     font-size: 28px;
@@ -282,6 +294,7 @@
     padding: 24px;
     gap: 20px;
     flex-wrap: wrap;
+    flex-basis: 100%;
   }
   .support .contactArea .contactRight .horizontalContainer {
     gap: 20px;
@@ -329,6 +342,7 @@
   }
   .support .questionsArea .questionsBottomContainer .questionsHalfContainer {
     gap: 20px;
+    flex-basis: 100%;
   }
   .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer {
     padding: 20px 10px;

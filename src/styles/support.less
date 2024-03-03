@@ -270,8 +270,20 @@
     }
   }
 }
-
-@media (max-width: 391px) {
+@media (max-width: 1050px) {
+  .support {
+    margin-top: 40px;
+    .contactArea {
+      flex-wrap: wrap;
+      .contactLeft {
+        img {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 799px) {
   .support {
     margin-top: 60px;
     .contentContainer {
@@ -282,6 +294,7 @@
       flex-wrap: wrap;
       .contactLeft {
         gap: 10px;
+        flex-basis: 100%;
         h1 {
           font-size: 28px;
         }
@@ -298,7 +311,7 @@
         padding: 24px;
         gap: 20px;
         flex-wrap: wrap;
-
+        flex-basis: 100%;
         .horizontalContainer {
           gap: 20px;
           flex-wrap: wrap;
@@ -345,6 +358,7 @@
         flex-wrap: wrap;
         .questionsHalfContainer {
           gap: 20px;
+          flex-basis: 100%;
           .questionContainer {
             padding: 20px 10px;
             gap: 16px;

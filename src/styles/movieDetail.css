@@ -398,7 +398,7 @@
     margin-bottom: 10px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 799px) {
   .movieDetail {
     margin-top: 60px;
   }

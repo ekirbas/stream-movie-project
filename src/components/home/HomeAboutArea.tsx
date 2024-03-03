@@ -6,7 +6,7 @@ import { HomeAboutAreaType } from "../../models/homeType";
 
 const HomeAboutArea = (props: HomeAboutAreaType) => {
   const { windowHeight } = props;
-  const [pageWidth, setPageWidth] = useState<number>(390);
+  const [pageWidth, setPageWidth] = useState<number>(outerWidth);
   useEffect(() => {
     setPageWidth(outerWidth);
   }, []);
@@ -31,9 +31,9 @@ const HomeAboutArea = (props: HomeAboutAreaType) => {
         <p>
           StreamVibe is the best streaming experience for watching your favorite
           movies and shows on demand, anytime, anywhere.
-          {pageWidth < 391
-            ? ""
-            : " With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch."}
+          {pageWidth > 798
+            ? " With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch."
+            : ""}
         </p>
         <button className="watchButton">
           <PlayBtnIcon />

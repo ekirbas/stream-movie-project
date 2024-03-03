@@ -37,8 +37,8 @@ const Home = () => {
     fecthTopRatedSeries("1");
     fecthUpcomingMovie("1");
     fecthOnTheAirSeries("1");
+    setWindowHeight(window.innerHeight);
     window.onresize = () => {
-      setWindowHeight(window.innerHeight);
       setPageWidth(outerWidth);
     };
   }, []);
@@ -48,7 +48,7 @@ const Home = () => {
       <HomeAboutArea windowHeight={windowHeight} />
       <div className="homeContainer" style={{ marginTop: `${windowHeight}px` }}>
         <div className="contentContainer">
-          {pageWidth > 390 ? (
+          {pageWidth > 798 ? (
             <>
               <HomeMovieArea />
               <HomeSerieArea />

@@ -7,7 +7,7 @@ const FieldsetComp = (props: FieldsetCompType) => {
   useEffect(() => {
     setPageWidth(outerWidth);
   }, []);
-  if (pageWidth > 390) {
+  if (pageWidth > 798) {
     return (
       <fieldset className="fieldS">
         <legend>

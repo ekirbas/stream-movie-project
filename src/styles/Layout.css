@@ -153,11 +153,11 @@
   }
   .streamMovieProject .navBarZ-Index .navBar .navButtonsContainer {
     padding: 8px;
-    width: 465px;
-    height: 61px;
+    width: 516px;
+    height: 70px;
   }
   .streamMovieProject .navBarZ-Index .navBar .navButtonsContainer li a {
-    font: 400 14px/150% "Manrope", sans-serif;
+    font: 400 16px/150% "Manrope", sans-serif;
     padding: 12px 20px;
   }
   .streamMovieProject .navBarZ-Index .navBar svg {
@@ -180,7 +180,33 @@
     margin-top: 80px;
   }
 }
-@media (max-width: 391px) {
+@media (max-width: 1050px) {
+  .streamMovieProject .navBarZ-Index .navBar {
+    height: 98px;
+    padding: 0 80px;
+  }
+  .streamMovieProject .navBarZ-Index .navBar .navLogo {
+    width: 165px;
+    height: 50px;
+  }
+  .streamMovieProject .navBarZ-Index .navBar .activeNavBarItem {
+    font-size: 10px;
+  }
+  .streamMovieProject .navBarZ-Index .navBar .navButtonsContainer {
+    padding: 4px;
+    width: 310px;
+    height: 54px;
+  }
+  .streamMovieProject .navBarZ-Index .navBar .navButtonsContainer li a {
+    font: 400 10px/150% "Manrope", sans-serif;
+    padding: 10px;
+  }
+  .streamMovieProject .navBarZ-Index .navBar svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (max-width: 799px) {
   .streamMovieProject {
     padding: 26px 16px 0 16px;
   }

@@ -28,7 +28,7 @@ const DetailImage = (props: DetailImageType) => {
     >
       <div className="dataInfoContainer">
         <h1>{title}</h1>
-        {pageWidth > 390 ? <p>{overview} </p> : null}
+        {pageWidth > 798 ? <p>{overview} </p> : null}
         <div className="infoButtons">
           <button className="playBtn">
             <PlayBtnIcon />
