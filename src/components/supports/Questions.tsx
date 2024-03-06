@@ -31,7 +31,9 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">02</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">
+                How much does StreamVibe cost?
+              </div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
@@ -42,7 +44,9 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">03</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">
+                What content is available on StreamVibe?
+              </div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
@@ -53,7 +57,7 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">04</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">How can I watch StreamVibe?</div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
@@ -66,7 +70,9 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">05</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">
+                How do I sign up for StreamVibe?
+              </div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
@@ -77,7 +83,9 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">06</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">
+                What is the StreamVibe free trial?
+              </div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
@@ -88,7 +96,9 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">07</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">
+                How do I contact StreamVibe customer support?
+              </div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
@@ -99,7 +109,9 @@ const Questions = () => {
           <div className="questionContainer">
             <div className="count">08</div>
             <div className="questionTextContainer">
-              <div className="questionTitle">What is StreamVibe?</div>
+              <div className="questionTitle">
+                What are the StreamVibe payment methods?
+              </div>
               <div className="questionAnswer">
                 StreamVibe is a streaming service that allows you to watch
                 movies and shows on demand.
