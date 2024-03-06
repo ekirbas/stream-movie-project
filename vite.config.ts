@@ -12,5 +12,8 @@ export default defineConfig({
         javascriptEnabled: true
       },
     },
-  }
+  },
+  build: {
+    outDir: 'dist', // Üretim dosyalarının çıkış dizini
+  },
 })
