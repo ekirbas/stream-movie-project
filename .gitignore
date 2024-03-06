@@ -12,7 +12,6 @@ node_modules
 
 *.local
 
-statikVariables.tsx
 
 # Editor directories and files
 .vscode/*
