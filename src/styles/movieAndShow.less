@@ -1,0 +1,345 @@
+.movieAndShow {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 16px;
+}
+.sliderImageContainer {
+  width: 100%;
+  height: 835px;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  .imageContainer {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    gap: 50px;
+    padding: 50px 50px 20px 50px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    .dataInfoContainer {
+      width: 100%;
+      text-align: center;
+      gap: 4px;
+      padding: 0 150px;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 100px;
+      h1 {
+        color: var(--white);
+        font: 700 38px/150% "Manrope", sans-serif;
+      }
+      p {
+        color: var(--grey60);
+        font: 500 18px/150% "Manrope", sans-serif;
+      }
+      .infoButtons {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .playBtn {
+          font: 600 18px/153% "Manrope", sans-serif;
+          background-color: var(--red45);
+          color: var(--white);
+          padding: 14px 24px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .actionBtn {
+          padding: 14px;
+          border-radius: 8px;
+          background-color: var(--black06);
+          border: solid 1px var(--black15);
+          height: 56px;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .sliderNavContainer {
+  }
+}
+/* sliderTabIndicatorContainer */
+.sliderTabIndicatorContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 50px 20px 50px;
+  .arrowContainer {
+    padding: 14px;
+    border-radius: 8px;
+    background-color: var(--black10);
+    border: 1px var(--black12), solid;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  .lineTabsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    .tab {
+      display: flex;
+      height: 4px;
+      width: 16px;
+      background-color: var(--black20);
+      border-radius: 100px;
+    }
+    .tabActive {
+      background-color: var(--red45);
+      width: 23px;
+    }
+  }
+}
+.sliderImageFadeOut {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 13%;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
+}
+
+@media (max-width: 1700px) {
+  .movieAndShow {
+    margin-top: 16px;
+
+    .contentContainer {
+      gap: 120px;
+      .fieldS {
+        padding: 40px;
+        gap: 80px;
+        legend .title {
+          font-size: 16px;
+          padding: 8px 20px;
+        }
+        .headerContainer {
+          margin-bottom: 40px;
+          .header {
+            font-size: 30px;
+          }
+        }
+        .dataContainer {
+          .genreData {
+            min-width: 224px;
+            height: 259px;
+            border-radius: 10px;
+            padding: 24px;
+            .bottomArea {
+              font-size: 16px;
+              .bottomBtn {
+                width: 15px;
+                height: 13.5px;
+              }
+            }
+          }
+          .popularData {
+            min-width: 224px;
+            height: 308px;
+            border-radius: 10px;
+            padding: 16px;
+            .dataImageContainer {
+              margin-bottom: 16px;
+              .voteDiv {
+                font-size: 13px;
+                width: 62px;
+                height: 24px;
+              }
+            }
+            .bottomAreaPopular {
+              font-size: 12px;
+              padding: 4px 8px 4px 8px;
+            }
+          }
+          .dateDiv {
+            font-size: 12px;
+            top: 10px;
+          }
+        }
+      }
+    }
+  }
+  .sliderImageContainer {
+    height: 709px;
+    .imageContainer {
+      padding: 40px 40px 16px 40px;
+      .dataInfoContainer {
+        gap: 2px;
+        padding: 0 120px;
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .infoButtons {
+          margin-top: 22px;
+          gap: 12px;
+          .playBtn {
+            padding: 12px 20px;
+            font-size: 14px;
+            svg {
+              width: 15.3px;
+              height: 16.45px;
+            }
+          }
+          .actionBtn {
+            padding: 12px;
+            height: 44px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    .sliderTabIndicatorContainer .arrowContainer {
+      padding: 12px;
+      svg {
+        width: 20px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .movieAndShow {
+    margin-top: 60px;
+
+    .contentContainer {
+      gap: 50px;
+      .mobileTabsContainer {
+        margin-top: 30px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--black06);
+        border: solid 1px var(--black15);
+        border-radius: 8px;
+        .mobileTab {
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 12px 20px;
+          border-radius: 6px;
+          font: 500 14px/150% "Manrope", sans-serif;
+          color: var(--grey60);
+        }
+        .mobileTabActive {
+          color: var(--white);
+          background-color: var(--black12);
+        }
+      }
+      .headerContainer {
+        margin-bottom: 20px;
+        .header {
+          font-size: 24px;
+        }
+      }
+      .dataContainer {
+        .genreData {
+          min-width: 181px;
+          height: 201px;
+          border-radius: 10px;
+          padding: 20px;
+          .bottomArea {
+            font-size: 14px;
+            .bottomBtn {
+              width: 12.5px;
+              height: 11.25px;
+            }
+          }
+        }
+        .popularData {
+          min-width: 178.4px;
+          height: 259px;
+          border-radius: 10px;
+          padding: 12px;
+          .dataImageContainer {
+            margin-bottom: 12px;
+            .voteDiv {
+              font-size: 11px;
+              width: 52px;
+              height: 18px;
+            }
+          }
+          .bottomAreaPopular {
+            font-size: 10px;
+            padding: 4px 8px 4px 8px;
+          }
+        }
+        .dateDiv {
+          font-size: 10px;
+          top: 8px;
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+  .sliderImageContainer {
+    height: 468px;
+    .imageContainer {
+      padding: 24px 24px 16px 24px;
+      .dataInfoContainer {
+        gap: 2px;
+        padding: 0;
+        margin-bottom: 0;
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          display: none;
+        }
+        .infoButtons {
+          margin-top: 20px;
+          gap: 8px;
+          flex-wrap: wrap;
+          .playBtn {
+            padding: 14px 20px;
+            font-size: 14px;
+            justify-content: center;
+            flex-basis: 100%;
+            svg {
+              width: 16.3px;
+              height: 17.45px;
+            }
+          }
+          .actionBtn {
+            padding: 12px;
+            height: 48px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

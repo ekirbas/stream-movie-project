@@ -1,0 +1,402 @@
+.support {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 115px;
+}
+.contactArea {
+  width: 100%;
+  display: flex;
+  gap: 80px;
+}
+.contactArea .contactLeft {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 14px;
+}
+.contactArea .contactLeft h1 {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.contactArea .contactLeft p {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.contactArea .contactLeft img {
+  margin-top: 36px;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: solid 6px var(--black15);
+  background-color: var(--black06);
+}
+/* ContactForm.tsx */
+.contactRight {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background-color: var(--black06);
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px var(--black15) solid;
+  gap: 50px;
+}
+.contactRight .horizontalContainer {
+  display: flex;
+  gap: 50px;
+}
+.contactRight .verticalContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.contactRight .titleDiv {
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.contactRight .inpt {
+  padding: 20px;
+  background-color: var(--black08);
+  border-radius: 8px;
+  border: 1px var(--black15) solid;
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.contactRight .sendButton {
+  border-radius: 8px;
+  padding: 18px 24px;
+  background-color: var(--red45);
+  color: var(--white);
+  font: 600 18px/150% "Manrope", sans-serif;
+  margin: auto;
+}
+.questionsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 100%;
+}
+.questionsArea .questionsTopContainer {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+}
+.questionsArea .questionsTopContainer .questionsTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.questionsArea .questionsTopContainer .questionsTitleContainer .questionsTitle {
+  font: 600 38px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.questionsArea .questionsTopContainer .questionsTitleContainer .questionsText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.questionsArea .questionsTopContainer .askQuestionButton {
+  align-self: flex-end;
+  padding: 18px 24px;
+  border-radius: 8px;
+  background-color: var(--red45);
+  color: var(--white);
+  font: 600 18px/150% "Manrope", sans-serif;
+}
+.questionsArea .questionsBottomContainer {
+  display: flex;
+  gap: 80px;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px 34px;
+  border-bottom: solid 1px var(--red45);
+  border-image: linear-gradient(to right, var(--black08) 0%, var(--red45) 8%, var(--black08) 100%) 1;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .count {
+  background-color: var(--black12);
+  border: 1px var(--black15);
+  border-radius: 10px;
+  padding: 20px;
+  font: 600 20px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionTitle {
+  font: 500 22px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionAnswer {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .plusIcon {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+@media (max-width: 1700px) {
+  .support {
+    margin-top: 100px;
+  }
+  .support .contactArea {
+    gap: 50px;
+  }
+  .support .contactArea .contactLeft {
+    gap: 10px;
+  }
+  .support .contactArea .contactLeft h1 {
+    font-size: 38px;
+  }
+  .support .contactArea .contactLeft p {
+    font-size: 16px;
+  }
+  .support .contactArea .contactLeft img {
+    width: 429px;
+    height: 380px;
+    margin-top: 30px;
+  }
+  .support .contactArea .contactRight {
+    padding: 40px;
+    gap: 40px;
+  }
+  .support .contactArea .contactRight .horizontalContainer {
+    gap: 20px;
+  }
+  .support .contactArea .contactRight .verticalContainer {
+    gap: 12px;
+  }
+  .support .contactArea .contactRight .titleDiv {
+    font-size: 16px;
+  }
+  .support .contactArea .contactRight .inpt {
+    padding: 16px;
+    font-size: 14px;
+  }
+  .support .contactArea .contactRight .sendButton {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  .support .questionsArea {
+    gap: 60px;
+  }
+  .support .questionsArea .questionsTopContainer {
+    gap: 80px;
+  }
+  .support .questionsArea .questionsTopContainer .questionsTitleContainer {
+    gap: 10px;
+  }
+  .support .questionsArea .questionsTopContainer .questionsTitleContainer .questionsTitle {
+    font-size: 28px;
+  }
+  .support .questionsArea .questionsTopContainer .questionsTitleContainer .questionsText {
+    font-size: 16px;
+  }
+  .support .questionsArea .questionsTopContainer .askQuestionButton {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  .support .questionsArea .questionsBottomContainer {
+    gap: 40px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer {
+    padding: 24px;
+    gap: 16px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .count {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer {
+    gap: 14px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionTitle {
+    font-size: 20px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionAnswer {
+    font-size: 16px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .plusIcon {
+    width: 24px;
+    height: 24px;
+  }
+  .support .trialHorizontal {
+    height: 236px;
+    padding: 80px 60px;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 28px;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1050px) {
+  .support {
+    margin-top: 40px;
+  }
+  .support .contactArea {
+    flex-wrap: wrap;
+  }
+  .support .contactArea .contactLeft img {
+    width: auto;
+  }
+}
+@media (max-width: 799px) {
+  .support {
+    margin-top: 60px;
+  }
+  .support .contentContainer {
+    gap: 80px;
+  }
+  .support .contactArea {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  .support .contactArea .contactLeft {
+    gap: 10px;
+    flex-basis: 100%;
+  }
+  .support .contactArea .contactLeft h1 {
+    font-size: 28px;
+  }
+  .support .contactArea .contactLeft p {
+    font-size: 14px;
+  }
+  .support .contactArea .contactLeft img {
+    width: 100%;
+    height: 344px;
+    margin-top: 20px;
+  }
+  .support .contactArea .contactRight {
+    padding: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+  .support .contactArea .contactRight .horizontalContainer {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .support .contactArea .contactRight .verticalContainer {
+    gap: 12px;
+  }
+  .support .contactArea .contactRight .titleDiv {
+    font-size: 16px;
+  }
+  .support .contactArea .contactRight .inpt {
+    padding: 16px;
+    font-size: 14px;
+  }
+  .support .contactArea .contactRight .sendButton {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  .support .questionsArea {
+    gap: 40px;
+  }
+  .support .questionsArea .questionsTopContainer {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .support .questionsArea .questionsTopContainer .questionsTitleContainer {
+    gap: 10px;
+  }
+  .support .questionsArea .questionsTopContainer .questionsTitleContainer .questionsTitle {
+    font-size: 20px;
+  }
+  .support .questionsArea .questionsTopContainer .questionsTitleContainer .questionsText {
+    font-size: 14px;
+  }
+  .support .questionsArea .questionsTopContainer .askQuestionButton {
+    padding: 14px 20px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+  .support .questionsArea .questionsBottomContainer {
+    gap: 0;
+    flex-wrap: wrap;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer {
+    gap: 20px;
+    flex-basis: 100%;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer {
+    padding: 20px 10px;
+    gap: 16px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .count {
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer {
+    gap: 14px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionTitle {
+    font-size: 20px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .questionTextContainer .questionAnswer {
+    font-size: 16px;
+  }
+  .support .questionsArea .questionsBottomContainer .questionsHalfContainer .questionContainer .plusIcon {
+    width: 24px;
+    height: 24px;
+  }
+  .support .trialHorizontal {
+    height: 344px;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -530px 47px;
+  }
+  .support .trialHorizontal .horizontalContainer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+    flex-basis: 100%;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+    flex-basis: 100%;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 24px;
+  }
+  .support .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 14px;
+  }
+  .support .trialHorizontal .fadeOutHorizontal {
+    background: linear-gradient(180deg, #0f0f0f 4%, rgba(20, 15, 15, 0.97) 22%, rgba(34, 14, 14, 0.91) 39%, rgba(229, 0, 0, 0.4) 100%);
+  }
+}

@@ -1,0 +1,594 @@
+.movieDetail {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 16px;
+}
+.divTitle {
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.detailContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  /* detailLeft */
+  .detailLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 3;
+    max-width: 66.6%;
+
+    .overview {
+      background-color: var(--black10);
+      border-radius: 12px;
+      border: solid 1px var(--black15);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 50px;
+      font: 500 18px/150% "Manrope", sans-serif;
+      color: var(--white);
+    }
+    .castArea {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      gap: 30px;
+      background-color: var(--black10);
+      border: solid 1px var(--black15);
+      border-radius: 12px;
+
+      .topContainer {
+        display: flex;
+      }
+
+      .castContainer {
+        display: flex;
+        gap: 20px;
+        overflow: auto;
+        //hide scroll x
+        -ms-overflow-style: none; /* Internet Explorer and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .castCard {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          img {
+            width: 226px;
+            height: 269px;
+            border-radius: 12px;
+          }
+          .characterText {
+            font: 400 18px/150% "Manrope", sans-serif;
+            color: var(--grey60);
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+  }
+  /* detailRight */
+  .detailRight {
+    background-color: var(--black10);
+    max-width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 30px;
+    padding: 50px;
+    border-radius: 12px;
+    border: solid 1px var(--black15);
+    .releaseDate {
+      font: 600 20px/150% "Manrope", sans-serif;
+    }
+    .languagesArea {
+      .languagesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .languages {
+          border-radius: 8px;
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          padding: 8px 14px;
+          font: 500 18px/150% "Manrope", sans-serif;
+        }
+      }
+    }
+    .ratingContainer {
+      display: inline-flex;
+      flex-direction: column;
+      font: 600 20px/150% "Manrope", sans-serif;
+      gap: 4px;
+      background-color: var(--black08);
+      border-radius: 8px;
+      border: solid 1px var(--black15);
+      padding: 16px;
+      .starsContainer {
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        gap: 2px;
+
+        .ratingText {
+          font: 500 18px/100% "Manrope", sans-serif;
+          margin-left: 4px;
+          display: inline-flex;
+        }
+      }
+    }
+    .genresArea {
+      .genresContainer {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .genres {
+          border-radius: 8px;
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          padding: 8px 14px;
+          font: 500 18px/150% "Manrope", sans-serif;
+        }
+      }
+    }
+    .directorArea {
+      .directorContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .director {
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+          background-color: var(--black08);
+          border: solid 1px var(--black15);
+          padding: 14px;
+          font: 500 18px/150% "Manrope", sans-serif;
+          gap: 10px;
+          img {
+            height: 60px;
+            width: 56.56px;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.trialHorizontal {
+  width: 100%;
+  height: 313px;
+  padding: 100px 80px;
+  border-radius: 12px;
+  border: solid 1px #262626;
+  position: relative;
+  background: round;
+  .horizontalContainer {
+    display: flex;
+
+    .horizontalText {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 3;
+      .horizontalBigText {
+        font: 700 48px/150% "Manrope", sans-serif;
+        color: var(--white);
+        z-index: 10;
+      }
+      .horizontalSmallText {
+        font: 400 18px/150% "Manrope", sans-serif;
+        color: var(--grey60);
+        z-index: 10;
+      }
+    }
+    .horizontalButton {
+      z-index: 10;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      button {
+        font: 600 18px/150% "Manrope", sans-serif;
+        color: var(--white);
+        padding: 18px 24px;
+        border-radius: 8px;
+        background-color: var(--red45);
+        z-index: 10;
+      }
+    }
+  }
+  .fadeOutHorizontal {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+      90deg,
+      #0f0f0f 4%,
+      rgba(20.42, 14.62, 14.62, 0.97) 22%,
+      rgba(34.35, 13.64, 13.64, 0.91) 39%,
+      rgba(229, 0, 0, 0.4) 100%
+    );
+  }
+}
+
+/* DetailImage */
+.detailImageContainer {
+  width: 100%;
+  height: 835px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  gap: 50px;
+  padding: 50px 50px 20px 50px;
+  display: flex;
+  align-items: flex-end;
+
+  .dataInfoContainer {
+    width: 100%;
+    text-align: center;
+    gap: 4px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: var(--white);
+      font: 700 38px/150% "Manrope", sans-serif;
+    }
+    p {
+      color: var(--grey75);
+      font: 500 18px/150% "Manrope", sans-serif;
+    }
+    .infoButtons {
+      margin-top: 30px;
+      font: 600 18px/153% "Manrope", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      .playBtn {
+        background-color: var(--red45);
+        color: var(--white);
+        padding: 14px 24px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .actionBtn {
+        padding: 14px;
+        border-radius: 8px;
+        background-color: var(--black06);
+        border: solid 1px var(--black15);
+        height: 56px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media (max-width: 1700px) {
+  .movieDetail {
+    margin-top: 16px;
+    .tabIndicatorContainer {
+      padding: 10px;
+      gap: 8px;
+      .arrowContainer {
+        padding: 6px;
+      }
+    }
+    .trialHorizontal {
+      height: 236px;
+      padding: 80px 60px;
+      .horizontalContainer {
+        .horizontalButton button {
+          padding: 14px 20px;
+          font-size: 14px;
+        }
+        .horizontalText {
+          gap: 10px;
+          .horizontalBigText {
+            font-size: 28px;
+          }
+          .horizontalSmallText {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .detailImageContainer {
+      height: 709px;
+      padding: 40px 40px 16px 40px;
+      .dataInfoContainer {
+        gap: 2px;
+        padding: 0 120px;
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .infoButtons {
+          margin-top: 22px;
+          gap: 12px;
+          .playBtn {
+            padding: 12px 20px;
+            font-size: 14px;
+            svg {
+              width: 15.3px;
+              height: 16.45px;
+            }
+          }
+          .actionBtn {
+            padding: 12px;
+            height: 44px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    .contentContainer {
+      gap: 80px;
+    }
+    .detailContainer {
+      .detailRight {
+        padding: 40px;
+        gap: 24px;
+        .releaseDate {
+          font-size: 16px;
+        }
+        .languagesArea .languagesContainer .languages {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+        .ratingContainer {
+          font-size: 16px;
+          padding: 14px;
+          gap: 4px;
+          .starsContainer {
+            svg {
+              width: 18px !important;
+              height: 18px !important;
+            }
+            .ratingText {
+              font-size: 14px;
+            }
+          }
+        }
+        .genresArea .genresContainer .genres {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+        .directorArea .directorContainer .director {
+          padding: 12px;
+          font-size: 16px;
+          img {
+            width: 47.13px;
+            height: 50px;
+          }
+        }
+      }
+
+      .detailLeft {
+        gap: 20px;
+        .overview {
+          padding: 40px;
+          gap: 10px;
+          font-size: 16px;
+        }
+        .castArea {
+          padding: 40px;
+          gap: 20px;
+          .castContainer {
+            gap: 10px;
+            .castCard {
+              gap: 2px;
+              font-size: 14px;
+              img {
+                width: 184px;
+                height: 226px;
+                border-radius: 10px;
+              }
+              .characterText {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .divTitle {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .movieDetail {
+    margin-top: 60px;
+
+    .detailImageContainer {
+      height: 468px;
+      padding: 24px 24px 16px 24px;
+      background-position: center;
+      .dataInfoContainer {
+        gap: 20px;
+        padding: 0;
+        h1 {
+          font-size: 24px;
+        }
+        .infoButtons {
+          margin-top: 0;
+          gap: 8px;
+          flex-wrap: wrap;
+          .playBtn {
+            padding: 14px 20px;
+            font-size: 14px;
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: center;
+            svg {
+              width: 27.3px;
+              height: 21.45px;
+            }
+          }
+          .actionBtn {
+            padding: 12px;
+            height: 48px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    .contentContainer {
+      gap: 80px;
+    }
+    .detailContainer {
+      flex-wrap: wrap;
+      .detailRight {
+        padding: 24px;
+        gap: 20px;
+        max-width: 100%;
+        .releaseDate {
+          font-size: 16px;
+        }
+        .languagesArea .languagesContainer .languages {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+        .ratingContainer {
+          font-size: 14px;
+          padding: 12px;
+          gap: 4px;
+          .starsContainer {
+            svg {
+              width: 18px !important;
+              height: 18px !important;
+            }
+            .ratingText {
+              font-size: 14px;
+            }
+          }
+        }
+        .genresArea .genresContainer .genres {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+        .directorArea .directorContainer .director {
+          padding: 12px;
+          font-size: 16px;
+          img {
+            width: 47.13px;
+            height: 50px;
+          }
+        }
+      }
+
+      .detailLeft {
+        gap: 20px;
+        max-width: 100%;
+        .overview {
+          padding: 24px;
+          gap: 8px;
+          font-size: 14px;
+        }
+        .castArea {
+          padding: 24px;
+          gap: 6px;
+          .castContainer {
+            gap: 8px;
+            .castCard {
+              gap: 2px;
+              font-size: 12px;
+              img {
+                width: 150px;
+                height: 200px;
+                border-radius: 8px;
+              }
+              .characterText {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .divTitle {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .trialHorizontal {
+      height: 344px;
+      padding: 30px 50px;
+      flex-wrap: wrap;
+      display: flex;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: -530px 47px;
+      .horizontalContainer {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .horizontalButton button {
+          padding: 14px 20px;
+          font-size: 14px;
+          flex-basis: 100%;
+        }
+        .horizontalText {
+          gap: 10px;
+          flex-basis: 100%;
+          .horizontalBigText {
+            font-size: 24px;
+          }
+          .horizontalSmallText {
+            font-size: 14px;
+          }
+        }
+      }
+      .fadeOutHorizontal {
+        background: linear-gradient(
+          180deg,
+          #0f0f0f 4%,
+          rgba(20, 15, 15, 0.97) 22%,
+          rgba(34, 14, 14, 0.91) 39%,
+          rgba(229, 0, 0, 0.4) 100%
+        );
+      }
+    }
+  }
+}

@@ -1,0 +1,424 @@
+.subscriptions {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 100px;
+}
+.plansArea {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.plansArea .topContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 100px;
+}
+.plansArea .topContainer .textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.plansArea .topContainer .textContainer .topTitle {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .topContainer .textContainer .topText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansArea .topContainer .tabs {
+  border-radius: 10px;
+  padding: 14px 24px;
+  background-color: var(--black12);
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+  margin-left: auto;
+}
+.plansArea .itemsContainer {
+  display: flex;
+  gap: 30px;
+}
+.plansArea .itemsContainer .planCard {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+  border-radius: 12px;
+  border: 1px var(--black15) solid;
+  background-color: var(--black10);
+}
+.plansArea .itemsContainer .planCard .planText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.plansArea .itemsContainer .planCard .planText h2 {
+  font: 700 24px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .itemsContainer .planCard .planText p {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansArea .itemsContainer .priceContainer {
+  display: flex;
+}
+.plansArea .itemsContainer .priceContainer .price {
+  font: 600 40px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .itemsContainer .priceContainer .planTime {
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  margin-left: 4px;
+}
+.plansArea .itemsContainer .buttonsContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.plansArea .itemsContainer .buttonsContainer .trialButton {
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  padding: 18px 24px;
+  background-color: var(--black08);
+  border: 1px var(--black15) solid;
+  border-radius: 8px;
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansArea .itemsContainer .buttonsContainer .choosePlanButton {
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  padding: 18px 24px;
+  background-color: var(--black08);
+  border: 1px var(--black15) solid;
+  border-radius: 8px;
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+  background-color: var(--red45);
+}
+.plansDetailArea {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.plansDetailArea .topContainer {
+  padding-right: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.plansDetailArea .topContainer .plansDetailTitle {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansDetailArea .topContainer .plansDetailText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+}
+.plansDetailArea .plansTable {
+  overflow: auto;
+  border: 1px var(--black15) solid;
+  border-radius: 12px;
+}
+.plansDetailArea .plansTable table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-style: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+.plansDetailArea .plansTable table thead {
+  background-color: var(--black06);
+  border: 1px var(--black15) solid;
+  font: 600 20px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansDetailArea .plansTable table thead th {
+  width: 25%;
+  border: 1px var(--black15) solid;
+  text-align: left;
+  flex: 1;
+  align-items: center;
+  padding: 30px;
+}
+.plansDetailArea .plansTable table thead th .popularText {
+  margin-left: 4px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  background-color: var(--red45);
+  font: 600 14px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.plansDetailArea .plansTable table tbody td {
+  border: 1px var(--black15) solid;
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  padding: 30px;
+}
+@media (max-width: 1700px) {
+  .subscriptions .contentContainer {
+    gap: 120px;
+  }
+  .subscriptions .plansArea {
+    gap: 60px;
+  }
+  .subscriptions .plansArea .topContainer .textContainer {
+    gap: 10px;
+  }
+  .subscriptions .plansArea .topContainer .textContainer .topTitle {
+    font-size: 28px;
+  }
+  .subscriptions .plansArea .topContainer .textContainer .topText {
+    font-size: 16px;
+  }
+  .subscriptions .plansArea .topContainer .tabs {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .subscriptions .plansArea .itemsContainer {
+    gap: 20px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard {
+    padding: 40px;
+    gap: 40px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard .planText {
+    gap: 12px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard .planText h2 {
+    font-size: 20px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard .planText p {
+    font-size: 16px;
+  }
+  .subscriptions .plansArea .itemsContainer .priceContainer .price {
+    font-size: 30px;
+  }
+  .subscriptions .plansArea .itemsContainer .priceContainer .planTime {
+    font-size: 16px;
+    margin-left: 2px;
+  }
+  .subscriptions .plansArea .itemsContainer .buttonsContainer {
+    gap: 12px;
+  }
+  .subscriptions .plansArea .itemsContainer .buttonsContainer .trialButton {
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .subscriptions .plansArea .itemsContainer .buttonsContainer .choosePlanButton {
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .subscriptions .plansDetailArea {
+    gap: 60px;
+  }
+  .subscriptions .plansDetailArea .topContainer {
+    gap: 10px;
+    padding-right: 150px;
+  }
+  .subscriptions .plansDetailArea .topContainer .plansDetailTitle {
+    font-size: 38px;
+  }
+  .subscriptions .plansDetailArea .topContainer .plansDetailText {
+    font-size: 16px;
+  }
+  .subscriptions .plansDetailArea .plansTable {
+    border-radius: 10px;
+  }
+  .subscriptions .plansDetailArea .plansTable table thead {
+    font-size: 18px;
+  }
+  .subscriptions .plansDetailArea .plansTable table thead th {
+    padding: 24px;
+  }
+  .subscriptions .plansDetailArea .plansTable table tbody td {
+    padding: 24px;
+    font-size: 16px;
+  }
+  .subscriptions .trialHorizontal {
+    height: 236px;
+    padding: 80px 60px;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 28px;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 16px;
+  }
+}
+@media (max-width: 799px) {
+  .subscriptions {
+    margin-top: 60px;
+  }
+  .subscriptions .contentContainer {
+    gap: 80px;
+  }
+  .subscriptions .plansArea {
+    gap: 40px;
+  }
+  .subscriptions .plansArea .topContainer {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .subscriptions .plansArea .topContainer .textContainer {
+    gap: 10px;
+  }
+  .subscriptions .plansArea .topContainer .textContainer .topTitle {
+    font-size: 24px;
+  }
+  .subscriptions .plansArea .topContainer .textContainer .topText {
+    font-size: 14px;
+  }
+  .subscriptions .plansArea .topContainer .tabs {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .subscriptions .plansArea .itemsContainer {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard {
+    padding: 24px;
+    gap: 30px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard .planText {
+    gap: 10px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard .planText h2 {
+    font-size: 18px;
+  }
+  .subscriptions .plansArea .itemsContainer .planCard .planText p {
+    font-size: 14px;
+  }
+  .subscriptions .plansArea .itemsContainer .priceContainer .price {
+    font-size: 24px;
+  }
+  .subscriptions .plansArea .itemsContainer .priceContainer .planTime {
+    font-size: 14px;
+    margin-left: 2px;
+  }
+  .subscriptions .plansArea .itemsContainer .buttonsContainer {
+    gap: 12px;
+  }
+  .subscriptions .plansArea .itemsContainer .buttonsContainer .trialButton {
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .subscriptions .plansArea .itemsContainer .buttonsContainer .choosePlanButton {
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  .subscriptions .plansDetailArea {
+    gap: 40px;
+  }
+  .subscriptions .plansDetailArea .topContainer {
+    gap: 8px;
+    padding-right: 0;
+  }
+  .subscriptions .plansDetailArea .topContainer .plansDetailTitle {
+    font-size: 24px;
+  }
+  .subscriptions .plansDetailArea .topContainer .plansDetailText {
+    font-size: 14px;
+  }
+  .subscriptions .plansDetailArea .mobileTabsContainer {
+    margin-top: 30px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black06);
+    border: solid 1px var(--black15);
+    border-radius: 8px;
+  }
+  .subscriptions .plansDetailArea .mobileTabsContainer .mobileTab {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font: 500 14px/150% "Manrope", sans-serif;
+    color: var(--grey60);
+  }
+  .subscriptions .plansDetailArea .mobileTabsContainer .mobileTabActive {
+    color: var(--white);
+    background-color: var(--black12);
+  }
+  .subscriptions .plansDetailArea .planStandardContainer {
+    background-color: var(--black06);
+    padding: 24px;
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px var(--black15);
+    border-radius: 12px;
+    font: 500 14px/150% "Manrope", sans-serif;
+  }
+  .subscriptions .plansDetailArea .planStandardContainer .verticalContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-basis: 45%;
+  }
+  .subscriptions .plansDetailArea .planStandardContainer .basis100 {
+    flex-basis: 100%;
+  }
+  .subscriptions .plansDetailArea .planStandardContainer .title {
+    color: var(--grey60);
+  }
+  .subscriptions .plansDetailArea .planStandardContainer .text {
+    color: var(--grey95);
+  }
+  .subscriptions .trialHorizontal {
+    height: 344px;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -530px 47px;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+    flex-basis: 100%;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+    flex-basis: 100%;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 24px;
+  }
+  .subscriptions .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 14px;
+  }
+  .subscriptions .trialHorizontal .fadeOutHorizontal {
+    background: linear-gradient(180deg, #0f0f0f 4%, rgba(20, 15, 15, 0.97) 22%, rgba(34, 14, 14, 0.91) 39%, rgba(229, 0, 0, 0.4) 100%);
+  }
+}

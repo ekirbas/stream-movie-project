@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: inherit;
+  /* no underline */
+}
+/* Scrollbar */
+/* Firefox */
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  scrollbar-color: var(--red45) var(--black08);
+}
+::-webkit-scrollbar-track {
+  background: var(--black08);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--red45);
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.8);
+}
+::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+body {
+  width: 100%;
+  max-width: 100%;
+  font-family: "Manrope", sans-serif;
+}
+:root {
+  -webkit-font-smoothing: antialiased;
+  --white: #ffffff;
+  --black: #000000;
+  --red45: #e50000;
+  --red50: #ff0000;
+  --red55: #ff1a1a;
+  --red60: #ff3333;
+  --red80: #ff9999;
+  --red90: #ffcccc;
+  --red95: #ffe5e5;
+  --red99: #fffafa;
+  --black06: #0f0f0f;
+  --black08: #141414;
+  --black10: #1a1a1a;
+  --black12: #1f1f1f;
+  --black15: #262626;
+  --black20: #333333;
+  --black25: #404040;
+  --black30: #4d4d4d;
+  --grey60: #999999;
+  --grey65: #a6a6a6;
+  --grey70: #b3b3b3;
+  --grey75: #bfbfbf;
+  --grey90: #e4e4e7;
+  --grey95: #f1f1f3;
+  --grey97: #f7f7f8;
+  --grey99: #fcfcfd;
+}

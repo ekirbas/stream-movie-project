@@ -1,0 +1,548 @@
+.movieDetail {
+  color: var(--white);
+  max-width: 100%;
+  margin-top: 16px;
+}
+.divTitle {
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.detailContainer {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  /* detailLeft */
+  /* detailRight */
+}
+.detailContainer .detailLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 3;
+  max-width: 66.6%;
+}
+.detailContainer .detailLeft .overview {
+  background-color: var(--black10);
+  border-radius: 12px;
+  border: solid 1px var(--black15);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 50px;
+  font: 500 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+}
+.detailContainer .detailLeft .castArea {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 30px;
+  background-color: var(--black10);
+  border: solid 1px var(--black15);
+  border-radius: 12px;
+}
+.detailContainer .detailLeft .castArea .topContainer {
+  display: flex;
+}
+.detailContainer .detailLeft .castArea .castContainer {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  /* Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.detailContainer .detailLeft .castArea .castContainer::-webkit-scrollbar {
+  display: none;
+}
+.detailContainer .detailLeft .castArea .castContainer .castCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.detailContainer .detailLeft .castArea .castContainer .castCard img {
+  width: 226px;
+  height: 269px;
+  border-radius: 12px;
+}
+.detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.detailContainer .detailRight {
+  background-color: var(--black10);
+  max-width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 30px;
+  padding: 50px;
+  border-radius: 12px;
+  border: solid 1px var(--black15);
+}
+.detailContainer .detailRight .releaseDate {
+  font: 600 20px/150% "Manrope", sans-serif;
+}
+.detailContainer .detailRight .languagesArea .languagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.detailContainer .detailRight .languagesArea .languagesContainer .languages {
+  border-radius: 8px;
+  background-color: var(--black08);
+  border: solid 1px var(--black15);
+  padding: 8px 14px;
+  font: 500 18px/150% "Manrope", sans-serif;
+}
+.detailContainer .detailRight .ratingContainer {
+  display: inline-flex;
+  flex-direction: column;
+  font: 600 20px/150% "Manrope", sans-serif;
+  gap: 4px;
+  background-color: var(--black08);
+  border-radius: 8px;
+  border: solid 1px var(--black15);
+  padding: 16px;
+}
+.detailContainer .detailRight .ratingContainer .starsContainer {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  gap: 2px;
+}
+.detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
+  font: 500 18px/100% "Manrope", sans-serif;
+  margin-left: 4px;
+  display: inline-flex;
+}
+.detailContainer .detailRight .genresArea .genresContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.detailContainer .detailRight .genresArea .genresContainer .genres {
+  border-radius: 8px;
+  background-color: var(--black08);
+  border: solid 1px var(--black15);
+  padding: 8px 14px;
+  font: 500 18px/150% "Manrope", sans-serif;
+}
+.detailContainer .detailRight .directorArea .directorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detailContainer .detailRight .directorArea .directorContainer .director {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--black08);
+  border: solid 1px var(--black15);
+  padding: 14px;
+  font: 500 18px/150% "Manrope", sans-serif;
+  gap: 10px;
+}
+.detailContainer .detailRight .directorArea .directorContainer .director img {
+  height: 60px;
+  width: 56.56px;
+  border-radius: 8px;
+}
+.trialHorizontal {
+  width: 100%;
+  height: 313px;
+  padding: 100px 80px;
+  border-radius: 12px;
+  border: solid 1px #262626;
+  position: relative;
+  background: round;
+}
+.trialHorizontal .horizontalContainer {
+  display: flex;
+}
+.trialHorizontal .horizontalContainer .horizontalText {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 3;
+}
+.trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+  font: 700 48px/150% "Manrope", sans-serif;
+  color: var(--white);
+  z-index: 10;
+}
+.trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+  font: 400 18px/150% "Manrope", sans-serif;
+  color: var(--grey60);
+  z-index: 10;
+}
+.trialHorizontal .horizontalContainer .horizontalButton {
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.trialHorizontal .horizontalContainer .horizontalButton button {
+  font: 600 18px/150% "Manrope", sans-serif;
+  color: var(--white);
+  padding: 18px 24px;
+  border-radius: 8px;
+  background-color: var(--red45);
+  z-index: 10;
+}
+.trialHorizontal .fadeOutHorizontal {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #0f0f0f 4%, rgba(20, 15, 15, 0.97) 22%, rgba(34, 14, 14, 0.91) 39%, rgba(229, 0, 0, 0.4) 100%);
+}
+/* DetailImage */
+.detailImageContainer {
+  width: 100%;
+  height: 835px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  gap: 50px;
+  padding: 50px 50px 20px 50px;
+  display: flex;
+  align-items: flex-end;
+}
+.detailImageContainer .dataInfoContainer {
+  width: 100%;
+  text-align: center;
+  gap: 4px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+.detailImageContainer .dataInfoContainer h1 {
+  color: var(--white);
+  font: 700 38px/150% "Manrope", sans-serif;
+}
+.detailImageContainer .dataInfoContainer p {
+  color: var(--grey75);
+  font: 500 18px/150% "Manrope", sans-serif;
+}
+.detailImageContainer .dataInfoContainer .infoButtons {
+  margin-top: 30px;
+  font: 600 18px/153% "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.detailImageContainer .dataInfoContainer .infoButtons .playBtn {
+  background-color: var(--red45);
+  color: var(--white);
+  padding: 14px 24px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.detailImageContainer .dataInfoContainer .infoButtons .actionBtn {
+  padding: 14px;
+  border-radius: 8px;
+  background-color: var(--black06);
+  border: solid 1px var(--black15);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+@media (max-width: 1700px) {
+  .movieDetail {
+    margin-top: 16px;
+  }
+  .movieDetail .tabIndicatorContainer {
+    padding: 10px;
+    gap: 8px;
+  }
+  .movieDetail .tabIndicatorContainer .arrowContainer {
+    padding: 6px;
+  }
+  .movieDetail .trialHorizontal {
+    height: 236px;
+    padding: 80px 60px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 28px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 16px;
+  }
+  .movieDetail .detailImageContainer {
+    height: 709px;
+    padding: 40px 40px 16px 40px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer {
+    gap: 2px;
+    padding: 0 120px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer h1 {
+    font-size: 30px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer p {
+    font-size: 16px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons {
+    margin-top: 22px;
+    gap: 12px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn svg {
+    width: 15.3px;
+    height: 16.45px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn {
+    padding: 12px;
+    height: 44px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .movieDetail .contentContainer {
+    gap: 80px;
+  }
+  .movieDetail .detailContainer .detailRight {
+    padding: 40px;
+    gap: 24px;
+  }
+  .movieDetail .detailContainer .detailRight .releaseDate {
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .languagesArea .languagesContainer .languages {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer {
+    font-size: 16px;
+    padding: 14px;
+    gap: 4px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .genresArea .genresContainer .genres {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director img {
+    width: 47.13px;
+    height: 50px;
+  }
+  .movieDetail .detailContainer .detailLeft {
+    gap: 20px;
+  }
+  .movieDetail .detailContainer .detailLeft .overview {
+    padding: 40px;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea {
+    padding: 40px;
+    gap: 20px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer {
+    gap: 10px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard {
+    gap: 2px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard img {
+    width: 184px;
+    height: 226px;
+    border-radius: 10px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
+    font-size: 14px;
+  }
+  .movieDetail .divTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 799px) {
+  .movieDetail {
+    margin-top: 60px;
+  }
+  .movieDetail .detailImageContainer {
+    height: 468px;
+    padding: 24px 24px 16px 24px;
+    background-position: center;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer {
+    gap: 20px;
+    padding: 0;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer h1 {
+    font-size: 24px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons {
+    margin-top: 0;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn {
+    padding: 14px 20px;
+    font-size: 14px;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .playBtn svg {
+    width: 27.3px;
+    height: 21.45px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn {
+    padding: 12px;
+    height: 48px;
+  }
+  .movieDetail .detailImageContainer .dataInfoContainer .infoButtons .actionBtn svg {
+    width: 24px;
+    height: 24px;
+  }
+  .movieDetail .contentContainer {
+    gap: 80px;
+  }
+  .movieDetail .detailContainer {
+    flex-wrap: wrap;
+  }
+  .movieDetail .detailContainer .detailRight {
+    padding: 24px;
+    gap: 20px;
+    max-width: 100%;
+  }
+  .movieDetail .detailContainer .detailRight .releaseDate {
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .languagesArea .languagesContainer .languages {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer {
+    font-size: 14px;
+    padding: 12px;
+    gap: 4px;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  .movieDetail .detailContainer .detailRight .ratingContainer .starsContainer .ratingText {
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .genresArea .genresContainer .genres {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .movieDetail .detailContainer .detailRight .directorArea .directorContainer .director img {
+    width: 47.13px;
+    height: 50px;
+  }
+  .movieDetail .detailContainer .detailLeft {
+    gap: 20px;
+    max-width: 100%;
+  }
+  .movieDetail .detailContainer .detailLeft .overview {
+    padding: 24px;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea {
+    padding: 24px;
+    gap: 6px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer {
+    gap: 8px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard {
+    gap: 2px;
+    font-size: 12px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard img {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  .movieDetail .detailContainer .detailLeft .castArea .castContainer .castCard .characterText {
+    font-size: 12px;
+  }
+  .movieDetail .divTitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .movieDetail .trialHorizontal {
+    height: 344px;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -530px 47px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalButton button {
+    padding: 14px 20px;
+    font-size: 14px;
+    flex-basis: 100%;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText {
+    gap: 10px;
+    flex-basis: 100%;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalBigText {
+    font-size: 24px;
+  }
+  .movieDetail .trialHorizontal .horizontalContainer .horizontalText .horizontalSmallText {
+    font-size: 14px;
+  }
+  .movieDetail .trialHorizontal .fadeOutHorizontal {
+    background: linear-gradient(180deg, #0f0f0f 4%, rgba(20, 15, 15, 0.97) 22%, rgba(34, 14, 14, 0.91) 39%, rgba(229, 0, 0, 0.4) 100%);
+  }
+}
