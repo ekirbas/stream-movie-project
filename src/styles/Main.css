@@ -7,3 +7,6 @@
 @import url(./serieDetail.css);
 @import url(./support.css);
 @import url(./subscriptions.css);
+.empty {
+    color: red;
+  }

@@ -520,3 +520,6 @@
     background: linear-gradient(180deg, #0f0f0f 4%, rgba(20, 15, 15, 0.97) 22%, rgba(34, 14, 14, 0.91) 39%, rgba(229, 0, 0, 0.4) 100%);
   }
 }
+.empty {
+  color: red;
+}

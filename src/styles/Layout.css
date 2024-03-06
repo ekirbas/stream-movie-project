@@ -300,3 +300,6 @@
     margin-bottom: 20px;
   }
 }
+.empty {
+  color: red;
+}
